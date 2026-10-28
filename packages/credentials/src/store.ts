@@ -1,6 +1,6 @@
 import lockfile from 'proper-lockfile';
 import fs from 'node:fs';
-import { lstat,readdir } from 'node:fs/promises';
+import { lstat,readdir,open,type FileHandle } from 'node:fs/promises';
 import { dirname } from 'node:path';
 import {createHash} from 'node:crypto';
 import {canonicalJson} from '@tilde/config';
@@ -32,7 +32,7 @@ export function openCredentialStore(authFile:string,options:StoreOptions={}):Pri
   catch(e){if((e as NodeJS.ErrnoException).code==='ENOENT')return undefined;throw e;}
  }
  async function locked<T>(write:boolean,operation:(data:Record<string,unknown>,check:()=>Promise<void>,startCommit:()=>void)=>Promise<T>,op:AuthOperationOptions={}):Promise<T>{
-  let release:(()=>Promise<void>)|undefined;let compromised=false;let held:Awaited<ReturnType<typeof lstat>>|undefined;let ownMtime:number|undefined;let committing=false;let heartbeatRevision=0,heartbeat:Promise<void>|undefined;
+  let release:(()=>Promise<void>)|undefined;let compromised=false;let held:Awaited<ReturnType<typeof lstat>>|undefined;let heldDirectory:FileHandle|undefined;let ownMtime:number|undefined;let committing=false;let heartbeatRevision=0,heartbeat:Promise<void>|undefined;
   const guardedFs={...fs,utimes:(path:fs.PathLike,atime:fs.TimeLike,mtime:fs.TimeLike,callback:fs.NoParamCallback)=>{
    if(String(path)!==authFile+'.lock'){fs.utimes(path,atime,mtime,callback);return;}
    heartbeatRevision++;let done!:()=>void;const pending=new Promise<void>(r=>{done=r;});heartbeat=pending;
@@ -65,10 +65,15 @@ export function openCredentialStore(authFile:string,options:StoreOptions={}):Pri
     }
    }
    held=await inspectLock();ownMtime=held?Number(held.mtimeMs):undefined;
+   // Keep the held inode alive through release. Otherwise ext4 can recycle an
+   // unlinked directory's inode into another writer's lock before cleanup.
+   try{heldDirectory=await open(authFile+'.lock',fs.constants.O_RDONLY|fs.constants.O_DIRECTORY|fs.constants.O_NOFOLLOW);}catch{throw new CredentialError('LOCK_COMPROMISED');}
+   const pinned=await heldDirectory.stat();
+   if(!held||!pinned.isDirectory()||pinned.dev!==held.dev||pinned.ino!==held.ino||Number(pinned.mtimeMs)!==ownMtime)throw new CredentialError('LOCK_COMPROMISED');
    const check=async()=>{for(;;){if(!committing)cancelled(op.signal);if(heartbeat)await heartbeat;const revision=heartbeatRevision,current=await inspectLock();if(compromised||!held||!current||current.ino!==held.ino||current.dev!==held.dev)throw new CredentialError('LOCK_COMPROMISED');if(heartbeat||revision!==heartbeatRevision)continue;if(Number(current.mtimeMs)!==ownMtime)throw new CredentialError('LOCK_COMPROMISED');if(!committing)cancelled(op.signal);return;}};
    await check();return await operation(await raw(),check,()=>{options.onCommitStart?.();if(options.finishMutation)committing=true;});
   }catch(e){throw safeError(e);}
-  finally{if(release)await release().catch(()=>{compromised=true;});}
+  finally{try{if(release)await release().catch(()=>{compromised=true;});}finally{try{await heldDirectory?.close();}catch{throw new CredentialError('CREDENTIAL_STORE_FAILED');}}}
  }
  function entry(data:Record<string,unknown>,id:string):Credential|undefined{
   if(!Object.hasOwn(data,id))return undefined;

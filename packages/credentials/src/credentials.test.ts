@@ -90,3 +90,26 @@ test('actual injected rename and file sync failures leave old bytes and remove t
   assert.ok(await readFile(file,'utf8')==='{}');assert.deepEqual(await readdir(dirname(file)),['auth.json']);
  }
 });
+test('replacementLockCannotReuseHeldDirectoryInodeAndSurvivesCleanup',async t=>{
+ const {file}=await fixture(t);await mkdir(dirname(file),{recursive:true,mode:0o700});await writeFile(file,'{}',{mode:0o600});
+ let originalInode:number|undefined,replacementInode:number|undefined;
+ await assert.rejects(openCredentialStore(file).modify('opencode-go',async()=>{
+  originalInode=(await lstat(file+'.lock')).ino;
+  await rm(file+'.lock',{recursive:true});await mkdir(file+'.lock',{mode:0o700});
+  replacementInode=(await lstat(file+'.lock')).ino;
+  return{type:'api_key',key:secret};
+ }),code('LOCK_COMPROMISED'));
+ assert.notEqual(replacementInode,originalInode,'The held directory must stay alive until release; ext4 must not recycle its inode into the replacement lock');
+ assert.equal((await lstat(file+'.lock')).isDirectory(),true);
+ assert.equal(await readFile(file,'utf8'),'{}');
+});
+test('credentialDirectoryPinsCloseAfterSuccessFailureAndCancellation',async t=>{
+ const {file}=await fixture(t),before=(await readdir('/proc/self/fd')).length;
+ for(let i=0;i<12;i++){
+  await saveApiKey(openCredentialStore(file),'opencode-go',secret);
+  await assert.rejects(saveApiKey(openCredentialStore(file,{atomicWrite:async()=>{throw Error('synthetic');}}),'opencode-go',secret),code('CREDENTIAL_WRITE_FAILED'));
+  const controller=new AbortController();
+  await assert.rejects(openCredentialStore(file).modify('opencode-go',async()=>{controller.abort();return{type:'api_key',key:secret};},{signal:controller.signal}),code('CANCELLED'));
+ }
+ assert.equal((await readdir('/proc/self/fd')).length,before);
+});
