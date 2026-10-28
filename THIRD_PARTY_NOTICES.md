@@ -143,8 +143,8 @@ platform or hardware compatibility.
 | undici-types | 7.16.0 | MIT | js |
 | web-streams-polyfill | 3.3.3 | MIT | js |
 | ws | 8.22.0 | MIT | js |
-| Tilde | 0.1.0 | MIT | native |
-| Tilde icon | 0.1.0 | MIT | asset |
+| Tilde | 0.1.1 | MIT | native |
+| Tilde icon | 0.1.1 | MIT | asset |
 | Node system runtime | 24.22.1 qualification; compatibility floor 22.19.0 | MIT | dynamic-system |
 | libQt6Core.so.6 | 6.12.0 qualification; minimum 6.8 | LGPL-3.0-only | dynamic-system |
 | libQt6DBus.so.6 | 6.12.0 qualification; minimum 6.8 | LGPL-3.0-only | dynamic-system |

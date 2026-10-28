@@ -5,7 +5,7 @@ Saved conversations, private drafts, safe Markdown, exact tool review and
 optional tray/notifications keep the interface separate from ongoing work.
 One unsettled run owns work globally, including approval and budget pauses.
 
-This is the 0.1.0 release-candidate source. Release qualification and publication
+This is the 0.1.1 release-candidate source. Release qualification and publication
 are separate steps. No service is started or enabled by a build or staging run.
 
 Requires Linux, system Node >=22.19.0 with matching public Node/libuv build

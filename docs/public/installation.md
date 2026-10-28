@@ -51,7 +51,7 @@ recipe beside an exact, verified source archive so no archive contains its own
 checksum and no nonexistent GitHub URL or SKIP checksum is used:
 
 ```sh
-node scripts/prepare-arch-build.mjs --source /absolute/tilde-0.1.0.tar.gz --sha256 <actual-sha256> --output /absolute/new-build --npm-cache /absolute/prepared-cache
+node scripts/prepare-arch-build.mjs --source /absolute/tilde-0.1.1.tar.gz --sha256 <actual-sha256> --output /absolute/new-build --npm-cache /absolute/prepared-cache
 node scripts/qualify-arch.mjs --build-root /absolute/new-build --evidence /absolute/new-evidence
 ```
 

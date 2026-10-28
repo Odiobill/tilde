@@ -1,7 +1,7 @@
 # Local template. prepare-arch-build.mjs writes a checksummed recipe beside the
 # exact local source archive. No repository URL or install/service hook is used.
 pkgname=tilde-assistant
-pkgver=0.1.0
+pkgver=0.1.1
 pkgrel=1
 pkgdesc='Native Linux conversation interface with a durable user daemon'
 arch=('x86_64')

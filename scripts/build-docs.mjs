@@ -19,7 +19,7 @@ export async function buildDocs({root=resolve('.'),output,basePath='/'}){
    const file=(directory==='docs/public'?'':'development/')+entry.name.replace(/\.md$/,'.html'),title=text.match(/^# (.+)$/m)?.[1];if(!title)throw Error('DOCS_TITLE_MISSING');sources.push({path,file,text,title});
   }
  }
- const order=['index.html','installation.html','source-build.html','configuration.html','limitations.html','security.html','troubleshooting.html','contributing.html','releasing.html','release-notes-0.1.0.html'];sources.sort((a,b)=>(order.includes(a.file)?order.indexOf(a.file):100)-(order.includes(b.file)?order.indexOf(b.file):100)||a.file.localeCompare(b.file));
+ const order=['index.html','installation.html','source-build.html','configuration.html','limitations.html','security.html','troubleshooting.html','contributing.html','releasing.html','release-notes-0.1.1.html'];sources.sort((a,b)=>(order.includes(a.file)?order.indexOf(a.file):100)-(order.includes(b.file)?order.indexOf(b.file):100)||a.file.localeCompare(b.file));
  if(!sources.some(s=>s.file==='index.html'))throw Error('DOCS_INDEX_MISSING');
  for(const source of sources){source.links=[];for(const match of source.text.matchAll(/\[([^\]]+)\]\(([^)\s]+)\)/g)){
   const [label,url]=[match[1],match[2]];

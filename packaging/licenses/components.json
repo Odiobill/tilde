@@ -1,7 +1,7 @@
 [
   {
     "name": "Tilde",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "source": "original project source",
     "license": "MIT",
     "textPath": "LICENSE",
@@ -15,7 +15,7 @@
   },
   {
     "name": "Tilde icon",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "source": "packaging/icons/tilde-gui.svg",
     "license": "MIT",
     "textPath": "LICENSE",

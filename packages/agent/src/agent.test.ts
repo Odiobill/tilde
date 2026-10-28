@@ -58,7 +58,7 @@ test('pinned OpenCode fetch seam sends Tilde headers, stable session, output cap
   return new Response(chunks.map(c=>'data: '+JSON.stringify(c)+'\n\n').join('')+'data: [DONE]\n\n',{headers:{'content-type':'text/event-stream'}});
  };
  for(let n=0;n<2;n++){const agent=await openAgent({...f,models:createOpenCodeModels(f.credentials,fetch)});t.after(()=>agent.close());await agent.submit({requestId:'http-'+n,text:'hello',selectionRevision:publicSettings(f.config,f.paths).selectionRevision});assert.equal((await finished(agent)).state,'idle');await agent.close();}
- assert.equal(captures.length,2);for(const c of captures){assert.ok(c.headers.get('authorization')==='Bearer agent-synthetic-canary');assert.equal(c.headers.get('user-agent'),'Tilde/0.1.0');assert.equal(c.body.max_tokens??c.body.max_completion_tokens,8192);assert.ok(c.headers.get('x-opencode-session'));}
+ assert.equal(captures.length,2);for(const c of captures){assert.ok(c.headers.get('authorization')==='Bearer agent-synthetic-canary');assert.equal(c.headers.get('user-agent'),'Tilde/0.1.1');assert.equal(c.body.max_tokens??c.body.max_completion_tokens,8192);assert.ok(c.headers.get('x-opencode-session'));}
  assert.equal(captures[0]!.headers.get('x-opencode-session'),captures[1]!.headers.get('x-opencode-session'));
 });
 test('provider deadline terminates even a stream ignoring abort; errors are safe codes',async()=>{

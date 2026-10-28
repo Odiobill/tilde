@@ -8,7 +8,7 @@ import { stageInstall } from '../../scripts/stage-install.mjs';
 async function temporary(t) { const dir = await mkdtemp(join(tmpdir(), 'tilde-arch-test-')); t.after(() => rm(dir, { recursive: true, force: true })); return dir; }
 test('packagePhaseWorksWithFakerootStatx', async t => {
   const dir = await temporary(t), srcdir = join(dir, 'source'), pkgdir = join(dir, 'package');
-  await mkdir(srcdir); await mkdir(pkgdir); await symlink(resolve('.'), join(srcdir, 'tilde-0.1.0'));
+  await mkdir(srcdir); await mkdir(pkgdir); await symlink(resolve('.'), join(srcdir, 'tilde-0.1.1'));
   await stageInstall({ root: resolve('.'), destdir: join(srcdir, 'tilde-stage'), prefix: '/usr', nodeExecutable: process.execPath });
   const result = spawnSync('fakeroot', ['--', '/usr/bin/bash', '-c', 'srcdir=$1; pkgdir=$2; source "$3"; package', '--', srcdir, pkgdir, resolve('packaging/arch/PKGBUILD')], { encoding: 'utf8', timeout: 30000 });
   assert.equal(result.status, 0, result.stderr);

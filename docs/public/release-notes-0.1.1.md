@@ -1,4 +1,11 @@
-# Tilde 0.1.0 candidate notes
+# Tilde 0.1.1 candidate notes
+
+This patch keeps a credential-lock directory open until lock release, preventing
+immediate ext4 inode reuse from causing cleanup to remove another writer's
+replacement lock. Credential writes still refuse a compromised lock. Regression
+coverage includes replacement identity, handle cleanup and heartbeat timestamp
+quantization. The unpublished 0.1.0 candidate is retained privately as historical
+qualification evidence; it is not the package offered for this corrected release.
 
 This is the first x86_64 Linux source/Arch candidate mechanism. Read the artifact's
 qualification/build manifest for its actual readiness and tested versions.

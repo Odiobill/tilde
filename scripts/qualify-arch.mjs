@@ -66,7 +66,7 @@ export function parsePackageInfo(text) {
 export async function qualifyArch({ buildRoot, evidence }) {
   buildRoot = resolve(buildRoot); evidence = resolve(evidence);
   const input = JSON.parse(await readFile(join(buildRoot, 'build-input.json'), 'utf8'));
-  if (input.kind !== 'local-build-candidate' || input.source !== 'tilde-0.1.0.tar.gz' || ![null, 'npm-cache'].includes(input.npmCache)
+  if (input.kind !== 'local-build-candidate' || input.source !== 'tilde-0.1.1.tar.gz' || ![null, 'npm-cache'].includes(input.npmCache)
     || sha256(await readFile(join(buildRoot, input.source))) !== input.sourceSha256 || sha256(await readFile(join(buildRoot, 'PKGBUILD'))) !== input.recipeSha256) throw new Error('ARCH_INPUT_IDENTITY_MISMATCH');
   await mkdir(evidence, { recursive: false, mode: 0o700 }); const home = join(evidence, 'home'); await mkdir(home, { mode: 0o700 });
   const env = childEnvironment('/usr/bin/node', { HOME: home, XDG_CONFIG_HOME: join(home, 'config'), XDG_STATE_HOME: join(home, 'state'), XDG_CACHE_HOME: join(home, 'cache'), TILDE_CMAKE: '/usr/bin/cmake', TILDE_NPM_CACHE: join(buildRoot, input.npmCache ?? 'missing-cache'), PACKAGER: 'Tilde local build', SOURCE_DATE_EPOCH: '1793145600' });

@@ -16,7 +16,7 @@ export async function stageInstall({ root, destdir, prefix, nodeExecutable }) {
   await mkdir(target, { recursive: true, mode: 0o755 });
   const at = final => join(destdir, final), app = at(layout.appRoot);
   await mkdir(app, { recursive: true, mode: 0o755 });
-  await put(target, join(app, 'package.json'), JSON.stringify({ name: 'tilde-installed', version: '0.1.0', private: true, type: 'module' }, null, 2) + '\n');
+  await put(target, join(app, 'package.json'), JSON.stringify({ name: 'tilde-installed', version: '0.1.1', private: true, type: 'module' }, null, 2) + '\n');
   const productFilter = path => !path.endsWith('.test.js') && !path.endsWith('.d.ts') && !path.endsWith('.map') && !path.split('/').includes('fixtures');
   for (const workspace of config.workspaces) {
     await put(target, join(app, workspace, 'package.json'), await readFile(join(root, workspace, 'package.json')));

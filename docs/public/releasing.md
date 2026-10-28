@@ -47,11 +47,11 @@ runners. The job installs no host packages. It acquires a locked npm cache in it
 own temporary tree, builds/checks/inspects a candidate, and uploads an allowlisted
 artifact set. It does not claim actual installed/removal qualification.
 
-`release-draft.yml` requires manual dispatch with exact version0.1.0 and reviewed
+`release-draft.yml` requires manual dispatch with exact version0.1.1 and reviewed
 source archive SHA256. Identity, complete native CI and Arch build/inspection
 must succeed before its separate contents-write draft job. It derives repository
 identity from GitHub context, checks same-commit/source/package manifests and
-checksums, and requires an existing `v0.1.0` tag resolving to that exact commit.
+checksums, and requires an existing `v0.1.1` tag resolving to that exact commit.
 The command creates only a **draft**, labelled verification pending, with no
 automatic publication. Missing local qualification or licenses remain blockers
 for readiness/publication; inspect them before changing that draft's status.

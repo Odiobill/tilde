@@ -1,19 +1,19 @@
 {
   "name": "@tilde/agent",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@tilde/config": "0.1.0",
-    "@tilde/protocol": "0.1.0",
-    "@tilde/credentials": "0.1.0",
-    "@tilde/transport": "0.1.0",
+    "@tilde/config": "0.1.1",
+    "@tilde/protocol": "0.1.1",
+    "@tilde/credentials": "0.1.1",
+    "@tilde/transport": "0.1.1",
     "@earendil-works/pi-durable": "1.4.0",
     "@earendil-works/pi-ai": "1.4.0",
     "@earendil-works/chord": "1.4.0",
-    "@tilde/tools": "0.1.0",
+    "@tilde/tools": "0.1.1",
     "typebox": "1.3.27"
   }
 }

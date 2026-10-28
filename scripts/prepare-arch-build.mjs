@@ -9,7 +9,7 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 export async function prepareArchBuild({ source, sha256, output, npmCache }) {
   source = resolve(source); output = resolve(output);
   if (!/^[a-f0-9]{64}$/.test(sha256) || (await stat(source)).size > 64 * 1024 * 1024 || digest(await readFile(source)) !== sha256) throw new Error('SOURCE_DIGEST_MISMATCH');
-  const archive = spawnSync('python3', [join(root, 'scripts/release/archive-input.py'), source, 'tilde-0.1.0'], { encoding: 'utf8', timeout: 10000 });
+  const archive = spawnSync('python3', [join(root, 'scripts/release/archive-input.py'), source, 'tilde-0.1.1'], { encoding: 'utf8', timeout: 10000 });
   if (archive.status !== 0 || archive.error) throw new Error('SOURCE_ARCHIVE_INVALID');
   const node = spawnSync('/usr/bin/node', ['-p', 'process.versions.node'], { encoding: 'utf8', timeout: 5000 });
   const qt = spawnSync('qmake6', ['-query', 'QT_VERSION'], { encoding: 'utf8', timeout: 5000 });
@@ -17,9 +17,9 @@ export async function prepareArchBuild({ source, sha256, output, npmCache }) {
   await mkdir(output, { recursive: false, mode: 0o700 });
   const recipe = (await readFile(join(root, 'packaging/arch/PKGBUILD'), 'utf8')).replaceAll('@SOURCE_SHA256@', sha256).replaceAll('@QT_VERSION@', qt.stdout.trim());
   await writeFile(join(output, 'PKGBUILD'), recipe, { mode: 0o644, flag: 'wx' });
-  await cp(source, join(output, 'tilde-0.1.0.tar.gz'));
+  await cp(source, join(output, 'tilde-0.1.1.tar.gz'));
   if (npmCache) await cp(join(resolve(npmCache), '_cacache'), join(output, 'npm-cache/_cacache'), { recursive: true });
-  const metadata = { version: 1, source: 'tilde-0.1.0.tar.gz', sourceSha256: sha256, recipeSha256: digest(Buffer.from(recipe)), packageName: 'tilde-assistant', packageVersion: '0.1.0-1', nodeVersion: node.stdout.trim(), qtVersion: qt.stdout.trim(), npmCache: npmCache ? 'npm-cache' : null, networkDuringBuild: false, kind: 'local-build-candidate', cleanArchGuestQualified: false, installedQualified: false };
+  const metadata = { version: 1, source: 'tilde-0.1.1.tar.gz', sourceSha256: sha256, recipeSha256: digest(Buffer.from(recipe)), packageName: 'tilde-assistant', packageVersion: '0.1.1-1', nodeVersion: node.stdout.trim(), qtVersion: qt.stdout.trim(), npmCache: npmCache ? 'npm-cache' : null, networkDuringBuild: false, kind: 'local-build-candidate', cleanArchGuestQualified: false, installedQualified: false };
   await writeFile(join(output, 'build-input.json'), JSON.stringify(metadata, null, 2) + '\n', { mode: 0o600, flag: 'wx' });
   return metadata;
 }

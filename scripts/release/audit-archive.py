@@ -8,14 +8,14 @@ import tarfile
 from pathlib import PurePosixPath
 
 PRIVATE={'.git','.superpowers','.aws','.codex','.agents','.env','.build','node_modules','dist','__pycache__','experiments'}
-FIXED=('LICENSE','THIRD_PARTY_NOTICES.md','docs/public/release-notes-0.1.0.md','packaging/licenses/inventory.json','package.json','packaging/release/public-files.json','packaging/arch/PKGBUILD')
+FIXED=('LICENSE','THIRD_PARTY_NOTICES.md','docs/public/release-notes-0.1.1.md','packaging/licenses/inventory.json','package.json','packaging/release/public-files.json','packaging/arch/PKGBUILD')
 def audit(path,kind):
     process=None
     if kind=='package':
         process=subprocess.Popen(['/usr/bin/zstd','-dc','--',path],stdout=subprocess.PIPE,stderr=subprocess.DEVNULL)
         archive=tarfile.open(fileobj=process.stdout,mode='r|')
     else:archive=tarfile.open(path,mode='r:*')
-    records=[];names=set();links={};bodies={};total=0;root='tilde-0.1.0';source_names=set()
+    records=[];names=set();links={};bodies={};total=0;root='tilde-0.1.1';source_names=set()
     try:
         for index,member in enumerate(archive):
             raw=member.name.rstrip('/')
@@ -76,7 +76,7 @@ def audit(path,kind):
             if any(name not in bodies for name in FIXED):raise ValueError('SOURCE_RELEASE_METADATA_MISSING')
             public=json.loads(bodies['packaging/release/public-files.json'])
             if public.get('version')!=1 or not isinstance(public.get('files'),list) or len(public['files'])!=len(set(public['files'])) or set(public['files'])!=source_names:raise ValueError('SOURCE_ALLOWLIST_MISMATCH')
-            if json.loads(bodies['package.json']).get('version')!='0.1.0':raise ValueError('SOURCE_VERSION_MISMATCH')
+            if json.loads(bodies['package.json']).get('version')!='0.1.1':raise ValueError('SOURCE_VERSION_MISMATCH')
         return {'kind':kind,'files':records,'bodies':bodies}
     finally:
         archive.close()
