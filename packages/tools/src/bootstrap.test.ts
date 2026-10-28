@@ -1,0 +1,3 @@
+import{test}from'node:test';import assert from'node:assert/strict';import{Readable}from'node:stream';import{readBootstrap}from'./bootstrap.js';
+test('privateBootstrapPreservesSplitUnicodeSeeds',async()=>{const value={version:1,seeds:['before-🔑-after']},b=Buffer.from(JSON.stringify(value)),i=b.indexOf(Buffer.from('🔑'));assert.deepEqual(await readBootstrap(Readable.from([b.subarray(0,i+1),b.subarray(i+1)])),value);});
+test('privateBootstrapRejectsOversizedOrInvalidUtf8',async()=>{await assert.rejects(readBootstrap(Readable.from([Buffer.alloc(12583937,32)])));await assert.rejects(readBootstrap(Readable.from([Buffer.from([0x22,0xff,0x22])])));});

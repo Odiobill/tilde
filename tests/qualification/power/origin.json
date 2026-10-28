@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "origin": "experiments/m0/power (retained M0 project qualification source)",
+  "originalSha256": {
+    "volatile_disk.py": "e333878f4fad65c0f4292ca08aa3ed9086dfaaf758f893e361d86ffc7787cf79",
+    "volatile_disk_test.py": "0ff36befb0c70c93335595c87f6cb02f0252735d71fc8b3ce80e75ee7c9b16c3",
+    "nbdkit_plugin.py": "8161b476d74b4379c146d93727c4a205ab085c59bb3ca315f920e261777536c4",
+    "nbdkit_plugin_test.py": "40140fbe3ced59dd3d53c2286cbbf3e77ab268e8d88d7fc75a0ae44293c19ba8",
+    "guest_control.py": "be0f5d4321be893a50a4fcd1546de14588ddbbcd093ef5843288b2feec10a851",
+    "guest_control_test.py": "929ca3fbcdff5412858c03828f6c5e3251fe98414307861e20ebf4a08fd237e6"
+  },
+  "license": "MIT; same project owner; repository LICENSE applies",
+  "audit": "Pending writes are memory-only. Only flush persists+fsyncs; close/cut discard. Serial nbdkit adapter advertises emulated FUA, no trim/cache/multi-connection. Trace metadata only. Guest fixed verbs validate root manifest, actual DMI UUID, exact owned image, nbd major/minor, mount options and boot/connection identity before block changes. Historical VM identity/paths have no authority.",
+  "adaptation": "M4 fixture names/account; trusted root manifest supplies exact approved disposable UUID rather than historical constant. Host grants/oracle are separate. Helper is test-only and not in installed product closure."
+}

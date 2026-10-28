@@ -1,0 +1,75 @@
+{
+  "name": "Manual disposable Arch candidate",
+  "on": {
+    "workflow_dispatch": {
+      "inputs": {
+        "version": {
+          "description": "Exact source version",
+          "required": true,
+          "type": "string",
+          "default": "0.1.0"
+        },
+        "source_sha256": {
+          "description": "Reviewed exact source archive SHA256",
+          "required": true,
+          "type": "string"
+        }
+      }
+    },
+    "workflow_call": {
+      "inputs": {
+        "version": {
+          "description": "Exact source version",
+          "required": true,
+          "type": "string"
+        },
+        "source_sha256": {
+          "description": "Reviewed exact source archive SHA256",
+          "required": true,
+          "type": "string"
+        }
+      }
+    }
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "jobs": {
+    "arch": {
+      "if": "${{ github.event_name == 'workflow_dispatch' }}",
+      "runs-on": [
+        "self-hosted",
+        "linux",
+        "x64",
+        "tilde-disposable-arch"
+      ],
+      "timeout-minutes": 35,
+      "env": {
+        "RELEASE_VERSION": "${{ inputs.version }}",
+        "SOURCE_SHA256": "${{ inputs.source_sha256 }}"
+      },
+      "steps": [
+        {
+          "uses": "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "with": {
+            "persist-credentials": false,
+            "fetch-depth": 1
+          }
+        },
+        {
+          "name": "Build and inspect candidate; installed gate remains pending",
+          "run": "node scripts/ci-arch.mjs --output \"$RUNNER_TEMP/arch-candidate\""
+        },
+        {
+          "uses": "actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+          "with": {
+            "name": "arch-candidate",
+            "path": "${{ runner.temp }}/arch-candidate/artifacts/*",
+            "if-no-files-found": "error",
+            "retention-days": 7
+          }
+        }
+      ]
+    }
+  }
+}

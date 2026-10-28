@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "paths": {
+    "daemonLauncher": "bin/tilde-agentd",
+    "gui": "bin/tilde-gui",
+    "appRoot": "lib/tilde/app",
+    "helper": "lib/tilde/tilde-desktop-bridge",
+    "userUnit": "lib/systemd/user/tilde-agentd.service",
+    "desktopEntry": "share/applications/tilde-gui.desktop",
+    "icon": "share/icons/hicolor/scalable/apps/tilde-gui.svg",
+    "licenses": "share/licenses/tilde",
+    "docs": "share/doc/tilde",
+    "manifest": "lib/tilde/install-manifest.json"
+  },
+  "build": {
+    "gui": ".build/cmake/apps/gui/tilde-gui",
+    "helper": ".build/cmake/apps/desktop-bridge/tilde-desktop-bridge"
+  },
+  "workspaces": ["packages/agent", "packages/config", "packages/credentials", "packages/protocol", "packages/tools", "packages/transport", "apps/daemon"],
+  "addons": ["packages/transport/.build/tilde_peer.node", "packages/tools/.build/tilde_scoped_fs.node"]
+}

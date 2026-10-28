@@ -1,0 +1,3184 @@
+{
+  "version": 1,
+  "auditDate": "2026-10-28",
+  "artifacts": [
+    {
+      "name": "proxy-agent-negotiate",
+      "version": "1.1.0",
+      "integrity": "sha512-N8IBcM3UgCVzz2L2Lqv8DVntDnnC8/hiV4nEDUPkqq72TPUgYWjQc+bdZlBPZK9LzPAvOY//gAt0S0DApoOXWQ==",
+      "tarDigestVerified": true,
+      "allSelectedInstalledBinaryBytesMatch": true,
+      "files": {
+        "node_modules/proxy-agent-negotiate/dist/index.js": {
+          "sha256": "56f33d231c16933054a0dddc665abdc8514d952c84fa96b245e841875d05f5e5",
+          "bytes": 1371
+        }
+      },
+      "notices": [
+        "packaging/licenses/audited/proxy-agent-negotiate-1.1.0-MIT.txt"
+      ]
+    },
+    {
+      "name": "@silvia-odwyer/photon",
+      "version": "0.3.3",
+      "integrity": "sha512-8BhUjEch4slwRe8uXnaA4vcA5uiiOTT90UMsxulOj2gN98X1p0q9Z4Ysk4DkD05uNgbR9XoSqtZ37w+33w4QKQ==",
+      "tarDigestVerified": true,
+      "allSelectedInstalledBinaryBytesMatch": true,
+      "files": {
+        "node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm": {
+          "sha256": "06e9f6b245d53b488244e04dfe30e6731c029526101c6400e6490057fcfbdd04",
+          "bytes": 1880773
+        }
+      },
+      "notices": [
+        "packaging/licenses/audited/photon-rs-0.3.3.txt",
+        "packaging/licenses/audited/Roboto-Regular.txt",
+        "packaging/licenses/audited/photon-ab_glyph_rasterizer-0.1.5.txt",
+        "packaging/licenses/audited/photon-adler2-2.0.0.txt",
+        "packaging/licenses/audited/photon-approx-0.5.1.txt",
+        "packaging/licenses/audited/photon-autocfg-1.1.0.txt",
+        "packaging/licenses/audited/photon-base64-0.13.0.txt",
+        "packaging/licenses/audited/photon-bitflags-1.3.2.txt",
+        "packaging/licenses/audited/photon-bumpalo-3.10.0.txt",
+        "packaging/licenses/audited/photon-bytemuck-1.11.0.txt",
+        "packaging/licenses/audited/photon-byteorder-1.4.3.txt",
+        "packaging/licenses/audited/photon-cfg-if-0.1.10.txt",
+        "packaging/licenses/audited/photon-cfg-if-1.0.0.txt",
+        "packaging/licenses/audited/photon-color_quant-1.1.0.txt",
+        "packaging/licenses/audited/photon-console_error_panic_hook-0.1.7.txt",
+        "packaging/licenses/audited/photon-conv-0.3.3.txt",
+        "packaging/licenses/audited/photon-crc32fast-1.3.2.txt",
+        "packaging/licenses/audited/photon-custom_derive-0.1.7.txt",
+        "packaging/licenses/audited/photon-deranged-0.3.8.txt",
+        "packaging/licenses/audited/photon-either-1.7.0.txt",
+        "packaging/licenses/audited/photon-fdeflate-0.3.6.txt",
+        "packaging/licenses/audited/photon-find-crate-0.6.3.txt",
+        "packaging/licenses/audited/photon-flate2-1.0.34.txt",
+        "packaging/licenses/audited/photon-getrandom-0.1.16.txt",
+        "packaging/licenses/audited/photon-getrandom-0.2.7.txt",
+        "packaging/licenses/audited/photon-gif-0.13.1.txt",
+        "packaging/licenses/audited/photon-image-0.24.9.txt",
+        "packaging/licenses/audited/photon-imageproc-0.23.0.txt",
+        "packaging/licenses/audited/photon-instant-0.1.13.txt",
+        "packaging/licenses/audited/photon-itertools-0.10.3.txt",
+        "packaging/licenses/audited/photon-jpeg-decoder-0.3.1.txt",
+        "packaging/licenses/audited/photon-js-sys-0.3.62.txt",
+        "packaging/licenses/audited/photon-libc-0.2.126.txt",
+        "packaging/licenses/audited/photon-log-0.4.17.txt",
+        "packaging/licenses/audited/photon-matrixmultiply-0.3.9.txt",
+        "packaging/licenses/audited/photon-miniz_oxide-0.8.0.txt",
+        "packaging/licenses/audited/photon-nalgebra-0.30.1.txt",
+        "packaging/licenses/audited/photon-node-sys-0.4.2.txt",
+        "packaging/licenses/audited/photon-num-0.4.3.txt",
+        "packaging/licenses/audited/photon-num-bigint-0.4.6.txt",
+        "packaging/licenses/audited/photon-num-complex-0.4.6.txt",
+        "packaging/licenses/audited/photon-num-integer-0.1.46.txt",
+        "packaging/licenses/audited/photon-num-iter-0.1.45.txt",
+        "packaging/licenses/audited/photon-num-rational-0.4.2.txt",
+        "packaging/licenses/audited/photon-num-traits-0.2.19.txt",
+        "packaging/licenses/audited/photon-once_cell-1.13.0.txt",
+        "packaging/licenses/audited/photon-owned_ttf_parser-0.6.0.txt",
+        "packaging/licenses/audited/photon-palette-0.6.1.txt",
+        "packaging/licenses/audited/photon-palette_derive-0.6.1.txt",
+        "packaging/licenses/audited/photon-paste-1.0.15.txt",
+        "packaging/licenses/audited/photon-perlin2d-0.2.6.txt",
+        "packaging/licenses/audited/photon-phf-0.11.0.txt",
+        "packaging/licenses/audited/photon-phf_generator-0.11.0.txt",
+        "packaging/licenses/audited/photon-phf_macros-0.11.0.txt",
+        "packaging/licenses/audited/photon-phf_shared-0.11.0.txt",
+        "packaging/licenses/audited/photon-png-0.17.14.txt",
+        "packaging/licenses/audited/photon-ppv-lite86-0.2.16.txt",
+        "packaging/licenses/audited/photon-proc-macro2-1.0.67.txt",
+        "packaging/licenses/audited/photon-quote-1.0.33.txt",
+        "packaging/licenses/audited/photon-rand-0.7.3.txt",
+        "packaging/licenses/audited/photon-rand-0.8.5.txt",
+        "packaging/licenses/audited/photon-rand_chacha-0.2.2.txt",
+        "packaging/licenses/audited/photon-rand_chacha-0.3.1.txt",
+        "packaging/licenses/audited/photon-rand_core-0.5.1.txt",
+        "packaging/licenses/audited/photon-rand_core-0.6.3.txt",
+        "packaging/licenses/audited/photon-rand_distr-0.2.2.txt",
+        "packaging/licenses/audited/photon-rawpointer-0.2.1.txt",
+        "packaging/licenses/audited/photon-rusttype-0.9.2.txt",
+        "packaging/licenses/audited/photon-safe_arch-0.7.2.txt",
+        "packaging/licenses/audited/photon-serde-1.0.188.txt",
+        "packaging/licenses/audited/photon-serde_derive-1.0.188.txt",
+        "packaging/licenses/audited/photon-simba-0.7.3.txt",
+        "packaging/licenses/audited/photon-simd-adler32-0.3.7.txt",
+        "packaging/licenses/audited/photon-siphasher-0.3.10.txt",
+        "packaging/licenses/audited/photon-syn-1.0.98.txt",
+        "packaging/licenses/audited/photon-syn-2.0.37.txt",
+        "packaging/licenses/audited/photon-thiserror-1.0.31.txt",
+        "packaging/licenses/audited/photon-thiserror-impl-1.0.31.txt",
+        "packaging/licenses/audited/photon-tiff-0.9.1.txt",
+        "packaging/licenses/audited/photon-time-0.3.28.txt",
+        "packaging/licenses/audited/photon-time-core-0.1.1.txt",
+        "packaging/licenses/audited/photon-toml-0.5.9.txt",
+        "packaging/licenses/audited/photon-ttf-parser-0.6.2.txt",
+        "packaging/licenses/audited/photon-typenum-1.17.0.txt",
+        "packaging/licenses/audited/photon-unicode-ident-1.0.2.txt",
+        "packaging/licenses/audited/photon-wasm-bindgen-0.2.95.txt",
+        "packaging/licenses/audited/photon-wasm-bindgen-backend-0.2.95.txt",
+        "packaging/licenses/audited/photon-wasm-bindgen-macro-0.2.95.txt",
+        "packaging/licenses/audited/photon-wasm-bindgen-macro-support-0.2.95.txt",
+        "packaging/licenses/audited/photon-wasm-bindgen-shared-0.2.95.txt",
+        "packaging/licenses/audited/photon-web-sys-0.3.55.txt",
+        "packaging/licenses/audited/photon-weezl-0.1.8.txt",
+        "packaging/licenses/audited/photon-wide-0.7.28.txt",
+        "packaging/licenses/audited/Rust-standard-library-3f43b1a63673.txt",
+        "packaging/licenses/audited/rust-stdlib-addr2line-0.22.0.txt",
+        "packaging/licenses/audited/rust-stdlib-adler-1.0.2.txt",
+        "packaging/licenses/audited/rust-stdlib-allocator-api2-0.2.21.txt",
+        "packaging/licenses/audited/rust-stdlib-cc-1.2.0.txt",
+        "packaging/licenses/audited/rust-stdlib-cfg-if-1.0.0.txt",
+        "packaging/licenses/audited/rust-stdlib-compiler_builtins-0.1.140.txt",
+        "packaging/licenses/audited/rust-stdlib-dlmalloc-0.2.7.txt",
+        "packaging/licenses/audited/rust-stdlib-getopts-0.2.21.txt",
+        "packaging/licenses/audited/rust-stdlib-gimli-0.29.0.txt",
+        "packaging/licenses/audited/rust-stdlib-gimli-0.31.1.txt",
+        "packaging/licenses/audited/rust-stdlib-hashbrown-0.15.2.txt",
+        "packaging/licenses/audited/rust-stdlib-libc-0.2.169.txt",
+        "packaging/licenses/audited/rust-stdlib-memchr-2.7.4.txt",
+        "packaging/licenses/audited/rust-stdlib-miniz_oxide-0.7.4.txt",
+        "packaging/licenses/audited/rust-stdlib-object-0.36.7.txt",
+        "packaging/licenses/audited/rust-stdlib-rand-0.8.5.txt",
+        "packaging/licenses/audited/rust-stdlib-rand_core-0.6.4.txt",
+        "packaging/licenses/audited/rust-stdlib-rand_xorshift-0.3.0.txt",
+        "packaging/licenses/audited/rust-stdlib-rustc-demangle-0.1.24.txt",
+        "packaging/licenses/audited/rust-stdlib-shlex-1.3.0.txt",
+        "packaging/licenses/audited/rust-stdlib-unicode-width-0.1.14.txt",
+        "packaging/licenses/audited/rust-stdlib-unwinding-0.2.5.txt"
+      ]
+    },
+    {
+      "name": "quickjs-wasi",
+      "version": "3.6.2",
+      "integrity": "sha512-FCqGtGOrMgzUiIrMNMA2YnsOxCNwo31dzqXvclXUC6xeT35NJLKXQJsvbeCTjvoFAwZgEAPg8U6+KAPDGXn8Mg==",
+      "tarDigestVerified": true,
+      "allSelectedInstalledBinaryBytesMatch": true,
+      "files": {
+        "node_modules/quickjs-wasi/extensions/crypto/crypto.so": {
+          "sha256": "fa26b6fafda251c3b1442dcc4c876b3ac73689639519f4ddfc2c410ebdb5b7c2",
+          "bytes": 120228
+        },
+        "node_modules/quickjs-wasi/extensions/encoding/encoding.so": {
+          "sha256": "d501aa2a8410ee07c196103f0d169b226ec61c922883713510fd723fe14036c3",
+          "bytes": 7715
+        },
+        "node_modules/quickjs-wasi/extensions/headers/headers.so": {
+          "sha256": "42c847104d6aa8d4666fa41bb74d324c2ee9a4d15c2492fca013b1631232b011",
+          "bytes": 8896
+        },
+        "node_modules/quickjs-wasi/extensions/structured-clone/structured-clone.so": {
+          "sha256": "0ac5a36c0545c659ba6f9f8de5af11862df84546d151d0f15ec5184c95fd6cb3",
+          "bytes": 6007
+        },
+        "node_modules/quickjs-wasi/extensions/url/url.so": {
+          "sha256": "af780a79f1fb131b5e6fa1d6fedc481e265420cf2f254fe966255230f4c1bc62",
+          "bytes": 397332
+        },
+        "node_modules/quickjs-wasi/quickjs.wasm": {
+          "sha256": "d4c9375f2b1ca4dc95f72c8aa2982a7a9951ac8011490d79c6582df732b4bbd9",
+          "bytes": 637405
+        }
+      },
+      "notices": [
+        "packaging/licenses/audited/quickjs-wasi-3.6.2.txt",
+        "packaging/licenses/audited/QuickJS-NG-6d46d07d0404.txt",
+        "packaging/licenses/audited/Unicode-data.txt",
+        "packaging/licenses/audited/Ada-3.4.3.txt",
+        "packaging/licenses/audited/MbedTLS-TF-PSA-Crypto.txt",
+        "packaging/licenses/audited/WASI-SDK32-libc.txt",
+        "packaging/licenses/audited/WASI-SDK32-LLVM-runtime.txt"
+      ]
+    }
+  ],
+  "notices": [
+    {
+      "path": "packaging/licenses/audited/proxy-agent-negotiate-1.1.0-MIT.txt",
+      "sha256": "504b31e4188cfaf8bc32d98dfb5e8a93374cc13c96ea2bd48e6f5af239d5d3e1",
+      "scope": "proxy-agent-negotiate1.1.0 declares MIT and author Nathan Rajlich in the exact provenance-bound package. It supplies no license file. This is the unmodified full Nathan Rajlich MIT notice supplied by the same pinned upstream monorepo, at packages/proxy-agent/LICENSE; it is not represented as a file found in packages/negotiate. No copyright date or holder was invented.",
+      "sourceTexts": [
+        {
+          "source": "https://raw.githubusercontent.com/TooTallNate/proxy-agents/b7e5f7ccce1a3ac5b339cc4c587974e8989cbc16/packages/proxy-agent/LICENSE",
+          "sha256": "8d8c55319c7729d57be811c747452636688d54f19701ee0752b6b15ad3771d9a",
+          "bytes": 1101
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-rs-0.3.3.txt",
+      "sha256": "18a10e907826b8e3b1f1e6970b420a946fbed5a429962b6758c7059f0f4e09d9",
+      "scope": "Photon source; independent compiled dependencies and embedded font have separate notices below.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/photon-rs/photon-rs-0.3.3.crate#LICENSE.md",
+          "sha256": "c984c291167af70cc5fb7c7f4cec9b4560565110b766a718b3e12aba650327a7",
+          "bytes": 11546
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/Roboto-Regular.txt",
+      "sha256": "8de05398baeb29c2f442b46168218b75fecc1e9cba19681cc5934df9caf66924",
+      "scope": "Exact Roboto-Regular.ttf bytes embedded in the distributed Photon WASM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/photon-rs/photon-rs-0.3.3.crate#fonts/Roboto-Regular.ttf:name-copyright",
+          "sha256": "4abbc6ac50b102966978746bdf9868125c4532f57bb2d5ee5c3642adfbd27925",
+          "bytes": 81
+        },
+        {
+          "source": "https://static.crates.io/crates/photon-rs/photon-rs-0.3.3.crate#fonts/Apache License.txt",
+          "sha256": "3e8480e2679854dffdd0c4f162d9941fd5b9231be881859fcb419544cd7b6c99",
+          "bytes": 11388
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-ab_glyph_rasterizer-0.1.5.txt",
+      "sha256": "0514c57dfd21216223bfc5ae39876c899266ee1521920ddc01b587a1c2e4c41b",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/ab_glyph_rasterizer/ab_glyph_rasterizer-0.1.5.crate#ab_glyph_rasterizer-0.1.5/LICENSE",
+          "sha256": "15c517f38838988aa9f990a1e6bdfc0f20fd1aa1dcb710bb994669d098d73e70",
+          "bytes": 11341
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-adler2-2.0.0.txt",
+      "sha256": "c675269ce52d9f8b37a12d677a55411bb9acc5f36c59e525c4082d4375ad8f67",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/adler2/adler2-2.0.0.crate#adler2-2.0.0/LICENSE-0BSD",
+          "sha256": "861399f8c21c042b110517e76dc6b63a2b334276c8cf17412fc3c8908ca8dc17",
+          "bytes": 665
+        },
+        {
+          "source": "https://static.crates.io/crates/adler2/adler2-2.0.0.crate#adler2-2.0.0/LICENSE-APACHE",
+          "sha256": "8ada45cd9f843acf64e4722ae262c622a2b3b3007c7310ef36ac1061a30f6adb",
+          "bytes": 10860
+        },
+        {
+          "source": "https://static.crates.io/crates/adler2/adler2-2.0.0.crate#adler2-2.0.0/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-approx-0.5.1.txt",
+      "sha256": "072815fab2b54a840b8afe97341781dc241252c8494c13accded6fdcc63ce68a",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/approx/approx-0.5.1.crate#approx-0.5.1/LICENSE",
+          "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+          "bytes": 11560
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-autocfg-1.1.0.txt",
+      "sha256": "ffc3b144527e9fe5f87c8186c3e56584cfb8a9bf7d4727801751d90c477a0ae6",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/autocfg/autocfg-1.1.0.crate#autocfg-1.1.0/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/autocfg/autocfg-1.1.0.crate#autocfg-1.1.0/LICENSE-MIT",
+          "sha256": "27995d58ad5c1145c1a8cd86244ce844886958a35eb2b78c6b772748669999ac",
+          "bytes": 1054
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-base64-0.13.0.txt",
+      "sha256": "82cb7d7ae9e5fb65ef0daa14df4cb376400a18321648724d4d8f5d0d2d429963",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/base64/base64-0.13.0.crate#base64-0.13.0/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/base64/base64-0.13.0.crate#base64-0.13.0/LICENSE-MIT",
+          "sha256": "0dd882e53de11566d50f8e8e2d5a651bcf3fabee4987d70f306233cf39094ba7",
+          "bytes": 1076
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-bitflags-1.3.2.txt",
+      "sha256": "5900c77625e08283a0e78f8eb586f69fca03d545a9e7900546ffa6454d00673f",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/bitflags/bitflags-1.3.2.crate#bitflags-1.3.2/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/bitflags/bitflags-1.3.2.crate#bitflags-1.3.2/LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+          "bytes": 1071
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-bumpalo-3.10.0.txt",
+      "sha256": "eacfd2742bbefbf3854cde86ebdbd77c13dd56ebc8957e2f5c4c8d32a79d6c1a",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/bumpalo/bumpalo-3.10.0.crate#bumpalo-3.10.0/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/bumpalo/bumpalo-3.10.0.crate#bumpalo-3.10.0/LICENSE-MIT",
+          "sha256": "65f94e99ddaf4f5d1782a6dae23f35d4293a9a01444a13135a6887017d353cee",
+          "bytes": 1059
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-bytemuck-1.11.0.txt",
+      "sha256": "1ee08b2a0642897bc81cc2446842fa6e66814b5c3ce9fe9a59e80054409c020c",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/bytemuck/bytemuck-1.11.0.crate#bytemuck-1.11.0/LICENSE-APACHE",
+          "sha256": "870e20c217d15bcfcbe53d7c5867cd8fac44a4ca0b41fc1eb843557e16063eba",
+          "bytes": 10459
+        },
+        {
+          "source": "https://static.crates.io/crates/bytemuck/bytemuck-1.11.0.crate#bytemuck-1.11.0/LICENSE-MIT",
+          "sha256": "0b2d108c9c686a74ac312990ee8377902756a2a081a7af3b0f9d68abf0a8f1a1",
+          "bytes": 1119
+        },
+        {
+          "source": "https://static.crates.io/crates/bytemuck/bytemuck-1.11.0.crate#bytemuck-1.11.0/LICENSE-ZLIB",
+          "sha256": "682b4c81b85e83ce6cc6e1ace38fdd97aeb4de0e972bd2b44aa0916c54af8c96",
+          "bytes": 862
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-byteorder-1.4.3.txt",
+      "sha256": "f40e83608f7604f87530ee70e1e951a2bbf93c57a0a8f3c1c568fd7b30030e64",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/byteorder/byteorder-1.4.3.crate#byteorder-1.4.3/COPYING",
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f",
+          "bytes": 126
+        },
+        {
+          "source": "https://static.crates.io/crates/byteorder/byteorder-1.4.3.crate#byteorder-1.4.3/LICENSE-MIT",
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f",
+          "bytes": 1081
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-cfg-if-0.1.10.txt",
+      "sha256": "cf15633d14439e0dbad91626ee83d37445ae7c5e7cf327f39b0f705d1c22eea0",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/cfg-if/cfg-if-0.1.10.crate#cfg-if-0.1.10/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/cfg-if/cfg-if-0.1.10.crate#cfg-if-0.1.10/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "bytes": 1057
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-cfg-if-1.0.0.txt",
+      "sha256": "ab0ba0089bcb8c894e4b8f808fff63f0670047f82f2e4e22bab083a787b0674b",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/cfg-if/cfg-if-1.0.0.crate#cfg-if-1.0.0/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/cfg-if/cfg-if-1.0.0.crate#cfg-if-1.0.0/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "bytes": 1057
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-color_quant-1.1.0.txt",
+      "sha256": "d155c232ad3d2b3d037f6a7ecf2a966b1e3a27760316074a51b80f2154262b15",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/color_quant/color_quant-1.1.0.crate#color_quant-1.1.0/LICENSE",
+          "sha256": "592dc80f1a865d20d61a2006a2d29ce34a2bc28cd7e868ab300fdeed6da154ca",
+          "bytes": 1083
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-console_error_panic_hook-0.1.7.txt",
+      "sha256": "fec75222ef932b2361ed045a74c1f2a84b8af658e286063de805012ff48b1786",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/console_error_panic_hook/console_error_panic_hook-0.1.7.crate#console_error_panic_hook-0.1.7/LICENSE-APACHE",
+          "sha256": "353b508bbc50274d47a23729f568bab2618e3d0eaa10208616f5fd475255b896",
+          "bytes": 10848
+        },
+        {
+          "source": "https://static.crates.io/crates/console_error_panic_hook/console_error_panic_hook-0.1.7.crate#console_error_panic_hook-0.1.7/LICENSE-MIT",
+          "sha256": "77674336af8ded214dc3ae07da631c7dd35cc8205f39298474ba98a889e57272",
+          "bytes": 1059
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-conv-0.3.3.txt",
+      "sha256": "35de892f519f012a6d0a93dde0bce65648403f9bee84f94015fd62a6e8069869",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/conv/conv-0.3.3.crate#conv-0.3.3/LICENSE",
+          "sha256": "b2507383f9c3de7b2067c5af0fbe8ab5f24bb5fc0f606525201f2890d51c3400",
+          "bytes": 1080
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-crc32fast-1.3.2.txt",
+      "sha256": "2e7b4d2ed48d02072518e2a743d7a3264a4322082c4db5286f23af6d1754ef6a",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/crc32fast/crc32fast-1.3.2.crate#crc32fast-1.3.2/LICENSE-APACHE",
+          "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+          "bytes": 11358
+        },
+        {
+          "source": "https://static.crates.io/crates/crc32fast/crc32fast-1.3.2.crate#crc32fast-1.3.2/LICENSE-MIT",
+          "sha256": "61d383b05b87d78f94d2937e2580cce47226d17823c0430fbcad09596537efcf",
+          "bytes": 1097
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-custom_derive-0.1.7.txt",
+      "sha256": "5e92f49764ac719f8bcbeb59a8c44ae01196400e6f04d74a6dd4d453759aa5d3",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/custom_derive/custom_derive-0.1.7.crate#custom_derive-0.1.7/LICENSE",
+          "sha256": "9f95cbf09c33a40ca7e540d5adb58e8da482392af761d4785e43f0f8c3f62332",
+          "bytes": 12500
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-deranged-0.3.8.txt",
+      "sha256": "0090b91a04a0ebe85e12208cd93b641ff350efecf921b833f2e6e0459ec7e917",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/deranged/deranged-0.3.8.crate#deranged-0.3.8/LICENSE-Apache",
+          "sha256": "b8929fea28678da67251fb2daf9438f67503814211051861612441806d8edb05",
+          "bytes": 11349
+        },
+        {
+          "source": "https://static.crates.io/crates/deranged/deranged-0.3.8.crate#deranged-0.3.8/LICENSE-MIT",
+          "sha256": "04620bf27e4a643dd47bf27652320c205acdb776c1f9f24bb8c3bfaba10804c5",
+          "bytes": 1062
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-either-1.7.0.txt",
+      "sha256": "c392ee88b8dc7dd14cb2507f63be322198c80192784634cbf6f2b7d8a3ee8788",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/either/either-1.7.0.crate#either-1.7.0/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/either/either-1.7.0.crate#either-1.7.0/LICENSE-MIT",
+          "sha256": "7576269ea71f767b99297934c0b2367532690f8c4badc695edf8e04ab6a1e545",
+          "bytes": 1043
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-fdeflate-0.3.6.txt",
+      "sha256": "d1ccadc89b6a966087e40cbb22e78461679f05faf0ab37c9ec198a26b3cb00f3",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/fdeflate/fdeflate-0.3.6.crate#fdeflate-0.3.6/LICENSE-APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "bytes": 10174
+        },
+        {
+          "source": "https://static.crates.io/crates/fdeflate/fdeflate-0.3.6.crate#fdeflate-0.3.6/LICENSE-MIT",
+          "sha256": "c77a4cf9da729987d0fe7ccd811e3bd27393914ddf3d23467c18cc22954513b3",
+          "bytes": 1036
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-find-crate-0.6.3.txt",
+      "sha256": "0f886aea227778681901cf395062a28c02c0a2811a7067850b71b8655bd3297b",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/find-crate/find-crate-0.6.3.crate#find-crate-0.6.3/LICENSE-APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "bytes": 10174
+        },
+        {
+          "source": "https://static.crates.io/crates/find-crate/find-crate-0.6.3.crate#find-crate-0.6.3/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-flate2-1.0.34.txt",
+      "sha256": "d96b8f51af0c35b74b1b71ebbd79dd2fabb0e457e6733782a662f5575449be2b",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/flate2/flate2-1.0.34.crate#flate2-1.0.34/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/flate2/flate2-1.0.34.crate#flate2-1.0.34/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "bytes": 1057
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-getrandom-0.1.16.txt",
+      "sha256": "147db682ac4e83be0b37bfe3bf66198e7b6800228bb4084118614c28031d609c",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/getrandom/getrandom-0.1.16.crate#getrandom-0.1.16/LICENSE-APACHE",
+          "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf",
+          "bytes": 10849
+        },
+        {
+          "source": "https://static.crates.io/crates/getrandom/getrandom-0.1.16.crate#getrandom-0.1.16/LICENSE-MIT",
+          "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b",
+          "bytes": 1117
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-getrandom-0.2.7.txt",
+      "sha256": "1d76a99cdb1d8f8d3f6c7b0a1f216a7e2aa30b2173b687539b54c58312b9d38c",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/getrandom/getrandom-0.2.7.crate#getrandom-0.2.7/LICENSE-APACHE",
+          "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf",
+          "bytes": 10849
+        },
+        {
+          "source": "https://static.crates.io/crates/getrandom/getrandom-0.2.7.crate#getrandom-0.2.7/LICENSE-MIT",
+          "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b",
+          "bytes": 1117
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-gif-0.13.1.txt",
+      "sha256": "33d63df9aed9d6ac14d89ec2080bb7e494df7073e6c1f17aa2af1ea76cce5eaf",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/gif/gif-0.13.1.crate#gif-0.13.1/LICENSE-APACHE",
+          "sha256": "769f80b5bcb42ed0af4e4d2fd74e1ac9bf843cb80c5a29219d1ef3544428a6bb",
+          "bytes": 10846
+        },
+        {
+          "source": "https://static.crates.io/crates/gif/gif-0.13.1.crate#gif-0.13.1/LICENSE-MIT",
+          "sha256": "77257f3d2181236b1aee78920238062ae64efe13c5d858b2db126e79c9e1b14f",
+          "bytes": 1071
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-image-0.24.9.txt",
+      "sha256": "4824cb2a2c9ea5dfdbf7fc10dfba9bd3eb81c2132d803f626b402fc8a51fa7d5",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/image/image-0.24.9.crate#image-0.24.9/LICENSE-APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "bytes": 10174
+        },
+        {
+          "source": "https://static.crates.io/crates/image/image-0.24.9.crate#image-0.24.9/LICENSE-MIT",
+          "sha256": "c77a4cf9da729987d0fe7ccd811e3bd27393914ddf3d23467c18cc22954513b3",
+          "bytes": 1036
+        },
+        {
+          "source": "https://static.crates.io/crates/image/image-0.24.9.crate#image-0.24.9/tests/images/tga/testsuite/LICENSE",
+          "sha256": "8a0a57eda34cb129c52fa6d17a9edf627396efde24a55cfdaa771a1f77a1ad65",
+          "bytes": 635
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-imageproc-0.23.0.txt",
+      "sha256": "d1229bfd9bf1ea1ea37003982d882d0720ff7b038deb135b3120119d65b1ffb4",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/imageproc/imageproc-0.23.0.crate#imageproc-0.23.0/LICENSE",
+          "sha256": "5bffc7c9c5b2b2d31391f9022d5b744c17eedb8ef983aac5a5b72c0d9aeca6b5",
+          "bytes": 1083
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-instant-0.1.13.txt",
+      "sha256": "3bd707e81993363c1995a3993b5b85b2fc93f12ee1042f33f8d208a7b430007a",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/instant/instant-0.1.13.crate#instant-0.1.13/AUTHORS",
+          "sha256": "451a1be16acafff0cb0eaedc49b46063cc6ce087d0c36f6d64d67aa93d20e485",
+          "bytes": 62
+        },
+        {
+          "source": "https://static.crates.io/crates/instant/instant-0.1.13.crate#instant-0.1.13/LICENSE",
+          "sha256": "2510d4cde8c4e13d8c54b9fe2a9d144daf567ec8d02832f1454e7ca2d58cdda6",
+          "bytes": 1520
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-itertools-0.10.3.txt",
+      "sha256": "3cec6cc295d40f68dc19523e51310bf623cc0a8071f08fe49c871f49627b5058",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/itertools/itertools-0.10.3.crate#itertools-0.10.3/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/itertools/itertools-0.10.3.crate#itertools-0.10.3/LICENSE-MIT",
+          "sha256": "7576269ea71f767b99297934c0b2367532690f8c4badc695edf8e04ab6a1e545",
+          "bytes": 1043
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-jpeg-decoder-0.3.1.txt",
+      "sha256": "3179831f9ab8673c1c12a493a773eec4b0a69e6902019c48d65b8adcc5f7201e",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/jpeg-decoder/jpeg-decoder-0.3.1.crate#jpeg-decoder-0.3.1/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/jpeg-decoder/jpeg-decoder-0.3.1.crate#jpeg-decoder-0.3.1/LICENSE-MIT",
+          "sha256": "22b83fb92a50418c7df9564b9c179fa2a0e74f293bc58b72dd7e218fc0902143",
+          "bytes": 1084
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-js-sys-0.3.62.txt",
+      "sha256": "3ef58ea687a88ccd5989687b47892606a243336a150413c34597c4c9f772f6bc",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/js-sys/js-sys-0.3.62.crate#js-sys-0.3.62/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/js-sys/js-sys-0.3.62.crate#js-sys-0.3.62/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "bytes": 1057
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-libc-0.2.126.txt",
+      "sha256": "ebca8db39187d5b827f3bc6e9275a081a58bc686e5bb899bc20a860ba33ef804",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/libc/libc-0.2.126.crate#libc-0.2.126/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+          "bytes": 9723
+        },
+        {
+          "source": "https://static.crates.io/crates/libc/libc-0.2.126.crate#libc-0.2.126/LICENSE-MIT",
+          "sha256": "a8d47ff51ca256f56a8932dba07660672dbfe3004257ca8de708aac1415937a1",
+          "bytes": 1076
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-log-0.4.17.txt",
+      "sha256": "7f43d73607012f338aa0f092cae7f6bba86824cf2723166be8f333235ee26a4f",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/log/log-0.4.17.crate#log-0.4.17/LICENSE-APACHE",
+          "sha256": "7cfd738c53d61c79f07e348f622bf7707c9084237054d37fbe07788a75f5881c",
+          "bytes": 11048
+        },
+        {
+          "source": "https://static.crates.io/crates/log/log-0.4.17.crate#log-0.4.17/LICENSE-MIT",
+          "sha256": "705aaaaecefa087c187bd2eacdb01b8ac1c5ee95b1d5d04d8d7efe0363207df8",
+          "bytes": 1096
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-matrixmultiply-0.3.9.txt",
+      "sha256": "76fde43528793f83f1cc88b22d3e1190ce30fe64b59b141b9772b2df5bc8cd63",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/matrixmultiply/matrixmultiply-0.3.9.crate#matrixmultiply-0.3.9/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/matrixmultiply/matrixmultiply-0.3.9.crate#matrixmultiply-0.3.9/LICENSE-MIT",
+          "sha256": "792d075c7bad6dac258a44e799eb64cbf465e24d9932d27669be08c5ec957e27",
+          "bytes": 1159
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-miniz_oxide-0.8.0.txt",
+      "sha256": "6203569d646ee402737d442e04d3082ee489d546339717abe980ad05ae46b3bf",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/miniz_oxide/miniz_oxide-0.8.0.crate#miniz_oxide-0.8.0/LICENSE",
+          "sha256": "e190940e8ad3cdd4fca962a6508ed6865d589d314b1cb055f86000e124b88d8d",
+          "bytes": 1063
+        },
+        {
+          "source": "https://static.crates.io/crates/miniz_oxide/miniz_oxide-0.8.0.crate#miniz_oxide-0.8.0/LICENSE-APACHE.md",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "bytes": 10174
+        },
+        {
+          "source": "https://static.crates.io/crates/miniz_oxide/miniz_oxide-0.8.0.crate#miniz_oxide-0.8.0/LICENSE-MIT.md",
+          "sha256": "e190940e8ad3cdd4fca962a6508ed6865d589d314b1cb055f86000e124b88d8d",
+          "bytes": 1063
+        },
+        {
+          "source": "https://static.crates.io/crates/miniz_oxide/miniz_oxide-0.8.0.crate#miniz_oxide-0.8.0/LICENSE-ZLIB.md",
+          "sha256": "c89bcc058da12a0fb24402b8ea4542a21515dd1da2e8c67bba4ed9bd269f1c96",
+          "bytes": 835
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-nalgebra-0.30.1.txt",
+      "sha256": "d2ca7fe4a1c0c17e8fa0aaa310ceaf43bd1260d91e1e2088598a49eb6ea57d96",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/nalgebra/nalgebra-0.30.1.crate#nalgebra-0.30.1/LICENSE",
+          "sha256": "86ae51c591e742d80ce56823d35e2e176b53e38a99bd8499c85dae31ef4fe1f7",
+          "bytes": 11548
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-node-sys-0.4.2.txt",
+      "sha256": "97c29e9a9fa6aecbe3d761a5717563f7a31c48874c6895742238017ba7152328",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/node-sys/node-sys-0.4.2.crate#node-sys-0.4.2/LICENSE",
+          "sha256": "6e833819df71376990afca9cdfdd2691406f8a97ddb0409c7da16fe29f2000eb",
+          "bytes": 45
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-num-0.4.3.txt",
+      "sha256": "058ea60646da4eb00417b13ed26b05770119aea1c5761df2ad630b34d003f86b",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/num/num-0.4.3.crate#num-0.4.3/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/num/num-0.4.3.crate#num-0.4.3/LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+          "bytes": 1071
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-num-bigint-0.4.6.txt",
+      "sha256": "1b8679e584e85e6882b99915bb47a519749e58bc917f898cd4d838f7e0a823b9",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/num-bigint/num-bigint-0.4.6.crate#num-bigint-0.4.6/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/num-bigint/num-bigint-0.4.6.crate#num-bigint-0.4.6/LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+          "bytes": 1071
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-num-complex-0.4.6.txt",
+      "sha256": "a8f25f48465481736d2fdc1a858547f1a6cb4128586559e74974477630fae509",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/num-complex/num-complex-0.4.6.crate#num-complex-0.4.6/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/num-complex/num-complex-0.4.6.crate#num-complex-0.4.6/LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+          "bytes": 1071
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-num-integer-0.1.46.txt",
+      "sha256": "0af685587c4437858983d532c0c8fe4fdc434806dde603b1e4195e5b7eba9a7e",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/num-integer/num-integer-0.1.46.crate#num-integer-0.1.46/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/num-integer/num-integer-0.1.46.crate#num-integer-0.1.46/LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+          "bytes": 1071
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-num-iter-0.1.45.txt",
+      "sha256": "eb6dba8c749422783b2505e73f8409cbe39eb53effa6ba26de77262b5bd6a216",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/num-iter/num-iter-0.1.45.crate#num-iter-0.1.45/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/num-iter/num-iter-0.1.45.crate#num-iter-0.1.45/LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+          "bytes": 1071
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-num-rational-0.4.2.txt",
+      "sha256": "9f15aa600c469477b92cdc20b011ad0d340df9836b5fc431b5d8aa2839eb9cda",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/num-rational/num-rational-0.4.2.crate#num-rational-0.4.2/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/num-rational/num-rational-0.4.2.crate#num-rational-0.4.2/LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+          "bytes": 1071
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-num-traits-0.2.19.txt",
+      "sha256": "3d21c7a90a4596a588c76eabb75c0d76ce6a741ecfc20f3f63d1d9480e3a27aa",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/num-traits/num-traits-0.2.19.crate#num-traits-0.2.19/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/num-traits/num-traits-0.2.19.crate#num-traits-0.2.19/LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+          "bytes": 1071
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-once_cell-1.13.0.txt",
+      "sha256": "cdf20ad195810c917f4fd16e08f2378b51c969ee87129b179f1c83ec6b2753ce",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/once_cell/once_cell-1.13.0.crate#once_cell-1.13.0/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/once_cell/once_cell-1.13.0.crate#once_cell-1.13.0/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-owned_ttf_parser-0.6.0.txt",
+      "sha256": "5d3989f21cca13cf3c5b0f9dcdaeffff87790eecd5a1d0209deb6b92eab03185",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/owned_ttf_parser/owned_ttf_parser-0.6.0.crate#owned_ttf_parser-0.6.0/LICENSE",
+          "sha256": "15c517f38838988aa9f990a1e6bdfc0f20fd1aa1dcb710bb994669d098d73e70",
+          "bytes": 11341
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-palette-0.6.1.txt",
+      "sha256": "04900e423e28824a9c85d7bbced40114eab8523cdb370b0eac89b270268ff25a",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/palette/palette-0.6.1.crate#palette-0.6.1/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/palette/palette-0.6.1.crate#palette-0.6.1/LICENSE-MIT",
+          "sha256": "be1313a4b07ab509c80083966cdd209a7d81d75cd57fcea24441fc9041ccf184",
+          "bytes": 1080
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-palette_derive-0.6.1.txt",
+      "sha256": "b7b35f6ea87528a9ffbff34662fc758d1c4f639ff473722465044cbe7031c77a",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/palette_derive/palette_derive-0.6.1.crate#palette_derive-0.6.1/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/palette_derive/palette_derive-0.6.1.crate#palette_derive-0.6.1/LICENSE-MIT",
+          "sha256": "be1313a4b07ab509c80083966cdd209a7d81d75cd57fcea24441fc9041ccf184",
+          "bytes": 1080
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-paste-1.0.15.txt",
+      "sha256": "2c5e56fa45d8105bae42bcfda16dd7b3c9905ef7eb7316ffb998de0e88843c1b",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/paste/paste-1.0.15.crate#paste-1.0.15/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+          "bytes": 9723
+        },
+        {
+          "source": "https://static.crates.io/crates/paste/paste-1.0.15.crate#paste-1.0.15/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-perlin2d-0.2.6.txt",
+      "sha256": "9e7aa08d4f0e98e3911ead59bb55358aa79ab54da412fe8b4c5cffc07aa33aa3",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/perlin2d/perlin2d-0.2.6.crate#perlin2d-0.2.6/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-phf-0.11.0.txt",
+      "sha256": "eb4877ced188e139e3ae4f6ad4f202e468524f1739a6d9e29ffa8a7ed1d730fc",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://raw.githubusercontent.com/sfackler/rust-phf/c0b9ef98e798f807f94544aeb0fff429ef280efc/LICENSE",
+          "sha256": "d8870d5e2ab20fc50915b711c5aa7588131c9abcc1bcb980da1efd7486522a46",
+          "bytes": 1086
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-phf_generator-0.11.0.txt",
+      "sha256": "eb4877ced188e139e3ae4f6ad4f202e468524f1739a6d9e29ffa8a7ed1d730fc",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://raw.githubusercontent.com/sfackler/rust-phf/c0b9ef98e798f807f94544aeb0fff429ef280efc/LICENSE",
+          "sha256": "d8870d5e2ab20fc50915b711c5aa7588131c9abcc1bcb980da1efd7486522a46",
+          "bytes": 1086
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-phf_macros-0.11.0.txt",
+      "sha256": "eb4877ced188e139e3ae4f6ad4f202e468524f1739a6d9e29ffa8a7ed1d730fc",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://raw.githubusercontent.com/sfackler/rust-phf/c0b9ef98e798f807f94544aeb0fff429ef280efc/LICENSE",
+          "sha256": "d8870d5e2ab20fc50915b711c5aa7588131c9abcc1bcb980da1efd7486522a46",
+          "bytes": 1086
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-phf_shared-0.11.0.txt",
+      "sha256": "eb4877ced188e139e3ae4f6ad4f202e468524f1739a6d9e29ffa8a7ed1d730fc",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://raw.githubusercontent.com/sfackler/rust-phf/c0b9ef98e798f807f94544aeb0fff429ef280efc/LICENSE",
+          "sha256": "d8870d5e2ab20fc50915b711c5aa7588131c9abcc1bcb980da1efd7486522a46",
+          "bytes": 1086
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-png-0.17.14.txt",
+      "sha256": "235bf1adfcc87178604bdffaae446c1a8684575d6c7185afed84137c60bd0390",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/png/png-0.17.14.crate#png-0.17.14/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/png/png-0.17.14.crate#png-0.17.14/LICENSE-MIT",
+          "sha256": "eaf40297c75da471f7cda1f3458e8d91b4b2ec866e609527a13acfa93b638652",
+          "bytes": 1048
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-ppv-lite86-0.2.16.txt",
+      "sha256": "4b7ff94778b3d3d18517449bda284fe947681392739d206ec02d41343cb867e0",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/ppv-lite86/ppv-lite86-0.2.16.crate#ppv-lite86-0.2.16/LICENSE-APACHE",
+          "sha256": "0218327e7a480793ffdd4eb792379a9709e5c135c7ba267f709d6f6d4d70af0a",
+          "bytes": 10854
+        },
+        {
+          "source": "https://static.crates.io/crates/ppv-lite86/ppv-lite86-0.2.16.crate#ppv-lite86-0.2.16/LICENSE-MIT",
+          "sha256": "4cada0bd02ea3692eee6f16400d86c6508bbd3bafb2b65fed0419f36d4f83e8f",
+          "bytes": 1076
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-proc-macro2-1.0.67.txt",
+      "sha256": "18da6b6b4ca633269d1d9a5954ca50960fce5dc829976e57aeaf5073ad5d9e5a",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/proc-macro2/proc-macro2-1.0.67.crate#proc-macro2-1.0.67/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+          "bytes": 9723
+        },
+        {
+          "source": "https://static.crates.io/crates/proc-macro2/proc-macro2-1.0.67.crate#proc-macro2-1.0.67/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-quote-1.0.33.txt",
+      "sha256": "2b4d408d14b9825c1013c503067029e172c9c16a9663d1bab55a939b609969b5",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/quote/quote-1.0.33.crate#quote-1.0.33/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+          "bytes": 9723
+        },
+        {
+          "source": "https://static.crates.io/crates/quote/quote-1.0.33.crate#quote-1.0.33/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-rand-0.7.3.txt",
+      "sha256": "c055b5e70e435e0a787f221e54866bce28b3de0e6f49697a074e4a5b3fe8c2f7",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/rand/rand-0.7.3.crate#rand-0.7.3/COPYRIGHT",
+          "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5",
+          "bytes": 569
+        },
+        {
+          "source": "https://static.crates.io/crates/rand/rand-0.7.3.crate#rand-0.7.3/LICENSE-APACHE",
+          "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf",
+          "bytes": 10849
+        },
+        {
+          "source": "https://static.crates.io/crates/rand/rand-0.7.3.crate#rand-0.7.3/LICENSE-MIT",
+          "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b",
+          "bytes": 1117
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-rand-0.8.5.txt",
+      "sha256": "28cb54e9a01d86fdad7146f47756b7098b99ff25707c1c1a4880a4c047b7501c",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/rand/rand-0.8.5.crate#rand-0.8.5/COPYRIGHT",
+          "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5",
+          "bytes": 569
+        },
+        {
+          "source": "https://static.crates.io/crates/rand/rand-0.8.5.crate#rand-0.8.5/LICENSE-APACHE",
+          "sha256": "35242e7a83f69875e6edeff02291e688c97caafe2f8902e4e19b49d3e78b4cab",
+          "bytes": 9724
+        },
+        {
+          "source": "https://static.crates.io/crates/rand/rand-0.8.5.crate#rand-0.8.5/LICENSE-MIT",
+          "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b",
+          "bytes": 1117
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-rand_chacha-0.2.2.txt",
+      "sha256": "ffa3b9735077108c7290dc1c0346fbbfb8872b28d15daeaa2107332e66559294",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/rand_chacha/rand_chacha-0.2.2.crate#rand_chacha-0.2.2/COPYRIGHT",
+          "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5",
+          "bytes": 569
+        },
+        {
+          "source": "https://static.crates.io/crates/rand_chacha/rand_chacha-0.2.2.crate#rand_chacha-0.2.2/LICENSE-APACHE",
+          "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf",
+          "bytes": 10849
+        },
+        {
+          "source": "https://static.crates.io/crates/rand_chacha/rand_chacha-0.2.2.crate#rand_chacha-0.2.2/LICENSE-MIT",
+          "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b",
+          "bytes": 1117
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-rand_chacha-0.3.1.txt",
+      "sha256": "33d0070dfbb5fd62196ab132e413486c1a52e2e9df4be5c201cf42d659a9b18e",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/rand_chacha/rand_chacha-0.3.1.crate#rand_chacha-0.3.1/COPYRIGHT",
+          "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5",
+          "bytes": 569
+        },
+        {
+          "source": "https://static.crates.io/crates/rand_chacha/rand_chacha-0.3.1.crate#rand_chacha-0.3.1/LICENSE-APACHE",
+          "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf",
+          "bytes": 10849
+        },
+        {
+          "source": "https://static.crates.io/crates/rand_chacha/rand_chacha-0.3.1.crate#rand_chacha-0.3.1/LICENSE-MIT",
+          "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b",
+          "bytes": 1117
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-rand_core-0.5.1.txt",
+      "sha256": "c72f13424179fc846ffba610259280842abd7d198ee8fa05e1c9f51943dcd7ab",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/rand_core/rand_core-0.5.1.crate#rand_core-0.5.1/COPYRIGHT",
+          "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5",
+          "bytes": 569
+        },
+        {
+          "source": "https://static.crates.io/crates/rand_core/rand_core-0.5.1.crate#rand_core-0.5.1/LICENSE-APACHE",
+          "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf",
+          "bytes": 10849
+        },
+        {
+          "source": "https://static.crates.io/crates/rand_core/rand_core-0.5.1.crate#rand_core-0.5.1/LICENSE-MIT",
+          "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b",
+          "bytes": 1117
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-rand_core-0.6.3.txt",
+      "sha256": "5d8eca4ab2586f07df19cd0056c946e72514ea6c0bde68213e8f64ab39e5569c",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/rand_core/rand_core-0.6.3.crate#rand_core-0.6.3/COPYRIGHT",
+          "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5",
+          "bytes": 569
+        },
+        {
+          "source": "https://static.crates.io/crates/rand_core/rand_core-0.6.3.crate#rand_core-0.6.3/LICENSE-APACHE",
+          "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf",
+          "bytes": 10849
+        },
+        {
+          "source": "https://static.crates.io/crates/rand_core/rand_core-0.6.3.crate#rand_core-0.6.3/LICENSE-MIT",
+          "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b",
+          "bytes": 1117
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-rand_distr-0.2.2.txt",
+      "sha256": "7b17ca1eeedbcc7a32e871d78d4183c5cf61fba64e6a205e91ce9461d10ac743",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/rand_distr/rand_distr-0.2.2.crate#rand_distr-0.2.2/COPYRIGHT",
+          "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5",
+          "bytes": 569
+        },
+        {
+          "source": "https://static.crates.io/crates/rand_distr/rand_distr-0.2.2.crate#rand_distr-0.2.2/LICENSE-APACHE",
+          "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf",
+          "bytes": 10849
+        },
+        {
+          "source": "https://static.crates.io/crates/rand_distr/rand_distr-0.2.2.crate#rand_distr-0.2.2/LICENSE-MIT",
+          "sha256": "a771e4354f6b3ad4c92da1a5c9a239b6c291527db869632ecea4f20e24ca1135",
+          "bytes": 1070
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-rawpointer-0.2.1.txt",
+      "sha256": "415deb5982965ce239dc06c00261b947df77aabcdd4045826000c16bc7717af8",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/rawpointer/rawpointer-0.2.1.crate#rawpointer-0.2.1/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/rawpointer/rawpointer-0.2.1.crate#rawpointer-0.2.1/LICENSE-MIT",
+          "sha256": "7576269ea71f767b99297934c0b2367532690f8c4badc695edf8e04ab6a1e545",
+          "bytes": 1043
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-rusttype-0.9.2.txt",
+      "sha256": "5980a0ef88d044cca479db841ba8114a87229f0a14d217ad0196ed8807ce2a51",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/rusttype/rusttype-0.9.2.crate#rusttype-0.9.2/LICENSE-APACHE",
+          "sha256": "000b4962e6b27176a0ff89cce4be555b16472cafb5671eb2804a8fdac6854793",
+          "bytes": 11357
+        },
+        {
+          "source": "https://static.crates.io/crates/rusttype/rusttype-0.9.2.crate#rusttype-0.9.2/LICENSE-MIT",
+          "sha256": "fd198949ebcc78b2d12fc57ebfb2da4ae8f781b7c3b7047aaccc2f804b6f12ef",
+          "bytes": 1076
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-safe_arch-0.7.2.txt",
+      "sha256": "429c091acebb1cef123144bf814ce9b1726ecb9948d5899bf23ce32a1759cdae",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/safe_arch/safe_arch-0.7.2.crate#safe_arch-0.7.2/LICENSE-APACHE.md",
+          "sha256": "870e20c217d15bcfcbe53d7c5867cd8fac44a4ca0b41fc1eb843557e16063eba",
+          "bytes": 10459
+        },
+        {
+          "source": "https://static.crates.io/crates/safe_arch/safe_arch-0.7.2.crate#safe_arch-0.7.2/LICENSE-MIT.md",
+          "sha256": "45ca0f2bd0519a1826b11dbbd3e170c7bd3173b919a27b8be88329231806d395",
+          "bytes": 1119
+        },
+        {
+          "source": "https://static.crates.io/crates/safe_arch/safe_arch-0.7.2.crate#safe_arch-0.7.2/LICENSE-ZLIB.md",
+          "sha256": "6f5eb1806918b0e331db6aae84abddbcc7a297ffea58582211e41e941b5a1841",
+          "bytes": 862
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-serde-1.0.188.txt",
+      "sha256": "25182976174d6d8264e7925f4b7412b3f6162301e2075c1502ad175b13722756",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/serde/serde-1.0.188.crate#serde-1.0.188/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+          "bytes": 9723
+        },
+        {
+          "source": "https://static.crates.io/crates/serde/serde-1.0.188.crate#serde-1.0.188/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-serde_derive-1.0.188.txt",
+      "sha256": "ea349780911072a3033e522373bfc09cc50f9ba1a730c4748f225547023c6755",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/serde_derive/serde_derive-1.0.188.crate#serde_derive-1.0.188/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+          "bytes": 9723
+        },
+        {
+          "source": "https://static.crates.io/crates/serde_derive/serde_derive-1.0.188.crate#serde_derive-1.0.188/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-simba-0.7.3.txt",
+      "sha256": "e7af039e97335dc23ddf9bc1491e21b8143cfae1ae8a1744302ab0c5c2cd6337",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/simba/simba-0.7.3.crate#simba-0.7.3/LICENSE",
+          "sha256": "ceacfa4d7fa67df64ab09a56fe248c50a3bfc9bc00374d69bd74ad763b14b89c",
+          "bytes": 11347
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-simd-adler32-0.3.7.txt",
+      "sha256": "a62dcbc1e33670077e4ef0b0a6bbcb47a5bdafe7ecc420f7fac2a14e4db53367",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/simd-adler32/simd-adler32-0.3.7.crate#simd-adler32-0.3.7/LICENSE.md",
+          "sha256": "42a35170233e83e18856792e748de4c1ce4a63b2afce9a370c89ef3fe23f9f2d",
+          "bytes": 1078
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-siphasher-0.3.10.txt",
+      "sha256": "2fe1642a71fc88a46467c82f9cda2d062fedb8f347a93f4cc1065f9c5bdba204",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/siphasher/siphasher-0.3.10.crate#siphasher-0.3.10/COPYING",
+          "sha256": "2667c3da82a038bfbbd64cdb0fde6ecabda683e473fc1c10cc2b31c1c65e7fb6",
+          "bytes": 281
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-syn-1.0.98.txt",
+      "sha256": "dcaba22cdafc2d7f20dd4d1c732dfb7df2d0267ae57beb36d4caaf0a5813217b",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/syn/syn-1.0.98.crate#syn-1.0.98/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/syn/syn-1.0.98.crate#syn-1.0.98/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-syn-2.0.37.txt",
+      "sha256": "95690a27ced455a8003278b3f3291cf1bcb6472f1758a1b72d845a68f17ccdff",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/syn/syn-2.0.37.crate#syn-2.0.37/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+          "bytes": 9723
+        },
+        {
+          "source": "https://static.crates.io/crates/syn/syn-2.0.37.crate#syn-2.0.37/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-thiserror-1.0.31.txt",
+      "sha256": "8b6e5628a7c4a0e80226126c5ca6fcfbde03c94b249738a3c95b68396a71924d",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/thiserror/thiserror-1.0.31.crate#thiserror-1.0.31/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/thiserror/thiserror-1.0.31.crate#thiserror-1.0.31/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-thiserror-impl-1.0.31.txt",
+      "sha256": "65b1e9105f130a13710d2d2d2cb70382172a6a2778b05829105db7075be2b4ae",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/thiserror-impl/thiserror-impl-1.0.31.crate#thiserror-impl-1.0.31/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/thiserror-impl/thiserror-impl-1.0.31.crate#thiserror-impl-1.0.31/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-tiff-0.9.1.txt",
+      "sha256": "6115f64fe387e913aa502383643bff9da3ce2482b3cde375ded3028089b2cbfb",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/tiff/tiff-0.9.1.crate#tiff-0.9.1/LICENSE",
+          "sha256": "20c097d0de27e2adc179140a3d542091951a030699c7e1c78655f2a2d08d4e3e",
+          "bytes": 1073
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-time-0.3.28.txt",
+      "sha256": "beaf9d5bfb8f528fc34bf045058ddcf20aa1ba7e7391aada351fcad1c085d881",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/time/time-0.3.28.crate#time-0.3.28/LICENSE-Apache",
+          "sha256": "b8929fea28678da67251fb2daf9438f67503814211051861612441806d8edb05",
+          "bytes": 11349
+        },
+        {
+          "source": "https://static.crates.io/crates/time/time-0.3.28.crate#time-0.3.28/LICENSE-MIT",
+          "sha256": "04620bf27e4a643dd47bf27652320c205acdb776c1f9f24bb8c3bfaba10804c5",
+          "bytes": 1062
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-time-core-0.1.1.txt",
+      "sha256": "c9ac3076581cb4bc32f87b9e7443b091299476fea36068d09f7ee495a0666460",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/time-core/time-core-0.1.1.crate#time-core-0.1.1/LICENSE-Apache",
+          "sha256": "b8929fea28678da67251fb2daf9438f67503814211051861612441806d8edb05",
+          "bytes": 11349
+        },
+        {
+          "source": "https://static.crates.io/crates/time-core/time-core-0.1.1.crate#time-core-0.1.1/LICENSE-MIT",
+          "sha256": "04620bf27e4a643dd47bf27652320c205acdb776c1f9f24bb8c3bfaba10804c5",
+          "bytes": 1062
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-toml-0.5.9.txt",
+      "sha256": "9c4a4b90c21c0245691dd9b09fc104fe59d56c74b9b16346efb8660ac4f0696a",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/toml/toml-0.5.9.crate#toml-0.5.9/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/toml/toml-0.5.9.crate#toml-0.5.9/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "bytes": 1057
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-ttf-parser-0.6.2.txt",
+      "sha256": "d1c92b757a5ab8900a23df0794526f13b17ca8b682b70bbc78476390d6c23dd8",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/ttf-parser/ttf-parser-0.6.2.crate#ttf-parser-0.6.2/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/ttf-parser/ttf-parser-0.6.2.crate#ttf-parser-0.6.2/LICENSE-MIT",
+          "sha256": "0118c87dc5e451ede21a999b0f8808f6806f2ac6aac72a3a768f5c67d9b02340",
+          "bytes": 1060
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-typenum-1.17.0.txt",
+      "sha256": "6f84ca5929de84b85c0c81c35d3dcde245ff5d9595c77f1f1628c896bb7f698d",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/typenum/typenum-1.17.0.crate#typenum-1.17.0/LICENSE",
+          "sha256": "db11fec9946737df39ca3898d9cd8c10ec6f6c3a884a6802b0ad0b81b4e8f23a",
+          "bytes": 17
+        },
+        {
+          "source": "https://static.crates.io/crates/typenum/typenum-1.17.0.crate#typenum-1.17.0/LICENSE-APACHE",
+          "sha256": "516b24e051bf5630880ebbd55c40a25ce9552ebaf8970a53e8976eb70e522406",
+          "bytes": 10835
+        },
+        {
+          "source": "https://static.crates.io/crates/typenum/typenum-1.17.0.crate#typenum-1.17.0/LICENSE-MIT",
+          "sha256": "a825bd853ab71619a4923d7b4311221427848070ff44d990da39b0b274c1683f",
+          "bytes": 1083
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-unicode-ident-1.0.2.txt",
+      "sha256": "c4edef172a6ae6e6cb4d1d819038c3700adf23d13300cf2ff8bbaf57321f0df0",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/unicode-ident/unicode-ident-1.0.2.crate#unicode-ident-1.0.2/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/unicode-ident/unicode-ident-1.0.2.crate#unicode-ident-1.0.2/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023
+        },
+        {
+          "source": "https://static.crates.io/crates/unicode-ident/unicode-ident-1.0.2.crate#unicode-ident-1.0.2/LICENSE-UNICODE",
+          "sha256": "68f5b9f5ea36881a0942ba02f558e9e1faf76cc09cb165ad801744c61b738844",
+          "bytes": 2315
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-wasm-bindgen-0.2.95.txt",
+      "sha256": "5bb3d5eb72d72556df7d2ac2d1198ec2065378ba8c1a11a41e32b7cc727a69af",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/wasm-bindgen/wasm-bindgen-0.2.95.crate#wasm-bindgen-0.2.95/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/wasm-bindgen/wasm-bindgen-0.2.95.crate#wasm-bindgen-0.2.95/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "bytes": 1057
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-wasm-bindgen-backend-0.2.95.txt",
+      "sha256": "67de24b570aaaeaecfdcd6a5d8a25dae2a2d4a6ff013c367b9cc37ba6a763c24",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/wasm-bindgen-backend/wasm-bindgen-backend-0.2.95.crate#wasm-bindgen-backend-0.2.95/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/wasm-bindgen-backend/wasm-bindgen-backend-0.2.95.crate#wasm-bindgen-backend-0.2.95/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "bytes": 1057
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-wasm-bindgen-macro-0.2.95.txt",
+      "sha256": "110462804e345e13b7173ccfc8939c38bf5dfe463108e1f97e2eae2a47005c9c",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/wasm-bindgen-macro/wasm-bindgen-macro-0.2.95.crate#wasm-bindgen-macro-0.2.95/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/wasm-bindgen-macro/wasm-bindgen-macro-0.2.95.crate#wasm-bindgen-macro-0.2.95/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "bytes": 1057
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-wasm-bindgen-macro-support-0.2.95.txt",
+      "sha256": "8f8b9ad6f019083bc892d4a913dd4d638cf4edba393fbf8a0d240577d5a00460",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/wasm-bindgen-macro-support/wasm-bindgen-macro-support-0.2.95.crate#wasm-bindgen-macro-support-0.2.95/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/wasm-bindgen-macro-support/wasm-bindgen-macro-support-0.2.95.crate#wasm-bindgen-macro-support-0.2.95/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "bytes": 1057
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-wasm-bindgen-shared-0.2.95.txt",
+      "sha256": "c5ba090f32de4fd95708388422937cdb582cf2794419a27d147e8be3c5d108c0",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/wasm-bindgen-shared/wasm-bindgen-shared-0.2.95.crate#wasm-bindgen-shared-0.2.95/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/wasm-bindgen-shared/wasm-bindgen-shared-0.2.95.crate#wasm-bindgen-shared-0.2.95/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "bytes": 1057
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-web-sys-0.3.55.txt",
+      "sha256": "212e65c27937256e1ac81774e1dfb6d157c040977b6c248c5c77b2e39eb7f42f",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/web-sys/web-sys-0.3.55.crate#web-sys-0.3.55/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/web-sys/web-sys-0.3.55.crate#web-sys-0.3.55/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "bytes": 1057
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-weezl-0.1.8.txt",
+      "sha256": "56b87198b2fbfcf8627db55503c4e67938b47def2a367e0a8a0c4d441830d587",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/weezl/weezl-0.1.8.crate#weezl-0.1.8/LICENSE-APACHE",
+          "sha256": "769f80b5bcb42ed0af4e4d2fd74e1ac9bf843cb80c5a29219d1ef3544428a6bb",
+          "bytes": 10846
+        },
+        {
+          "source": "https://static.crates.io/crates/weezl/weezl-0.1.8.crate#weezl-0.1.8/LICENSE-MIT",
+          "sha256": "573f5227db835cd30bbdd3aed3f82615f80119a4d5c82b4daf642dbfe2b6afde",
+          "bytes": 1080
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/photon-wide-0.7.28.txt",
+      "sha256": "6f43abeb64e55fbf382dbfbce71d480bed78a3e1a712d39292591d3decda642d",
+      "scope": "Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/wide/wide-0.7.28.crate#wide-0.7.28/LICENSE-ZLIB.md",
+          "sha256": "6f5eb1806918b0e331db6aae84abddbcc7a297ffea58582211e41e941b5a1841",
+          "bytes": 862
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/Rust-standard-library-3f43b1a63673.txt",
+      "sha256": "4c8067f8ab8c0cb946b4c87771638e416a75151a5f7c4c6a9d020321ebde5472",
+      "scope": "Rust standard library for rustc1.86.0-nightly3f43b1a63 identified in Photon producers. Includes upstream third-party copyright terms; compiler tools themselves are not distributed.",
+      "sourceTexts": [
+        {
+          "source": "https://raw.githubusercontent.com/rust-lang/rust/3f43b1a636738f41c48df073c5bcb97a97bf8459/COPYRIGHT",
+          "sha256": "252b04f034f7383e09401dc700c8b933e3e38818eaa8b2f09dd247542be92292",
+          "bytes": 20759
+        },
+        {
+          "source": "https://raw.githubusercontent.com/rust-lang/rust/3f43b1a636738f41c48df073c5bcb97a97bf8459/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023
+        },
+        {
+          "source": "https://raw.githubusercontent.com/rust-lang/rust/3f43b1a636738f41c48df073c5bcb97a97bf8459/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+          "bytes": 9723
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-addr2line-0.22.0.txt",
+      "sha256": "3175af2e0a96a204bc22b9591e255e21c9995e9b3fede0dd6ce2c676e9a618c9",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/addr2line/addr2line-0.22.0.crate#addr2line-0.22.0/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/addr2line/addr2line-0.22.0.crate#addr2line-0.22.0/LICENSE-MIT",
+          "sha256": "e99d88d232bf57d70f0fb87f6b496d44b6653f99f8a63d250a54c61ea4bcde40",
+          "bytes": 1069
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-adler-1.0.2.txt",
+      "sha256": "7e2807cc8f7b8d709c3c92f97317ca26e69180b8f724bb113dbbb193dff8c452",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/adler/adler-1.0.2.crate#adler-1.0.2/LICENSE-0BSD",
+          "sha256": "861399f8c21c042b110517e76dc6b63a2b334276c8cf17412fc3c8908ca8dc17",
+          "bytes": 665
+        },
+        {
+          "source": "https://static.crates.io/crates/adler/adler-1.0.2.crate#adler-1.0.2/LICENSE-APACHE",
+          "sha256": "8ada45cd9f843acf64e4722ae262c622a2b3b3007c7310ef36ac1061a30f6adb",
+          "bytes": 10860
+        },
+        {
+          "source": "https://static.crates.io/crates/adler/adler-1.0.2.crate#adler-1.0.2/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-allocator-api2-0.2.21.txt",
+      "sha256": "b5c3f1db4649ac75f62cf20f624e7a8f80c710e6774e1b86a4062ff85c32eae3",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/allocator-api2/allocator-api2-0.2.21.crate#allocator-api2-0.2.21/LICENSE-APACHE",
+          "sha256": "20fe7b00e904ed690e3b9fd6073784d3fc428141dbd10b81c01fd143d0797f58",
+          "bytes": 9899
+        },
+        {
+          "source": "https://static.crates.io/crates/allocator-api2/allocator-api2-0.2.21.crate#allocator-api2-0.2.21/LICENSE-MIT",
+          "sha256": "36516aefdc84c5d5a1e7485425913a22dbda69eb1930c5e84d6ae4972b5194b9",
+          "bytes": 1046
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-cc-1.2.0.txt",
+      "sha256": "008097397e1b49a92efdb3fb6206c6694c8f4ba9a1f4ee49f957a03fcd6aca44",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/cc/cc-1.2.0.crate#cc-1.2.0/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/cc/cc-1.2.0.crate#cc-1.2.0/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "bytes": 1057
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-cfg-if-1.0.0.txt",
+      "sha256": "4bad6d619e38eb409a1cabbb597da8cf3066fac460a4f660bc9dc5157f55bf04",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/cfg-if/cfg-if-1.0.0.crate#cfg-if-1.0.0/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/cfg-if/cfg-if-1.0.0.crate#cfg-if-1.0.0/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "bytes": 1057
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-compiler_builtins-0.1.140.txt",
+      "sha256": "3e5e3eb63d7719856bc86264a1c47208458bd0a3566a9fdbf1e746a6625135f7",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/compiler_builtins/compiler_builtins-0.1.140.crate#compiler_builtins-0.1.140/LICENSE.txt",
+          "sha256": "789f172b2ebcfdd6ce9f0ef16763615c07d04fd1e0d352f7ce39c927d308de64",
+          "bytes": 14757
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-dlmalloc-0.2.7.txt",
+      "sha256": "418944146e918f4f925ab4a8b07a53546c8c1d1e31750809a844e44f02614422",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/dlmalloc/dlmalloc-0.2.7.crate#dlmalloc-0.2.7/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/dlmalloc/dlmalloc-0.2.7.crate#dlmalloc-0.2.7/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "bytes": 1057
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-getopts-0.2.21.txt",
+      "sha256": "ef86a370c045f344033421eb492f594785a6a09e29153bb5c618b27aaa7f2451",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/getopts/getopts-0.2.21.crate#getopts-0.2.21/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/getopts/getopts-0.2.21.crate#getopts-0.2.21/LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+          "bytes": 1071
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-gimli-0.29.0.txt",
+      "sha256": "f733dda929fd6e05b81041caea76130a8ade44e9417f3b6fd7c8540de9f66324",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/gimli/gimli-0.29.0.crate#gimli-0.29.0/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/gimli/gimli-0.29.0.crate#gimli-0.29.0/LICENSE-MIT",
+          "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0",
+          "bytes": 1071
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-gimli-0.31.1.txt",
+      "sha256": "73263107bd3df1e073d48477156b8ffe44dc43819af0f5e67e18075111acc253",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/gimli/gimli-0.31.1.crate#gimli-0.31.1/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/gimli/gimli-0.31.1.crate#gimli-0.31.1/LICENSE-MIT",
+          "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0",
+          "bytes": 1071
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-hashbrown-0.15.2.txt",
+      "sha256": "55560098a4dd8a5e5490523010bdfd2754548ba7376d786b6afdf478bf7822c0",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/hashbrown/hashbrown-0.15.2.crate#hashbrown-0.15.2/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/hashbrown/hashbrown-0.15.2.crate#hashbrown-0.15.2/LICENSE-MIT",
+          "sha256": "ff8f68cb076caf8cefe7a6430d4ac086ce6af2ca8ce2c4e5a2004d4552ef52a2",
+          "bytes": 1060
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-libc-0.2.169.txt",
+      "sha256": "b568c889fdcae0f86bcb8f6e3f550e3ec1f1e53532e7acc3037a2d63db40bf69",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/libc/libc-0.2.169.crate#libc-0.2.169/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+          "bytes": 9723
+        },
+        {
+          "source": "https://static.crates.io/crates/libc/libc-0.2.169.crate#libc-0.2.169/LICENSE-MIT",
+          "sha256": "a8d47ff51ca256f56a8932dba07660672dbfe3004257ca8de708aac1415937a1",
+          "bytes": 1076
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-memchr-2.7.4.txt",
+      "sha256": "747f9444f9d7a57087358855c09ae00c41c3821f4912ca3752533b388b1eb947",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/memchr/memchr-2.7.4.crate#memchr-2.7.4/COPYING",
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f",
+          "bytes": 126
+        },
+        {
+          "source": "https://static.crates.io/crates/memchr/memchr-2.7.4.crate#memchr-2.7.4/LICENSE-MIT",
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f",
+          "bytes": 1081
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-miniz_oxide-0.7.4.txt",
+      "sha256": "a4f3c968e17a7ca2aea639e973909d09492dd722fb668653ff537938188a061c",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/miniz_oxide/miniz_oxide-0.7.4.crate#miniz_oxide-0.7.4/LICENSE",
+          "sha256": "e190940e8ad3cdd4fca962a6508ed6865d589d314b1cb055f86000e124b88d8d",
+          "bytes": 1063
+        },
+        {
+          "source": "https://static.crates.io/crates/miniz_oxide/miniz_oxide-0.7.4.crate#miniz_oxide-0.7.4/LICENSE-APACHE.md",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "bytes": 10174
+        },
+        {
+          "source": "https://static.crates.io/crates/miniz_oxide/miniz_oxide-0.7.4.crate#miniz_oxide-0.7.4/LICENSE-MIT.md",
+          "sha256": "e190940e8ad3cdd4fca962a6508ed6865d589d314b1cb055f86000e124b88d8d",
+          "bytes": 1063
+        },
+        {
+          "source": "https://static.crates.io/crates/miniz_oxide/miniz_oxide-0.7.4.crate#miniz_oxide-0.7.4/LICENSE-ZLIB.md",
+          "sha256": "c89bcc058da12a0fb24402b8ea4542a21515dd1da2e8c67bba4ed9bd269f1c96",
+          "bytes": 835
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-object-0.36.7.txt",
+      "sha256": "c515ab40c1cb8fe39c7d35e67bfa8cebbf4800a1346a0687b7306d18a6f3c15f",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/object/object-0.36.7.crate#object-0.36.7/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/object/object-0.36.7.crate#object-0.36.7/LICENSE-MIT",
+          "sha256": "0b74dfa0bcee5c420c6b7f67b4b2658f9ab8388c97b8e733975f2cecbdd668a6",
+          "bytes": 1064
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-rand-0.8.5.txt",
+      "sha256": "0bc1f53a3b37b33a042bce3ebf975f647bceeb62895b2656ac473ee25d608756",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/rand/rand-0.8.5.crate#rand-0.8.5/COPYRIGHT",
+          "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5",
+          "bytes": 569
+        },
+        {
+          "source": "https://static.crates.io/crates/rand/rand-0.8.5.crate#rand-0.8.5/LICENSE-APACHE",
+          "sha256": "35242e7a83f69875e6edeff02291e688c97caafe2f8902e4e19b49d3e78b4cab",
+          "bytes": 9724
+        },
+        {
+          "source": "https://static.crates.io/crates/rand/rand-0.8.5.crate#rand-0.8.5/LICENSE-MIT",
+          "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b",
+          "bytes": 1117
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-rand_core-0.6.4.txt",
+      "sha256": "f590ca456344cd5015a1ba715b5aebdc442e198e3599ea82fc53ab791924210d",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/rand_core/rand_core-0.6.4.crate#rand_core-0.6.4/COPYRIGHT",
+          "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5",
+          "bytes": 569
+        },
+        {
+          "source": "https://static.crates.io/crates/rand_core/rand_core-0.6.4.crate#rand_core-0.6.4/LICENSE-APACHE",
+          "sha256": "6df43f6f4b5d4587f3d8d71e45532c688fd168afa5fe89d571cb32fa09c4ef51",
+          "bytes": 10282
+        },
+        {
+          "source": "https://static.crates.io/crates/rand_core/rand_core-0.6.4.crate#rand_core-0.6.4/LICENSE-MIT",
+          "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b",
+          "bytes": 1117
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-rand_xorshift-0.3.0.txt",
+      "sha256": "1e9221dcae58622f9daf14764c5e5f4de1463116e448d6b86bb5771bfbe072b7",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/rand_xorshift/rand_xorshift-0.3.0.crate#rand_xorshift-0.3.0/COPYRIGHT",
+          "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5",
+          "bytes": 569
+        },
+        {
+          "source": "https://static.crates.io/crates/rand_xorshift/rand_xorshift-0.3.0.crate#rand_xorshift-0.3.0/LICENSE-APACHE",
+          "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf",
+          "bytes": 10849
+        },
+        {
+          "source": "https://static.crates.io/crates/rand_xorshift/rand_xorshift-0.3.0.crate#rand_xorshift-0.3.0/LICENSE-MIT",
+          "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b",
+          "bytes": 1117
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-rustc-demangle-0.1.24.txt",
+      "sha256": "b1ccd6b3cd2035f316925cd26678d6d1c34ca7588c5e519f455a20b16fc2a371",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/rustc-demangle/rustc-demangle-0.1.24.crate#rustc-demangle-0.1.24/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/rustc-demangle/rustc-demangle-0.1.24.crate#rustc-demangle-0.1.24/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          "bytes": 1057
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-shlex-1.3.0.txt",
+      "sha256": "7f9f2ab3625e283426b79663a4fae3ebd80d352eab48a9cdd733deb5e9b182d1",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/shlex/shlex-1.3.0.crate#shlex-1.3.0/LICENSE-APACHE",
+          "sha256": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583",
+          "bytes": 566
+        },
+        {
+          "source": "https://static.crates.io/crates/shlex/shlex-1.3.0.crate#shlex-1.3.0/LICENSE-MIT",
+          "sha256": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1",
+          "bytes": 1092
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-unicode-width-0.1.14.txt",
+      "sha256": "c17e87df179b194a25b7721ea5e5557daed5b77bc0ce595be20ab7af5d1e0774",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/unicode-width/unicode-width-0.1.14.crate#unicode-width-0.1.14/COPYRIGHT",
+          "sha256": "23860c2a7b5d96b21569afedf033469bab9fe14a1b24a35068b8641c578ce24d",
+          "bytes": 321
+        },
+        {
+          "source": "https://static.crates.io/crates/unicode-width/unicode-width-0.1.14.crate#unicode-width-0.1.14/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://static.crates.io/crates/unicode-width/unicode-width-0.1.14.crate#unicode-width-0.1.14/LICENSE-MIT",
+          "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0",
+          "bytes": 1071
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/rust-stdlib-unwinding-0.2.5.txt",
+      "sha256": "d160d23dcad48979b1839848fb2fa2c81f1868cc8dfb9e699fb1a8d2ed032eeb",
+      "scope": "Conservative Rust source library/Cargo.lock coverage after excluding explicitly disjoint target platforms. May include unused build/optional components; not an exact linked-code SBOM.",
+      "sourceTexts": [
+        {
+          "source": "https://static.crates.io/crates/unwinding/unwinding-0.2.5.crate#unwinding-0.2.5/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+          "bytes": 9723
+        },
+        {
+          "source": "https://static.crates.io/crates/unwinding/unwinding-0.2.5.crate#unwinding-0.2.5/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/quickjs-wasi-3.6.2.txt",
+      "sha256": "22233ea67ad9eb0a446b5be160d9148f5408bd26c67b3fd4bca14bf86fdf9860",
+      "scope": "Root QuickJS-WASI interface and extension code; third-party static/runtime terms follow.",
+      "sourceTexts": [
+        {
+          "source": "https://raw.githubusercontent.com/vercel-labs/quickjs-wasi/5a7a0eeda87c99542f8cf3095b6d61ecfa755977/LICENSE",
+          "sha256": "f7735da3b2531ddf451937117343cfadb853fd8054b499e7a70695dc57ffd184",
+          "bytes": 1069
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/QuickJS-NG-6d46d07d0404.txt",
+      "sha256": "48383e0d7748552ab47202fc82a724ada17e5306f702b52105fd1eebe9661cc9",
+      "scope": "Exact source submodule and compiled source file copyright/permission notices.",
+      "sourceTexts": [
+        {
+          "source": "https://raw.githubusercontent.com/quickjs-ng/quickjs/6d46d07d04041b40f4f49eaa7fdebe44c314c699/LICENSE",
+          "sha256": "96f73f9d2a16c21a36b418f06073be26e7d6d5e7c1bc99756b21a4f2c74ef171",
+          "bytes": 1212
+        },
+        {
+          "source": "https://raw.githubusercontent.com/quickjs-ng/quickjs/6d46d07d04041b40f4f49eaa7fdebe44c314c699/dtoa.c#leading-copyright-notice",
+          "sha256": "1189a2dd251a2872f7265fa4298ffbc0df8972fb08a5203044e97bc003ba5cde",
+          "bytes": 1167
+        },
+        {
+          "source": "https://raw.githubusercontent.com/quickjs-ng/quickjs/6d46d07d04041b40f4f49eaa7fdebe44c314c699/libunicode.c#leading-copyright-notice",
+          "sha256": "0edc91fb5bcc10e21c254bdd6e232c26a31e2968b2d69c4a2693aacb3a4fb5cf",
+          "bytes": 1148
+        },
+        {
+          "source": "https://raw.githubusercontent.com/quickjs-ng/quickjs/6d46d07d04041b40f4f49eaa7fdebe44c314c699/quickjs.c#leading-copyright-notice",
+          "sha256": "9c41e7a2771816a0897def2fc1f4ac7bb098d80e43eeb1203288aa6b4d1defc3",
+          "bytes": 1289
+        },
+        {
+          "source": "https://raw.githubusercontent.com/quickjs-ng/quickjs/6d46d07d04041b40f4f49eaa7fdebe44c314c699/libregexp.c#leading-copyright-notice",
+          "sha256": "b65603688dd7d8ce02c3316f9621ad54e914770ffb60dde5f3d58abfad3a763f",
+          "bytes": 1156
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/Unicode-data.txt",
+      "sha256": "9fd4f812fd1e290058e82a5abd0b44ac89d7496de90abb0ef88a49eb2eeac04d",
+      "scope": "Unicode data notice preserved verbatim from the exact compiled QuickJS Unicode table; also retained for bundled IDNA data coverage.",
+      "sourceTexts": [
+        {
+          "source": "https://raw.githubusercontent.com/quickjs-ng/quickjs/6d46d07d04041b40f4f49eaa7fdebe44c314c699/libunicode-table.h#embedded-license",
+          "sha256": "d28ff605271a0675a2b12d9ff65d6bd5651d0cee111b57ec2781ca353d87dae7",
+          "bytes": 2000
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/Ada-3.4.3.txt",
+      "sha256": "fad92d40a786f33c6bbbee07037717491bac30d6f69ed4d217f361c9a62a4e50",
+      "scope": "Ada3.4.3 URL/IDNA parser. Both vendored amalgamations exactly match checksum-verified official singleheader.zip. MIT option selected, both upstream texts retained.",
+      "sourceTexts": [
+        {
+          "source": "https://raw.githubusercontent.com/ada-url/ada/v3.4.3/LICENSE-MIT",
+          "sha256": "af0d7d2cef91fc243cf4ad98570b03d1f26f5e0227cad0f5f4a7376e2feb3160",
+          "bytes": 1071
+        },
+        {
+          "source": "https://raw.githubusercontent.com/ada-url/ada/v3.4.3/LICENSE-APACHE",
+          "sha256": "508d4676d4083e874df706f302d9d42e5e7f9aed3f5a7ea614dc6d2b2252a22f",
+          "bytes": 11342
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/MbedTLS-TF-PSA-Crypto.txt",
+      "sha256": "c10b68c5a9efa1ac8d4b71db337c2e737c93e32dc055036d3758e7037586af15",
+      "scope": "Vendored MbedTLS/TF-PSA-Crypto and Project Everest copyright notices. Apache2 option selected; complete upstream dual-license text retained without alteration.",
+      "sourceTexts": [
+        {
+          "source": "https://raw.githubusercontent.com/vercel-labs/quickjs-wasi/5a7a0eeda87c99542f8cf3095b6d61ecfa755977/extensions/crypto/mbedtls/LICENSE",
+          "sha256": "9b405ef4c89342f5eae1dd828882f931747f71001cfba7d114801039b52ad09b",
+          "bytes": 29852
+        },
+        {
+          "source": "https://raw.githubusercontent.com/vercel-labs/quickjs-wasi/5a7a0eeda87c99542f8cf3095b6d61ecfa755977/extensions/crypto/mbedtls/tf-psa-crypto/drivers/everest/library/Hacl_Curve25519_joined.c#notice",
+          "sha256": "3640803922b7883fd9f0b9b6e6b3a84832545fdc3698149395404fb7be00a204",
+          "bytes": 771
+        },
+        {
+          "source": "https://raw.githubusercontent.com/vercel-labs/quickjs-wasi/5a7a0eeda87c99542f8cf3095b6d61ecfa755977/extensions/crypto/mbedtls/tf-psa-crypto/drivers/everest/library/Hacl_Curve25519.c#notice",
+          "sha256": "c08e0378f872c9c177f03a27220f62226672a1fe5a24675db91c9250793e2f1a",
+          "bytes": 115
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/WASI-SDK32-libc.txt",
+      "sha256": "db04dc48b65891da16777e0684ef35c3d78f57fd196650182eefa8cf4257bca0",
+      "scope": "SDK32 WASI libc source notice superset, including allocator/musl/cloudlibc/FTS. Not every libc routine or allocator is asserted linked.",
+      "sourceTexts": [
+        {
+          "source": "https://raw.githubusercontent.com/WebAssembly/wasi-libc/2fc32bc81b9f07f8d9525edea59bfbaf760c06d6/LICENSE",
+          "sha256": "2711a8b5a5cdfef0e639f96c1aca12ae23d7d64a02d0507f1bdf14d2b27bbc3a",
+          "bytes": 910
+        },
+        {
+          "source": "https://raw.githubusercontent.com/WebAssembly/wasi-libc/2fc32bc81b9f07f8d9525edea59bfbaf760c06d6/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847
+        },
+        {
+          "source": "https://raw.githubusercontent.com/WebAssembly/wasi-libc/2fc32bc81b9f07f8d9525edea59bfbaf760c06d6/LICENSE-APACHE-LLVM",
+          "sha256": "268872b9816f90fd8e85db5a28d33f8150ebb8dd016653fb39ef1f94f2686bc5",
+          "bytes": 12243
+        },
+        {
+          "source": "https://raw.githubusercontent.com/WebAssembly/wasi-libc/2fc32bc81b9f07f8d9525edea59bfbaf760c06d6/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023
+        },
+        {
+          "source": "https://raw.githubusercontent.com/WebAssembly/wasi-libc/2fc32bc81b9f07f8d9525edea59bfbaf760c06d6/libc-top-half/musl/COPYRIGHT",
+          "sha256": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af",
+          "bytes": 6204
+        },
+        {
+          "source": "https://raw.githubusercontent.com/WebAssembly/wasi-libc/2fc32bc81b9f07f8d9525edea59bfbaf760c06d6/libc-bottom-half/cloudlibc/LICENSE",
+          "sha256": "c8b789cf5a746611e6300a0cc7750dbf92b61912a709d04e639245f7290656d0",
+          "bytes": 1292
+        },
+        {
+          "source": "https://raw.githubusercontent.com/WebAssembly/wasi-libc/2fc32bc81b9f07f8d9525edea59bfbaf760c06d6/fts/musl-fts/COPYING",
+          "sha256": "55af87e4017668f54467a3380e7ebbac5e672d8c763bfe95e6fc882a6fdc4046",
+          "bytes": 1514
+        },
+        {
+          "source": "https://raw.githubusercontent.com/WebAssembly/wasi-libc/2fc32bc81b9f07f8d9525edea59bfbaf760c06d6/dlmalloc/src/malloc.c#notice",
+          "sha256": "4872c477338a576d7944d308b1d491afeb78408b9eca788468d5a1adae735553",
+          "bytes": 28001
+        },
+        {
+          "source": "https://raw.githubusercontent.com/WebAssembly/wasi-libc/2fc32bc81b9f07f8d9525edea59bfbaf760c06d6/emmalloc/emmalloc.c#notice",
+          "sha256": "39dc3bb396a3fb991b80a5a243efc6449894420a20d0d9a283b41a5425de2ced",
+          "bytes": 1696
+        }
+      ]
+    },
+    {
+      "path": "packaging/licenses/audited/WASI-SDK32-LLVM-runtime.txt",
+      "sha256": "655d059acd788f86404f10f153cbbc343ce3614f404dc9a9e7d0f7e228a1025c",
+      "scope": "SDK32 libc++/ABI/compiler runtime license notices; tool executables are not redistributed.",
+      "sourceTexts": [
+        {
+          "source": "https://raw.githubusercontent.com/llvm/llvm-project/4434dabb69916856b824f68a64b029c67175e532/libcxx/LICENSE.TXT",
+          "sha256": "539dd7aed86e8a4f12cbdd0e6c50c189c7d74847e4fecc64ce2c6ee3a01da38b",
+          "bytes": 16703
+        },
+        {
+          "source": "https://raw.githubusercontent.com/llvm/llvm-project/4434dabb69916856b824f68a64b029c67175e532/libcxxabi/LICENSE.TXT",
+          "sha256": "e2b35be49f7284a45b7baca8fc7b3ab7440e7902392b2528a457816b5bb2a15c",
+          "bytes": 16706
+        },
+        {
+          "source": "https://raw.githubusercontent.com/llvm/llvm-project/4434dabb69916856b824f68a64b029c67175e532/compiler-rt/LICENSE.TXT",
+          "sha256": "1a8f1058753f1ba890de984e48f0242a3a5c29a6a8f2ed9fd813f36985387e8d",
+          "bytes": 16708
+        }
+      ]
+    }
+  ],
+  "photon": {
+    "sourceCommit": "685f5b155b36c5611c08ca678bb78ddbab3edbac",
+    "sourceCrateSha256": "06e9b6d764d6656aba14f5ae43fbf48ce98ff1b1a6beb4d2e801eb0729f88773",
+    "lockSha256": "aa3e9c86b0380b8cd5cb768985f7e270aab01a5b35c24cbfa8533fa74343318f",
+    "normalBuildDependencySet": [
+      {
+        "name": "ab_glyph_rasterizer",
+        "version": "0.1.5",
+        "archiveSha256": "a13739d7177fbd22bb0ed28badfff9f372f8bef46c863db4e1c6248f6b223b6e",
+        "notice": "packaging/licenses/audited/photon-ab_glyph_rasterizer-0.1.5.txt"
+      },
+      {
+        "name": "adler2",
+        "version": "2.0.0",
+        "archiveSha256": "512761e0bb2578dd7380c6baaa0f4ce03e84f95e960231d1dec8bf4d7d6e2627",
+        "notice": "packaging/licenses/audited/photon-adler2-2.0.0.txt"
+      },
+      {
+        "name": "approx",
+        "version": "0.5.1",
+        "archiveSha256": "cab112f0a86d568ea0e627cc1d6be74a1e9cd55214684db5561995f6dad897c6",
+        "notice": "packaging/licenses/audited/photon-approx-0.5.1.txt"
+      },
+      {
+        "name": "autocfg",
+        "version": "1.1.0",
+        "archiveSha256": "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa",
+        "notice": "packaging/licenses/audited/photon-autocfg-1.1.0.txt"
+      },
+      {
+        "name": "base64",
+        "version": "0.13.0",
+        "archiveSha256": "904dfeac50f3cdaba28fc6f57fdcddb75f49ed61346676a78c4ffe55877802fd",
+        "notice": "packaging/licenses/audited/photon-base64-0.13.0.txt"
+      },
+      {
+        "name": "bitflags",
+        "version": "1.3.2",
+        "archiveSha256": "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a",
+        "notice": "packaging/licenses/audited/photon-bitflags-1.3.2.txt"
+      },
+      {
+        "name": "bumpalo",
+        "version": "3.10.0",
+        "archiveSha256": "37ccbd214614c6783386c1af30caf03192f17891059cecc394b4fb119e363de3",
+        "notice": "packaging/licenses/audited/photon-bumpalo-3.10.0.txt"
+      },
+      {
+        "name": "bytemuck",
+        "version": "1.11.0",
+        "archiveSha256": "a5377c8865e74a160d21f29c2d40669f53286db6eab59b88540cbb12ffc8b835",
+        "notice": "packaging/licenses/audited/photon-bytemuck-1.11.0.txt"
+      },
+      {
+        "name": "byteorder",
+        "version": "1.4.3",
+        "archiveSha256": "14c189c53d098945499cdfa7ecc63567cf3886b3332b312a5b4585d8d3a6a610",
+        "notice": "packaging/licenses/audited/photon-byteorder-1.4.3.txt"
+      },
+      {
+        "name": "cfg-if",
+        "version": "0.1.10",
+        "archiveSha256": "4785bdd1c96b2a846b2bd7cc02e86b6b3dbf14e7e53446c4f54c92a361040822",
+        "notice": "packaging/licenses/audited/photon-cfg-if-0.1.10.txt"
+      },
+      {
+        "name": "cfg-if",
+        "version": "1.0.0",
+        "archiveSha256": "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd",
+        "notice": "packaging/licenses/audited/photon-cfg-if-1.0.0.txt"
+      },
+      {
+        "name": "color_quant",
+        "version": "1.1.0",
+        "archiveSha256": "3d7b894f5411737b7867f4827955924d7c254fc9f4d91a6aad6b097804b1018b",
+        "notice": "packaging/licenses/audited/photon-color_quant-1.1.0.txt"
+      },
+      {
+        "name": "console_error_panic_hook",
+        "version": "0.1.7",
+        "archiveSha256": "a06aeb73f470f66dcdbf7223caeebb85984942f22f1adb2a088cf9668146bbbc",
+        "notice": "packaging/licenses/audited/photon-console_error_panic_hook-0.1.7.txt"
+      },
+      {
+        "name": "conv",
+        "version": "0.3.3",
+        "archiveSha256": "78ff10625fd0ac447827aa30ea8b861fead473bb60aeb73af6c1c58caf0d1299",
+        "notice": "packaging/licenses/audited/photon-conv-0.3.3.txt"
+      },
+      {
+        "name": "crc32fast",
+        "version": "1.3.2",
+        "archiveSha256": "b540bd8bc810d3885c6ea91e2018302f68baba2129ab3e88f32389ee9370880d",
+        "notice": "packaging/licenses/audited/photon-crc32fast-1.3.2.txt"
+      },
+      {
+        "name": "custom_derive",
+        "version": "0.1.7",
+        "archiveSha256": "ef8ae57c4978a2acd8b869ce6b9ca1dfe817bff704c220209fdef2c0b75a01b9",
+        "notice": "packaging/licenses/audited/photon-custom_derive-0.1.7.txt"
+      },
+      {
+        "name": "deranged",
+        "version": "0.3.8",
+        "archiveSha256": "f2696e8a945f658fd14dc3b87242e6b80cd0f36ff04ea560fa39082368847946",
+        "notice": "packaging/licenses/audited/photon-deranged-0.3.8.txt"
+      },
+      {
+        "name": "either",
+        "version": "1.7.0",
+        "archiveSha256": "3f107b87b6afc2a64fd13cac55fe06d6c8859f12d4b14cbcdd2c67d0976781be",
+        "notice": "packaging/licenses/audited/photon-either-1.7.0.txt"
+      },
+      {
+        "name": "fdeflate",
+        "version": "0.3.6",
+        "archiveSha256": "07c6f4c64c1d33a3111c4466f7365ebdcc37c5bd1ea0d62aae2e3d722aacbedb",
+        "notice": "packaging/licenses/audited/photon-fdeflate-0.3.6.txt"
+      },
+      {
+        "name": "find-crate",
+        "version": "0.6.3",
+        "archiveSha256": "59a98bbaacea1c0eb6a0876280051b892eb73594fd90cf3b20e9c817029c57d2",
+        "notice": "packaging/licenses/audited/photon-find-crate-0.6.3.txt"
+      },
+      {
+        "name": "flate2",
+        "version": "1.0.34",
+        "archiveSha256": "a1b589b4dc103969ad3cf85c950899926ec64300a1a46d76c03a6072957036f0",
+        "notice": "packaging/licenses/audited/photon-flate2-1.0.34.txt"
+      },
+      {
+        "name": "getrandom",
+        "version": "0.1.16",
+        "archiveSha256": "8fc3cb4d91f53b50155bdcfd23f6a4c39ae1969c2ae85982b135750cccaf5fce",
+        "notice": "packaging/licenses/audited/photon-getrandom-0.1.16.txt"
+      },
+      {
+        "name": "getrandom",
+        "version": "0.2.7",
+        "archiveSha256": "4eb1a864a501629691edf6c15a593b7a51eebaa1e8468e9ddc623de7c9b58ec6",
+        "notice": "packaging/licenses/audited/photon-getrandom-0.2.7.txt"
+      },
+      {
+        "name": "gif",
+        "version": "0.13.1",
+        "archiveSha256": "3fb2d69b19215e18bb912fa30f7ce15846e301408695e44e0ef719f1da9e19f2",
+        "notice": "packaging/licenses/audited/photon-gif-0.13.1.txt"
+      },
+      {
+        "name": "image",
+        "version": "0.24.9",
+        "archiveSha256": "5690139d2f55868e080017335e4b94cb7414274c74f1669c84fb5feba2c9f69d",
+        "notice": "packaging/licenses/audited/photon-image-0.24.9.txt"
+      },
+      {
+        "name": "imageproc",
+        "version": "0.23.0",
+        "archiveSha256": "b6aee993351d466301a29655d628bfc6f5a35a0d062b6160ca0808f425805fd7",
+        "notice": "packaging/licenses/audited/photon-imageproc-0.23.0.txt"
+      },
+      {
+        "name": "instant",
+        "version": "0.1.13",
+        "archiveSha256": "e0242819d153cba4b4b05a5a8f2a7e9bbf97b6055b2a002b395c96b5ff3c0222",
+        "notice": "packaging/licenses/audited/photon-instant-0.1.13.txt"
+      },
+      {
+        "name": "itertools",
+        "version": "0.10.3",
+        "archiveSha256": "a9a9d19fa1e79b6215ff29b9d6880b706147f16e9b1dbb1e4e5947b5b02bc5e3",
+        "notice": "packaging/licenses/audited/photon-itertools-0.10.3.txt"
+      },
+      {
+        "name": "jpeg-decoder",
+        "version": "0.3.1",
+        "archiveSha256": "f5d4a7da358eff58addd2877a45865158f0d78c911d43a5784ceb7bbf52833b0",
+        "notice": "packaging/licenses/audited/photon-jpeg-decoder-0.3.1.txt"
+      },
+      {
+        "name": "js-sys",
+        "version": "0.3.62",
+        "archiveSha256": "68c16e1bfd491478ab155fd8b4896b86f9ede344949b641e61501e07c2b8b4d5",
+        "notice": "packaging/licenses/audited/photon-js-sys-0.3.62.txt"
+      },
+      {
+        "name": "libc",
+        "version": "0.2.126",
+        "archiveSha256": "349d5a591cd28b49e1d1037471617a32ddcda5731b99419008085f72d5a53836",
+        "notice": "packaging/licenses/audited/photon-libc-0.2.126.txt"
+      },
+      {
+        "name": "log",
+        "version": "0.4.17",
+        "archiveSha256": "abb12e687cfb44aa40f41fc3978ef76448f9b6038cad6aef4259d3c095a2382e",
+        "notice": "packaging/licenses/audited/photon-log-0.4.17.txt"
+      },
+      {
+        "name": "matrixmultiply",
+        "version": "0.3.9",
+        "archiveSha256": "9380b911e3e96d10c1f415da0876389aaf1b56759054eeb0de7df940c456ba1a",
+        "notice": "packaging/licenses/audited/photon-matrixmultiply-0.3.9.txt"
+      },
+      {
+        "name": "miniz_oxide",
+        "version": "0.8.0",
+        "archiveSha256": "e2d80299ef12ff69b16a84bb182e3b9df68b5a91574d3d4fa6e41b65deec4df1",
+        "notice": "packaging/licenses/audited/photon-miniz_oxide-0.8.0.txt"
+      },
+      {
+        "name": "nalgebra",
+        "version": "0.30.1",
+        "archiveSha256": "4fb2d0de08694bed883320212c18ee3008576bfe8c306f4c3c4a58b4876998be",
+        "notice": "packaging/licenses/audited/photon-nalgebra-0.30.1.txt"
+      },
+      {
+        "name": "node-sys",
+        "version": "0.4.2",
+        "archiveSha256": "30d75eee6e8b159228449706773f9f2af60720250308124e9c3d38bd8070844a",
+        "notice": "packaging/licenses/audited/photon-node-sys-0.4.2.txt"
+      },
+      {
+        "name": "num",
+        "version": "0.4.3",
+        "archiveSha256": "35bd024e8b2ff75562e5f34e7f4905839deb4b22955ef5e73d2fea1b9813cb23",
+        "notice": "packaging/licenses/audited/photon-num-0.4.3.txt"
+      },
+      {
+        "name": "num-bigint",
+        "version": "0.4.6",
+        "archiveSha256": "a5e44f723f1133c9deac646763579fdb3ac745e418f2a7af9cd0c431da1f20b9",
+        "notice": "packaging/licenses/audited/photon-num-bigint-0.4.6.txt"
+      },
+      {
+        "name": "num-complex",
+        "version": "0.4.6",
+        "archiveSha256": "73f88a1307638156682bada9d7604135552957b7818057dcef22705b4d509495",
+        "notice": "packaging/licenses/audited/photon-num-complex-0.4.6.txt"
+      },
+      {
+        "name": "num-integer",
+        "version": "0.1.46",
+        "archiveSha256": "7969661fd2958a5cb096e56c8e1ad0444ac2bbcd0061bd28660485a44879858f",
+        "notice": "packaging/licenses/audited/photon-num-integer-0.1.46.txt"
+      },
+      {
+        "name": "num-iter",
+        "version": "0.1.45",
+        "archiveSha256": "1429034a0490724d0075ebb2bc9e875d6503c3cf69e235a8941aa757d83ef5bf",
+        "notice": "packaging/licenses/audited/photon-num-iter-0.1.45.txt"
+      },
+      {
+        "name": "num-rational",
+        "version": "0.4.2",
+        "archiveSha256": "f83d14da390562dca69fc84082e73e548e1ad308d24accdedd2720017cb37824",
+        "notice": "packaging/licenses/audited/photon-num-rational-0.4.2.txt"
+      },
+      {
+        "name": "num-traits",
+        "version": "0.2.19",
+        "archiveSha256": "071dfc062690e90b734c0b2273ce72ad0ffa95f0c74596bc250dcfd960262841",
+        "notice": "packaging/licenses/audited/photon-num-traits-0.2.19.txt"
+      },
+      {
+        "name": "once_cell",
+        "version": "1.13.0",
+        "archiveSha256": "18a6dbe30758c9f83eb00cbea4ac95966305f5a7772f3f42ebfc7fc7eddbd8e1",
+        "notice": "packaging/licenses/audited/photon-once_cell-1.13.0.txt"
+      },
+      {
+        "name": "owned_ttf_parser",
+        "version": "0.6.0",
+        "archiveSha256": "9f923fb806c46266c02ab4a5b239735c144bdeda724a50ed058e5226f594cde3",
+        "notice": "packaging/licenses/audited/photon-owned_ttf_parser-0.6.0.txt"
+      },
+      {
+        "name": "palette",
+        "version": "0.6.1",
+        "archiveSha256": "8f9cd68f7112581033f157e56c77ac4a5538ec5836a2e39284e65bd7d7275e49",
+        "notice": "packaging/licenses/audited/photon-palette-0.6.1.txt"
+      },
+      {
+        "name": "palette_derive",
+        "version": "0.6.1",
+        "archiveSha256": "05eedf46a8e7c27f74af0c9cfcdb004ceca158cb1b918c6f68f8d7a549b3e427",
+        "notice": "packaging/licenses/audited/photon-palette_derive-0.6.1.txt"
+      },
+      {
+        "name": "paste",
+        "version": "1.0.15",
+        "archiveSha256": "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a",
+        "notice": "packaging/licenses/audited/photon-paste-1.0.15.txt"
+      },
+      {
+        "name": "perlin2d",
+        "version": "0.2.6",
+        "archiveSha256": "bb6c71cfd92099c43062f059494786cdcbd9cb4dab61389098362b241071cde0",
+        "notice": "packaging/licenses/audited/photon-perlin2d-0.2.6.txt"
+      },
+      {
+        "name": "phf",
+        "version": "0.11.0",
+        "archiveSha256": "4724fa946c8d1e7cd881bd3dbee63ce32fc1e9e191e35786b3dc1320a3f68131",
+        "notice": "packaging/licenses/audited/photon-phf-0.11.0.txt"
+      },
+      {
+        "name": "phf_generator",
+        "version": "0.11.0",
+        "archiveSha256": "5b450720b6f75cfbfabc195814bd3765f337a4f9a83186f8537297cac12f6705",
+        "notice": "packaging/licenses/audited/photon-phf_generator-0.11.0.txt"
+      },
+      {
+        "name": "phf_macros",
+        "version": "0.11.0",
+        "archiveSha256": "cd94351ac44e70e56b59883e15029a5135f902a8a3020f9c18d580a420e526aa",
+        "notice": "packaging/licenses/audited/photon-phf_macros-0.11.0.txt"
+      },
+      {
+        "name": "phf_shared",
+        "version": "0.11.0",
+        "archiveSha256": "9dd5609d4b2df87167f908a32e1b146ce309c16cf35df76bc11f440b756048e4",
+        "notice": "packaging/licenses/audited/photon-phf_shared-0.11.0.txt"
+      },
+      {
+        "name": "png",
+        "version": "0.17.14",
+        "archiveSha256": "52f9d46a34a05a6a57566bc2bfae066ef07585a6e3fa30fbbdff5936380623f0",
+        "notice": "packaging/licenses/audited/photon-png-0.17.14.txt"
+      },
+      {
+        "name": "ppv-lite86",
+        "version": "0.2.16",
+        "archiveSha256": "eb9f9e6e233e5c4a35559a617bf40a4ec447db2e84c20b55a6f83167b7e57872",
+        "notice": "packaging/licenses/audited/photon-ppv-lite86-0.2.16.txt"
+      },
+      {
+        "name": "proc-macro2",
+        "version": "1.0.67",
+        "archiveSha256": "3d433d9f1a3e8c1263d9456598b16fec66f4acc9a74dacffd35c7bb09b3a1328",
+        "notice": "packaging/licenses/audited/photon-proc-macro2-1.0.67.txt"
+      },
+      {
+        "name": "quote",
+        "version": "1.0.33",
+        "archiveSha256": "5267fca4496028628a95160fc423a33e8b2e6af8a5302579e322e4b520293cae",
+        "notice": "packaging/licenses/audited/photon-quote-1.0.33.txt"
+      },
+      {
+        "name": "rand",
+        "version": "0.7.3",
+        "archiveSha256": "6a6b1679d49b24bbfe0c803429aa1874472f50d9b363131f0e89fc356b544d03",
+        "notice": "packaging/licenses/audited/photon-rand-0.7.3.txt"
+      },
+      {
+        "name": "rand",
+        "version": "0.8.5",
+        "archiveSha256": "34af8d1a0e25924bc5b7c43c079c942339d8f0a8b57c39049bef581b46327404",
+        "notice": "packaging/licenses/audited/photon-rand-0.8.5.txt"
+      },
+      {
+        "name": "rand_chacha",
+        "version": "0.2.2",
+        "archiveSha256": "f4c8ed856279c9737206bf725bf36935d8666ead7aa69b52be55af369d193402",
+        "notice": "packaging/licenses/audited/photon-rand_chacha-0.2.2.txt"
+      },
+      {
+        "name": "rand_chacha",
+        "version": "0.3.1",
+        "archiveSha256": "e6c10a63a0fa32252be49d21e7709d4d4baf8d231c2dbce1eaa8141b9b127d88",
+        "notice": "packaging/licenses/audited/photon-rand_chacha-0.3.1.txt"
+      },
+      {
+        "name": "rand_core",
+        "version": "0.5.1",
+        "archiveSha256": "90bde5296fc891b0cef12a6d03ddccc162ce7b2aff54160af9338f8d40df6d19",
+        "notice": "packaging/licenses/audited/photon-rand_core-0.5.1.txt"
+      },
+      {
+        "name": "rand_core",
+        "version": "0.6.3",
+        "archiveSha256": "d34f1408f55294453790c48b2f1ebbb1c5b4b7563eb1f418bcfcfdbb06ebb4e7",
+        "notice": "packaging/licenses/audited/photon-rand_core-0.6.3.txt"
+      },
+      {
+        "name": "rand_distr",
+        "version": "0.2.2",
+        "archiveSha256": "96977acbdd3a6576fb1d27391900035bf3863d4a16422973a409b488cf29ffb2",
+        "notice": "packaging/licenses/audited/photon-rand_distr-0.2.2.txt"
+      },
+      {
+        "name": "rawpointer",
+        "version": "0.2.1",
+        "archiveSha256": "60a357793950651c4ed0f3f52338f53b2f809f32d83a07f72909fa13e4c6c1e3",
+        "notice": "packaging/licenses/audited/photon-rawpointer-0.2.1.txt"
+      },
+      {
+        "name": "rusttype",
+        "version": "0.9.2",
+        "archiveSha256": "dc7c727aded0be18c5b80c1640eae0ac8e396abf6fa8477d96cb37d18ee5ec59",
+        "notice": "packaging/licenses/audited/photon-rusttype-0.9.2.txt"
+      },
+      {
+        "name": "safe_arch",
+        "version": "0.7.2",
+        "archiveSha256": "c3460605018fdc9612bce72735cba0d27efbcd9904780d44c7e3a9948f96148a",
+        "notice": "packaging/licenses/audited/photon-safe_arch-0.7.2.txt"
+      },
+      {
+        "name": "serde",
+        "version": "1.0.188",
+        "archiveSha256": "cf9e0fcba69a370eed61bcf2b728575f726b50b55cba78064753d708ddc7549e",
+        "notice": "packaging/licenses/audited/photon-serde-1.0.188.txt"
+      },
+      {
+        "name": "serde_derive",
+        "version": "1.0.188",
+        "archiveSha256": "4eca7ac642d82aa35b60049a6eccb4be6be75e599bd2e9adb5f875a737654af2",
+        "notice": "packaging/licenses/audited/photon-serde_derive-1.0.188.txt"
+      },
+      {
+        "name": "simba",
+        "version": "0.7.3",
+        "archiveSha256": "2f3fd720c48c53cace224ae62bef1bbff363a70c68c4802a78b5cc6159618176",
+        "notice": "packaging/licenses/audited/photon-simba-0.7.3.txt"
+      },
+      {
+        "name": "simd-adler32",
+        "version": "0.3.7",
+        "archiveSha256": "d66dc143e6b11c1eddc06d5c423cfc97062865baf299914ab64caa38182078fe",
+        "notice": "packaging/licenses/audited/photon-simd-adler32-0.3.7.txt"
+      },
+      {
+        "name": "siphasher",
+        "version": "0.3.10",
+        "archiveSha256": "7bd3e3206899af3f8b12af284fafc038cc1dc2b41d1b89dd17297221c5d225de",
+        "notice": "packaging/licenses/audited/photon-siphasher-0.3.10.txt"
+      },
+      {
+        "name": "syn",
+        "version": "1.0.98",
+        "archiveSha256": "c50aef8a904de4c23c788f104b7dddc7d6f79c647c7c8ce4cc8f73eb0ca773dd",
+        "notice": "packaging/licenses/audited/photon-syn-1.0.98.txt"
+      },
+      {
+        "name": "syn",
+        "version": "2.0.37",
+        "archiveSha256": "7303ef2c05cd654186cb250d29049a24840ca25d2747c25c0381c8d9e2f582e8",
+        "notice": "packaging/licenses/audited/photon-syn-2.0.37.txt"
+      },
+      {
+        "name": "thiserror",
+        "version": "1.0.31",
+        "archiveSha256": "bd829fe32373d27f76265620b5309d0340cb8550f523c1dda251d6298069069a",
+        "notice": "packaging/licenses/audited/photon-thiserror-1.0.31.txt"
+      },
+      {
+        "name": "thiserror-impl",
+        "version": "1.0.31",
+        "archiveSha256": "0396bc89e626244658bef819e22d0cc459e795a5ebe878e6ec336d1674a8d79a",
+        "notice": "packaging/licenses/audited/photon-thiserror-impl-1.0.31.txt"
+      },
+      {
+        "name": "tiff",
+        "version": "0.9.1",
+        "archiveSha256": "ba1310fcea54c6a9a4fd1aad794ecc02c31682f6bfbecdf460bf19533eed1e3e",
+        "notice": "packaging/licenses/audited/photon-tiff-0.9.1.txt"
+      },
+      {
+        "name": "time",
+        "version": "0.3.28",
+        "archiveSha256": "17f6bb557fd245c28e6411aa56b6403c689ad95061f50e4be16c274e70a17e48",
+        "notice": "packaging/licenses/audited/photon-time-0.3.28.txt"
+      },
+      {
+        "name": "time-core",
+        "version": "0.1.1",
+        "archiveSha256": "7300fbefb4dadc1af235a9cef3737cea692a9d97e1b9cbcd4ebdae6f8868e6fb",
+        "notice": "packaging/licenses/audited/photon-time-core-0.1.1.txt"
+      },
+      {
+        "name": "toml",
+        "version": "0.5.9",
+        "archiveSha256": "8d82e1a7758622a465f8cee077614c73484dac5b836c02ff6a40d5d1010324d7",
+        "notice": "packaging/licenses/audited/photon-toml-0.5.9.txt"
+      },
+      {
+        "name": "ttf-parser",
+        "version": "0.6.2",
+        "archiveSha256": "3e5d7cd7ab3e47dda6e56542f4bbf3824c15234958c6e1bd6aaa347e93499fdc",
+        "notice": "packaging/licenses/audited/photon-ttf-parser-0.6.2.txt"
+      },
+      {
+        "name": "typenum",
+        "version": "1.17.0",
+        "archiveSha256": "42ff0bf0c66b8238c6f3b578df37d0b7848e55df8577b3f74f92a69acceeb825",
+        "notice": "packaging/licenses/audited/photon-typenum-1.17.0.txt"
+      },
+      {
+        "name": "unicode-ident",
+        "version": "1.0.2",
+        "archiveSha256": "15c61ba63f9235225a22310255a29b806b907c9b8c964bcbd0a2c70f3f2deea7",
+        "notice": "packaging/licenses/audited/photon-unicode-ident-1.0.2.txt"
+      },
+      {
+        "name": "wasm-bindgen",
+        "version": "0.2.95",
+        "archiveSha256": "128d1e363af62632b8eb57219c8fd7877144af57558fb2ef0368d0087bddeb2e",
+        "notice": "packaging/licenses/audited/photon-wasm-bindgen-0.2.95.txt"
+      },
+      {
+        "name": "wasm-bindgen-backend",
+        "version": "0.2.95",
+        "archiveSha256": "cb6dd4d3ca0ddffd1dd1c9c04f94b868c37ff5fac97c30b97cff2d74fce3a358",
+        "notice": "packaging/licenses/audited/photon-wasm-bindgen-backend-0.2.95.txt"
+      },
+      {
+        "name": "wasm-bindgen-macro",
+        "version": "0.2.95",
+        "archiveSha256": "e79384be7f8f5a9dd5d7167216f022090cf1f9ec128e6e6a482a2cb5c5422c56",
+        "notice": "packaging/licenses/audited/photon-wasm-bindgen-macro-0.2.95.txt"
+      },
+      {
+        "name": "wasm-bindgen-macro-support",
+        "version": "0.2.95",
+        "archiveSha256": "26c6ab57572f7a24a4985830b120de1594465e5d500f24afe89e16b4e833ef68",
+        "notice": "packaging/licenses/audited/photon-wasm-bindgen-macro-support-0.2.95.txt"
+      },
+      {
+        "name": "wasm-bindgen-shared",
+        "version": "0.2.95",
+        "archiveSha256": "65fc09f10666a9f147042251e0dda9c18f166ff7de300607007e96bdebc1068d",
+        "notice": "packaging/licenses/audited/photon-wasm-bindgen-shared-0.2.95.txt"
+      },
+      {
+        "name": "web-sys",
+        "version": "0.3.55",
+        "archiveSha256": "38eb105f1c59d9eaa6b5cdc92b859d85b926e82cb2e0945cd0c9259faa6fe9fb",
+        "notice": "packaging/licenses/audited/photon-web-sys-0.3.55.txt"
+      },
+      {
+        "name": "weezl",
+        "version": "0.1.8",
+        "archiveSha256": "53a85b86a771b1c87058196170769dd264f66c0782acf1ae6cc51bfd64b39082",
+        "notice": "packaging/licenses/audited/photon-weezl-0.1.8.txt"
+      },
+      {
+        "name": "wide",
+        "version": "0.7.28",
+        "archiveSha256": "b828f995bf1e9622031f8009f8481a85406ce1f4d4588ff746d872043e855690",
+        "notice": "packaging/licenses/audited/photon-wide-0.7.28.txt"
+      }
+    ],
+    "dependencyGraphScope": "Conservative offline-resolved normal/build graph on wasm32-unknown-unknown; not every component is asserted linked",
+    "metadataResolver": {
+      "cargo": "1.99.1",
+      "offline": true,
+      "locked": true,
+      "crateCodeOrBuildScriptsExecuted": false
+    },
+    "observedBinaryCrateVersions": [
+      "ab_glyph_rasterizer-0.1.5",
+      "base64-0.13.0",
+      "color_quant-1.1.0",
+      "console_error_panic_hook-0.1.7",
+      "fdeflate-0.3.6",
+      "flate2-1.0.34",
+      "gif-0.13.1",
+      "image-0.24.9",
+      "imageproc-0.23.0",
+      "jpeg-decoder-0.3.1",
+      "js-sys-0.3.62",
+      "miniz_oxide-0.8.0",
+      "palette-0.6.1",
+      "png-0.17.14",
+      "rand-0.7.3",
+      "rand_chacha-0.2.2",
+      "rusttype-0.9.2",
+      "tiff-0.9.1",
+      "ttf-parser-0.6.2",
+      "wasm-bindgen-0.2.95",
+      "weezl-0.1.8"
+    ],
+    "producer": {
+      "rustc": "1.86.0-nightly (3f43b1a63 2025-01-03)",
+      "wasmBindgen": "0.2.95 (3a8da7cb8)",
+      "walrus": "0.22.0"
+    },
+    "embeddedFont": {
+      "name": "Roboto Regular2.137",
+      "sha256": "79e851404657dac2106b3d22ad256d47824a9a5765458edb72c9102a45816d95",
+      "bytes": 171676,
+      "offset": 1402424,
+      "exactByteMatch": true
+    },
+    "optionalWeeAllocActivated": false,
+    "rustRuntimeCommit": "3f43b1a636738f41c48df073c5bcb97a97bf8459",
+    "rustRuntimeNoticeSuperset": [
+      {
+        "name": "addr2line",
+        "version": "0.22.0",
+        "notice": "packaging/licenses/audited/rust-stdlib-addr2line-0.22.0.txt"
+      },
+      {
+        "name": "adler",
+        "version": "1.0.2",
+        "notice": "packaging/licenses/audited/rust-stdlib-adler-1.0.2.txt"
+      },
+      {
+        "name": "allocator-api2",
+        "version": "0.2.21",
+        "notice": "packaging/licenses/audited/rust-stdlib-allocator-api2-0.2.21.txt"
+      },
+      {
+        "name": "cc",
+        "version": "1.2.0",
+        "notice": "packaging/licenses/audited/rust-stdlib-cc-1.2.0.txt"
+      },
+      {
+        "name": "cfg-if",
+        "version": "1.0.0",
+        "notice": "packaging/licenses/audited/rust-stdlib-cfg-if-1.0.0.txt"
+      },
+      {
+        "name": "compiler_builtins",
+        "version": "0.1.140",
+        "notice": "packaging/licenses/audited/rust-stdlib-compiler_builtins-0.1.140.txt"
+      },
+      {
+        "name": "dlmalloc",
+        "version": "0.2.7",
+        "notice": "packaging/licenses/audited/rust-stdlib-dlmalloc-0.2.7.txt"
+      },
+      {
+        "name": "getopts",
+        "version": "0.2.21",
+        "notice": "packaging/licenses/audited/rust-stdlib-getopts-0.2.21.txt"
+      },
+      {
+        "name": "gimli",
+        "version": "0.29.0",
+        "notice": "packaging/licenses/audited/rust-stdlib-gimli-0.29.0.txt"
+      },
+      {
+        "name": "gimli",
+        "version": "0.31.1",
+        "notice": "packaging/licenses/audited/rust-stdlib-gimli-0.31.1.txt"
+      },
+      {
+        "name": "hashbrown",
+        "version": "0.15.2",
+        "notice": "packaging/licenses/audited/rust-stdlib-hashbrown-0.15.2.txt"
+      },
+      {
+        "name": "libc",
+        "version": "0.2.169",
+        "notice": "packaging/licenses/audited/rust-stdlib-libc-0.2.169.txt"
+      },
+      {
+        "name": "memchr",
+        "version": "2.7.4",
+        "notice": "packaging/licenses/audited/rust-stdlib-memchr-2.7.4.txt"
+      },
+      {
+        "name": "miniz_oxide",
+        "version": "0.7.4",
+        "notice": "packaging/licenses/audited/rust-stdlib-miniz_oxide-0.7.4.txt"
+      },
+      {
+        "name": "object",
+        "version": "0.36.7",
+        "notice": "packaging/licenses/audited/rust-stdlib-object-0.36.7.txt"
+      },
+      {
+        "name": "rand",
+        "version": "0.8.5",
+        "notice": "packaging/licenses/audited/rust-stdlib-rand-0.8.5.txt"
+      },
+      {
+        "name": "rand_core",
+        "version": "0.6.4",
+        "notice": "packaging/licenses/audited/rust-stdlib-rand_core-0.6.4.txt"
+      },
+      {
+        "name": "rand_xorshift",
+        "version": "0.3.0",
+        "notice": "packaging/licenses/audited/rust-stdlib-rand_xorshift-0.3.0.txt"
+      },
+      {
+        "name": "rustc-demangle",
+        "version": "0.1.24",
+        "notice": "packaging/licenses/audited/rust-stdlib-rustc-demangle-0.1.24.txt"
+      },
+      {
+        "name": "shlex",
+        "version": "1.3.0",
+        "notice": "packaging/licenses/audited/rust-stdlib-shlex-1.3.0.txt"
+      },
+      {
+        "name": "unicode-width",
+        "version": "0.1.14",
+        "notice": "packaging/licenses/audited/rust-stdlib-unicode-width-0.1.14.txt"
+      },
+      {
+        "name": "unwinding",
+        "version": "0.2.5",
+        "notice": "packaging/licenses/audited/rust-stdlib-unwinding-0.2.5.txt"
+      }
+    ],
+    "excludedDisjointRustTargets": [
+      {
+        "name": "fortanix-sgx-abi",
+        "version": "0.5.0",
+        "reason": "Explicit disjoint target platform, not wasm32-unknown-unknown"
+      },
+      {
+        "name": "hermit-abi",
+        "version": "0.4.0",
+        "reason": "Explicit disjoint target platform, not wasm32-unknown-unknown"
+      },
+      {
+        "name": "r-efi",
+        "version": "4.5.0",
+        "reason": "Explicit disjoint target platform, not wasm32-unknown-unknown"
+      },
+      {
+        "name": "r-efi-alloc",
+        "version": "1.0.0",
+        "reason": "Explicit disjoint target platform, not wasm32-unknown-unknown"
+      },
+      {
+        "name": "wasi",
+        "version": "0.11.0+wasi-snapshot-preview1",
+        "reason": "Explicit disjoint target platform, not wasm32-unknown-unknown"
+      },
+      {
+        "name": "windows-sys",
+        "version": "0.59.0",
+        "reason": "Explicit disjoint target platform, not wasm32-unknown-unknown"
+      },
+      {
+        "name": "windows-targets",
+        "version": "0.52.6",
+        "reason": "Explicit disjoint target platform, not wasm32-unknown-unknown"
+      },
+      {
+        "name": "windows_aarch64_gnullvm",
+        "version": "0.52.6",
+        "reason": "Explicit disjoint target platform, not wasm32-unknown-unknown"
+      },
+      {
+        "name": "windows_aarch64_msvc",
+        "version": "0.52.6",
+        "reason": "Explicit disjoint target platform, not wasm32-unknown-unknown"
+      },
+      {
+        "name": "windows_i686_gnu",
+        "version": "0.52.6",
+        "reason": "Explicit disjoint target platform, not wasm32-unknown-unknown"
+      },
+      {
+        "name": "windows_i686_gnullvm",
+        "version": "0.52.6",
+        "reason": "Explicit disjoint target platform, not wasm32-unknown-unknown"
+      },
+      {
+        "name": "windows_i686_msvc",
+        "version": "0.52.6",
+        "reason": "Explicit disjoint target platform, not wasm32-unknown-unknown"
+      },
+      {
+        "name": "windows_x86_64_gnu",
+        "version": "0.52.6",
+        "reason": "Explicit disjoint target platform, not wasm32-unknown-unknown"
+      },
+      {
+        "name": "windows_x86_64_gnullvm",
+        "version": "0.52.6",
+        "reason": "Explicit disjoint target platform, not wasm32-unknown-unknown"
+      },
+      {
+        "name": "windows_x86_64_msvc",
+        "version": "0.52.6",
+        "reason": "Explicit disjoint target platform, not wasm32-unknown-unknown"
+      }
+    ],
+    "bitForBitRebuildClaimed": false
+  },
+  "quickjs": {
+    "sourceCommit": "5a7a0eeda87c99542f8cf3095b6d61ecfa755977",
+    "npmSlsaVerified": true,
+    "workflowIdentity": "https://github.com/vercel-labs/quickjs-wasi/.github/workflows/release.yml@refs/heads/main",
+    "modules": [
+      "extensions/crypto/crypto.so",
+      "extensions/encoding/encoding.so",
+      "extensions/headers/headers.so",
+      "extensions/structured-clone/structured-clone.so",
+      "extensions/url/url.so",
+      "quickjs.wasm"
+    ],
+    "quickjsNgCommit": "6d46d07d04041b40f4f49eaa7fdebe44c314c699",
+    "adaVersion": "3.4.3",
+    "adaOfficialReleaseSha256": "9465f5595777d8ea528de60dcc322f17e9fda0649beb248f5575761e9e222009",
+    "adaVendoredAmalgamationExactMatch": true,
+    "wasiSdkVersion": "32.0",
+    "wasiSdkCommit": "249054e5427023344c1906afde0e9073714d1930",
+    "wasiLibcCommit": "2fc32bc81b9f07f8d9525edea59bfbaf760c06d6",
+    "llvmCommit": "4434dabb69916856b824f68a64b029c67175e532",
+    "sourceBuildRecipe": "https://github.com/vercel-labs/quickjs-wasi/blob/5a7a0eeda87c99542f8cf3095b6d61ecfa755977/Makefile",
+    "bitForBitRebuildClaimed": false,
+    "wasiSdkLinuxRelease": {
+      "url": "https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-32/wasi-sdk-32.0-x86_64-linux.tar.gz",
+      "digest": "sha256:55fc523ebfbc98f69d1034fcfcb83d1ff5610cd9ab7eceef6cd097a30ba4ef93",
+      "releaseAssetId": 375217210
+    }
+  },
+  "proxy": {
+    "sourceCommit": "b7e5f7ccce1a3ac5b339cc4c587974e8989cbc16",
+    "npmSlsaVerified": true,
+    "declaredLicense": "MIT",
+    "declaredAuthor": "Nathan Rajlich",
+    "packageSuppliedLicenseFile": false,
+    "fullNoticeOrigin": "https://raw.githubusercontent.com/TooTallNate/proxy-agents/b7e5f7ccce1a3ac5b339cc4c587974e8989cbc16/packages/proxy-agent/LICENSE",
+    "noticeRuling": "Preserve authenticated package declaration/author and unmodified shared upstream MIT notice. Do not invent dates/holders or claim a nonexistent package license file."
+  }
+}

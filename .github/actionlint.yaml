@@ -1,0 +1,8 @@
+{
+  "self-hosted-runner": {
+    "labels": [
+      "tilde-disposable-arch",
+      "ubuntu-26.04"
+    ]
+  }
+}

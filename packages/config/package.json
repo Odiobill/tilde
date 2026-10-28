@@ -1,0 +1,15 @@
+{
+  "name": "@tilde/config",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./files": "./dist/files.js",
+    "./paths": "./dist/paths.js"
+  },
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "smol-toml": "1.4.2"
+  }
+}

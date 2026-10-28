@@ -1,0 +1,47 @@
+# Local template. prepare-arch-build.mjs writes a checksummed recipe beside the
+# exact local source archive. No repository URL or install/service hook is used.
+pkgname=tilde-assistant
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='Native Linux conversation interface with a durable user daemon'
+arch=('x86_64')
+license=('MIT' 'Apache-2.0' 'Apache-2.0 WITH LLVM-exception' 'BSD-2-Clause' 'BSD-3-Clause' 'CC0-1.0' 'Unicode-3.0' 'Unicode-DFS-2016' 'ISC' '0BSD' 'Unlicense')
+depends=('nodejs>=22.19.0' 'qt6-base>=@QT_VERSION@' 'qt6-declarative>=@QT_VERSION@' 'glibc' 'gcc-libs' 'libglvnd' 'libuv' 'systemd' 'dbus' 'coreutils' 'bash')
+makedepends=('npm' 'cmake>=3.24' 'gcc' 'make' 'python' 'binutils')
+checkdepends=('bubblewrap' 'desktop-file-utils' 'qt6ct' 'ttf-dejavu')
+options=('!debug' '!lto' '!strip' 'docs' 'libtool' 'staticlibs' 'emptydirs' '!zipman' '!purge')
+source=("tilde-${pkgver}.tar.gz")
+sha256sums=('@SOURCE_SHA256@')
+
+prepare() {
+  cd "$srcdir/tilde-$pkgver"
+  [[ ${sha256sums[0]} =~ ^[a-f0-9]{64}$ ]] || { error 'Use prepare-arch-build.mjs first'; return 1; }
+  [[ -n ${TILDE_NPM_CACHE:-} && -d $TILDE_NPM_CACHE/_cacache ]] || { error 'An explicitly prepared npm cache is required'; return 1; }
+  [[ $(qmake6 -query QT_VERSION) == '@QT_VERSION@' ]] || { error 'Qt changed since recipe preparation'; return 1; }
+  export TILDE_NODE=/usr/bin/node
+  npm_config_userconfig=/dev/null npm ci --ignore-scripts --offline --no-audit --no-fund --cache "$TILDE_NPM_CACHE"
+}
+
+build() {
+  cd "$srcdir/tilde-$pkgver"
+  export TILDE_NODE=/usr/bin/node TILDE_CMAKE=/usr/bin/cmake
+  local _map
+  printf -v _map '%q' "-ffile-prefix-map=$srcdir=/usr/src/debug/$pkgname"
+  export CXXFLAGS="-O2 -pipe -march=x86-64 -mtune=generic -fstack-protector-strong -D_FORTIFY_SOURCE=2 $_map"
+  npm run build
+  # Run ownership-sensitive staging with the real build UID. fakeroot's statx
+  # and UID interception differ on current Node/libuv; keep those checks intact.
+  /usr/bin/node scripts/stage-install.mjs --destdir "$srcdir/tilde-stage" --prefix /usr --node /usr/bin/node
+}
+
+check() {
+  cd "$srcdir/tilde-$pkgver"
+  npm run typecheck
+  npm test
+  npm run test:release
+  ctest --test-dir .build/cmake --output-on-failure
+}
+
+package() {
+  cp -a "$srcdir/tilde-stage/usr" "$pkgdir/"
+}

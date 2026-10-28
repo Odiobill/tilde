@@ -1,0 +1,16 @@
+[Unit]
+Description=Tilde personal assistant daemon
+StartLimitIntervalSec=30s
+StartLimitBurst=3
+
+[Service]
+Type=simple
+ExecStart=@EXEC@
+Restart=on-failure
+RestartSec=1s
+TimeoutStopSec=10s
+KillMode=control-group
+UMask=0077
+
+[Install]
+WantedBy=default.target

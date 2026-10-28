@@ -1,0 +1,5 @@
+add_library(tilde_scoped_fs MODULE bindings.cpp scoped_fs.cpp)
+target_include_directories(tilde_scoped_fs PRIVATE ${NODE_INCLUDE_DIR})
+target_compile_definitions(tilde_scoped_fs PRIVATE NAPI_VERSION=8)
+target_compile_options(tilde_scoped_fs PRIVATE -Wall -Wextra -Werror)
+set_target_properties(tilde_scoped_fs PROPERTIES PREFIX "" SUFFIX ".node" LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../.build")

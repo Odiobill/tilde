@@ -1,0 +1,13 @@
+import{execFile}from'node:child_process';import{promisify}from'node:util';import{pathsOverlap}from'@tilde/config';import{ToolError}from'./types.js';
+export type UnitState={Id:string;Names:string;FragmentPath:string;LoadState:string;ActiveState:string;SubState:string;Result:string;InvocationID:string;MainPID:string;ControlGroup:string};
+const exec=promisify(execFile);export const unitProperties=['Id','Names','FragmentPath','LoadState','ActiveState','SubState','Result','InvocationID','MainPID','ControlGroup'] as const;
+export function validateUnit(unit:string):void{if(!/^[A-Za-z0-9][A-Za-z0-9_.-]{0,199}\.service$/.test(unit)||/^(?:tilde(?:-|\.)|dbus(?:-|\.)|systemd(?:-|\.)|gpg-agent(?:-|\.)|ssh-agent(?:-|\.))/.test(unit))throw new ToolError('UNIT_DENIED');}
+export function validateResolvedUnit(unit:string,p:Pick<UnitState,'Id'|'Names'|'FragmentPath'>,protectedPaths:readonly string[]=[]):void{validateUnit(unit);if(p.Id!==unit||!p.Names.split(' ').includes(unit))throw new ToolError('UNIT_ALIAS_DENIED');for(const name of p.Names.split(' ').filter(Boolean))validateUnit(name);if(p.FragmentPath&&(!p.FragmentPath.startsWith('/')||protectedPaths.some(path=>pathsOverlap(path,p.FragmentPath))))throw new ToolError('UNIT_PROTECTED');}
+export async function inspectUnit(unit:string,scope:'user'|'system'='user'):Promise<UnitState>{
+ const args=[...(scope==='user'?['--user']:[]),'show',unit,'--no-pager',...unitProperties.map(p=>'--property='+p)];let stdout:string;
+ try{stdout=(await exec('/usr/bin/systemctl',args,{timeout:5000,maxBuffer:16384,encoding:'utf8'})).stdout;}catch(e){stdout=String((e as {stdout?:string}).stdout??'');if(!stdout.includes('LoadState=not-found'))throw new ToolError('MANAGER_UNAVAILABLE');}
+ const result=Object.fromEntries(unitProperties.map(p=>[p,''])) as UnitState;for(const line of stdout.split('\n')){const at=line.indexOf('=');if(at<0)continue;const key=line.slice(0,at);if(unitProperties.includes(key as typeof unitProperties[number])){const value=line.slice(at+1);if(Buffer.byteLength(value)>2048)throw new ToolError('UNIT_OUTPUT_LIMIT');result[key as keyof UnitState]=value;}}
+ if(!result.LoadState)throw new ToolError('MANAGER_UNAVAILABLE');return result;
+}
+export async function stopOwnedUnit(unit:string):Promise<void>{if(!/^tilde-tool-[a-f0-9]{64}\.service$/.test(unit))throw new ToolError('UNIT_DENIED');try{await exec('/usr/bin/systemctl',['--user','stop',unit],{timeout:8000,maxBuffer:4096});}catch{if((await inspectUnit(unit)).LoadState!=='not-found')throw new ToolError('STOP_UNPROVEN');}}
+export async function releaseOwnedUnit(unit:string):Promise<void>{try{await exec('/usr/bin/systemctl',['--user','reset-failed',unit],{timeout:3000,maxBuffer:4096});}catch{}}

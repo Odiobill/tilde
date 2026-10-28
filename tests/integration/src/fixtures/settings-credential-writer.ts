@@ -1,0 +1,1 @@
+import{openCredentialStore}from'@tilde/credentials';const p=JSON.parse(process.argv[2]!);await openCredentialStore(p.authFile).modify(p.providerId,async current=>({...current,...p.credential}));process.send?.({event:'stored'});process.disconnect?.();

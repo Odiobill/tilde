@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "actions": [
+    {
+      "repository": "actions/checkout",
+      "tag": "v7.0.1",
+      "commit": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "verifiedAt": "2026-10-28",
+      "reference": "https://api.github.com/repos/actions/checkout/git/ref/tags/v7.0.1",
+      "commitUrl": "https://api.github.com/repos/actions/checkout/git/commits/3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "releaseUrl": "https://github.com/actions/checkout/releases/tag/v7.0.1",
+      "actionUrl": "https://raw.githubusercontent.com/actions/checkout/3d3c42e5aac5ba805825da76410c181273ba90b1/action.yml"
+    },
+    {
+      "repository": "actions/setup-node",
+      "tag": "v7.1.0",
+      "commit": "949feb2413d6458794dcd2491c4babbbce0c15c1",
+      "verifiedAt": "2026-10-28",
+      "reference": "https://api.github.com/repos/actions/setup-node/git/ref/tags/v7.1.0",
+      "commitUrl": "https://api.github.com/repos/actions/setup-node/git/commits/949feb2413d6458794dcd2491c4babbbce0c15c1",
+      "releaseUrl": "https://github.com/actions/setup-node/releases/tag/v7.1.0",
+      "actionUrl": "https://raw.githubusercontent.com/actions/setup-node/949feb2413d6458794dcd2491c4babbbce0c15c1/action.yml"
+    },
+    {
+      "repository": "actions/upload-artifact",
+      "tag": "v7.0.2",
+      "commit": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "verifiedAt": "2026-10-28",
+      "reference": "https://api.github.com/repos/actions/upload-artifact/git/ref/tags/v7.0.2",
+      "commitUrl": "https://api.github.com/repos/actions/upload-artifact/git/commits/cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "releaseUrl": "https://github.com/actions/upload-artifact/releases/tag/v7.0.2",
+      "actionUrl": "https://raw.githubusercontent.com/actions/upload-artifact/cf430e030ddbb5b0abf93d22962f4752f3646cd9/action.yml"
+    },
+    {
+      "repository": "actions/download-artifact",
+      "tag": "v8.0.2",
+      "commit": "9000827ccba6bdab643e8b6fd33ac0654aef8333",
+      "verifiedAt": "2026-10-28",
+      "reference": "https://api.github.com/repos/actions/download-artifact/git/ref/tags/v8.0.2",
+      "commitUrl": "https://api.github.com/repos/actions/download-artifact/git/commits/9000827ccba6bdab643e8b6fd33ac0654aef8333",
+      "releaseUrl": "https://github.com/actions/download-artifact/releases/tag/v8.0.2",
+      "actionUrl": "https://raw.githubusercontent.com/actions/download-artifact/9000827ccba6bdab643e8b6fd33ac0654aef8333/action.yml"
+    },
+    {
+      "repository": "actions/upload-pages-artifact",
+      "tag": "v5.0.0",
+      "commit": "fc324d3547104276b827a68afc52ff2a11cc49c9",
+      "verifiedAt": "2026-10-28",
+      "reference": "https://api.github.com/repos/actions/upload-pages-artifact/git/ref/tags/v5.0.0",
+      "commitUrl": "https://api.github.com/repos/actions/upload-pages-artifact/git/commits/fc324d3547104276b827a68afc52ff2a11cc49c9",
+      "releaseUrl": "https://github.com/actions/upload-pages-artifact/releases/tag/v5.0.0",
+      "actionUrl": "https://raw.githubusercontent.com/actions/upload-pages-artifact/fc324d3547104276b827a68afc52ff2a11cc49c9/action.yml"
+    },
+    {
+      "repository": "actions/deploy-pages",
+      "tag": "v5.0.1",
+      "commit": "368f82528645a54fb793d4d04e342629a3f51346",
+      "verifiedAt": "2026-10-28",
+      "reference": "https://api.github.com/repos/actions/deploy-pages/git/ref/tags/v5.0.1",
+      "commitUrl": "https://api.github.com/repos/actions/deploy-pages/git/commits/368f82528645a54fb793d4d04e342629a3f51346",
+      "releaseUrl": "https://github.com/actions/deploy-pages/releases/tag/v5.0.1",
+      "actionUrl": "https://raw.githubusercontent.com/actions/deploy-pages/368f82528645a54fb793d4d04e342629a3f51346/action.yml"
+    }
+  ]
+}

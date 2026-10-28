@@ -1,0 +1,1616 @@
+[
+  {
+    "name": "Tilde",
+    "version": "0.1.0",
+    "source": "original project source",
+    "license": "MIT",
+    "textPath": "LICENSE",
+    "shippedPaths": [
+      "bin/tilde-agentd",
+      "bin/tilde-gui",
+      "lib/tilde/tilde-desktop-bridge",
+      "lib/tilde/app/packages"
+    ],
+    "linkage": "native"
+  },
+  {
+    "name": "Tilde icon",
+    "version": "0.1.0",
+    "source": "packaging/icons/tilde-gui.svg",
+    "license": "MIT",
+    "textPath": "LICENSE",
+    "shippedPaths": [
+      "share/icons/hicolor/scalable/apps/tilde-gui.svg"
+    ],
+    "linkage": "asset"
+  },
+  {
+    "name": "Node system runtime",
+    "version": "24.22.1 qualification; compatibility floor 22.19.0",
+    "source": "https://nodejs.org/en/about/previous-releases",
+    "license": "MIT",
+    "textPath": "packaging/licenses/Node-system-LICENSE.txt",
+    "shippedPaths": [],
+    "linkage": "dynamic-system",
+    "noticeScope": "Full system Node license includes separate bundled third-party terms; Node is not redistributed."
+  },
+  {
+    "name": "libQt6Core.so.6",
+    "version": "6.12.0 qualification; minimum 6.8",
+    "source": "https://doc.qt.io/qt-6/licensing.html",
+    "license": "LGPL-3.0-only",
+    "textPath": "packaging/licenses/Qt-LGPL-3.0-only.txt",
+    "additionalTextPaths": [
+      "packaging/licenses/Qt-GPL-3.0-only.txt"
+    ],
+    "shippedPaths": [],
+    "linkedBy": [
+      "bin/tilde-gui"
+    ],
+    "linkage": "dynamic-system",
+    "licenseChoice": "Selected open-source option; dynamic system module, no Qt library redistributed."
+  },
+  {
+    "name": "libQt6DBus.so.6",
+    "version": "6.12.0 qualification; minimum 6.8",
+    "source": "https://doc.qt.io/qt-6/licensing.html",
+    "license": "LGPL-3.0-only",
+    "textPath": "packaging/licenses/Qt-LGPL-3.0-only.txt",
+    "additionalTextPaths": [
+      "packaging/licenses/Qt-GPL-3.0-only.txt"
+    ],
+    "shippedPaths": [],
+    "linkedBy": [
+      "bin/tilde-gui"
+    ],
+    "linkage": "dynamic-system",
+    "licenseChoice": "Selected open-source option; dynamic system module, no Qt library redistributed."
+  },
+  {
+    "name": "libQt6Gui.so.6",
+    "version": "6.12.0 qualification; minimum 6.8",
+    "source": "https://doc.qt.io/qt-6/licensing.html",
+    "license": "LGPL-3.0-only",
+    "textPath": "packaging/licenses/Qt-LGPL-3.0-only.txt",
+    "additionalTextPaths": [
+      "packaging/licenses/Qt-GPL-3.0-only.txt"
+    ],
+    "shippedPaths": [],
+    "linkedBy": [
+      "bin/tilde-gui"
+    ],
+    "linkage": "dynamic-system",
+    "licenseChoice": "Selected open-source option; dynamic system module, no Qt library redistributed."
+  },
+  {
+    "name": "libQt6Network.so.6",
+    "version": "6.12.0 qualification; minimum 6.8",
+    "source": "https://doc.qt.io/qt-6/licensing.html",
+    "license": "LGPL-3.0-only",
+    "textPath": "packaging/licenses/Qt-LGPL-3.0-only.txt",
+    "additionalTextPaths": [
+      "packaging/licenses/Qt-GPL-3.0-only.txt"
+    ],
+    "shippedPaths": [],
+    "linkedBy": [
+      "bin/tilde-gui"
+    ],
+    "linkage": "dynamic-system",
+    "licenseChoice": "Selected open-source option; dynamic system module, no Qt library redistributed."
+  },
+  {
+    "name": "libQt6OpenGL.so.6",
+    "version": "6.12.0 qualification; minimum 6.8",
+    "source": "https://doc.qt.io/qt-6/licensing.html",
+    "license": "LGPL-3.0-only",
+    "textPath": "packaging/licenses/Qt-LGPL-3.0-only.txt",
+    "additionalTextPaths": [
+      "packaging/licenses/Qt-GPL-3.0-only.txt"
+    ],
+    "shippedPaths": [],
+    "linkedBy": [
+      "bin/tilde-gui"
+    ],
+    "linkage": "dynamic-system",
+    "licenseChoice": "Selected open-source option; dynamic system module, no Qt library redistributed."
+  },
+  {
+    "name": "libQt6Qml.so.6",
+    "version": "6.12.0 qualification; minimum 6.8",
+    "source": "https://doc.qt.io/qt-6/licensing.html",
+    "license": "LGPL-3.0-only",
+    "textPath": "packaging/licenses/Qt-LGPL-3.0-only.txt",
+    "additionalTextPaths": [
+      "packaging/licenses/Qt-GPL-3.0-only.txt"
+    ],
+    "shippedPaths": [],
+    "linkedBy": [
+      "bin/tilde-gui"
+    ],
+    "linkage": "dynamic-system",
+    "licenseChoice": "Selected open-source option; dynamic system module, no Qt library redistributed."
+  },
+  {
+    "name": "libQt6QmlMeta.so.6",
+    "version": "6.12.0 qualification; minimum 6.8",
+    "source": "https://doc.qt.io/qt-6/licensing.html",
+    "license": "LGPL-3.0-only",
+    "textPath": "packaging/licenses/Qt-LGPL-3.0-only.txt",
+    "additionalTextPaths": [
+      "packaging/licenses/Qt-GPL-3.0-only.txt"
+    ],
+    "shippedPaths": [],
+    "linkedBy": [
+      "bin/tilde-gui"
+    ],
+    "linkage": "dynamic-system",
+    "licenseChoice": "Selected open-source option; dynamic system module, no Qt library redistributed."
+  },
+  {
+    "name": "libQt6QmlModels.so.6",
+    "version": "6.12.0 qualification; minimum 6.8",
+    "source": "https://doc.qt.io/qt-6/licensing.html",
+    "license": "LGPL-3.0-only",
+    "textPath": "packaging/licenses/Qt-LGPL-3.0-only.txt",
+    "additionalTextPaths": [
+      "packaging/licenses/Qt-GPL-3.0-only.txt"
+    ],
+    "shippedPaths": [],
+    "linkedBy": [
+      "bin/tilde-gui"
+    ],
+    "linkage": "dynamic-system",
+    "licenseChoice": "Selected open-source option; dynamic system module, no Qt library redistributed."
+  },
+  {
+    "name": "libQt6QmlWorkerScript.so.6",
+    "version": "6.12.0 qualification; minimum 6.8",
+    "source": "https://doc.qt.io/qt-6/licensing.html",
+    "license": "LGPL-3.0-only",
+    "textPath": "packaging/licenses/Qt-LGPL-3.0-only.txt",
+    "additionalTextPaths": [
+      "packaging/licenses/Qt-GPL-3.0-only.txt"
+    ],
+    "shippedPaths": [],
+    "linkedBy": [
+      "bin/tilde-gui"
+    ],
+    "linkage": "dynamic-system",
+    "licenseChoice": "Selected open-source option; dynamic system module, no Qt library redistributed."
+  },
+  {
+    "name": "libQt6Quick.so.6",
+    "version": "6.12.0 qualification; minimum 6.8",
+    "source": "https://doc.qt.io/qt-6/licensing.html",
+    "license": "LGPL-3.0-only",
+    "textPath": "packaging/licenses/Qt-LGPL-3.0-only.txt",
+    "additionalTextPaths": [
+      "packaging/licenses/Qt-GPL-3.0-only.txt"
+    ],
+    "shippedPaths": [],
+    "linkedBy": [
+      "bin/tilde-gui"
+    ],
+    "linkage": "dynamic-system",
+    "licenseChoice": "Selected open-source option; dynamic system module, no Qt library redistributed."
+  },
+  {
+    "name": "libQt6QuickControls2.so.6",
+    "version": "6.12.0 qualification; minimum 6.8",
+    "source": "https://doc.qt.io/qt-6/licensing.html",
+    "license": "LGPL-3.0-only",
+    "textPath": "packaging/licenses/Qt-LGPL-3.0-only.txt",
+    "additionalTextPaths": [
+      "packaging/licenses/Qt-GPL-3.0-only.txt"
+    ],
+    "shippedPaths": [],
+    "linkedBy": [
+      "bin/tilde-gui"
+    ],
+    "linkage": "dynamic-system",
+    "licenseChoice": "Selected open-source option; dynamic system module, no Qt library redistributed."
+  },
+  {
+    "name": "libQt6QuickTemplates2.so.6",
+    "version": "6.12.0 qualification; minimum 6.8",
+    "source": "https://doc.qt.io/qt-6/licensing.html",
+    "license": "LGPL-3.0-only",
+    "textPath": "packaging/licenses/Qt-LGPL-3.0-only.txt",
+    "additionalTextPaths": [
+      "packaging/licenses/Qt-GPL-3.0-only.txt"
+    ],
+    "shippedPaths": [],
+    "linkedBy": [
+      "bin/tilde-gui"
+    ],
+    "linkage": "dynamic-system",
+    "licenseChoice": "Selected open-source option; dynamic system module, no Qt library redistributed."
+  },
+  {
+    "name": "libQt6Widgets.so.6",
+    "version": "6.12.0 qualification; minimum 6.8",
+    "source": "https://doc.qt.io/qt-6/licensing.html",
+    "license": "LGPL-3.0-only",
+    "textPath": "packaging/licenses/Qt-LGPL-3.0-only.txt",
+    "additionalTextPaths": [
+      "packaging/licenses/Qt-GPL-3.0-only.txt"
+    ],
+    "shippedPaths": [],
+    "linkedBy": [
+      "bin/tilde-gui"
+    ],
+    "linkage": "dynamic-system",
+    "licenseChoice": "Selected open-source option; dynamic system module, no Qt library redistributed."
+  },
+  {
+    "name": "@silvia-odwyer/photon embedded WebAssembly",
+    "version": "0.3.3",
+    "license": "Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-rs-0.3.3.txt",
+    "source": "https://static.crates.io/crates/photon-rs/photon-rs-0.3.3.crate",
+    "shippedPaths": [
+      "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm"
+    ],
+    "linkage": "static-wasm",
+    "noticeScope": "Root Photon terms; dependency/build and Rust runtime notice supersets recorded separately; bit-for-bit rebuilding is not claimed."
+  },
+  {
+    "name": "Roboto Regular embedded font",
+    "version": "2.137",
+    "license": "Apache-2.0",
+    "textPath": "packaging/licenses/audited/Roboto-Regular.txt",
+    "source": "https://static.crates.io/crates/photon-rs/photon-rs-0.3.3.crate",
+    "shippedPaths": [
+      "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm"
+    ],
+    "linkage": "embedded-asset",
+    "exactEmbeddedSha256": "79e851404657dac2106b3d22ad256d47824a9a5765458edb72c9102a45816d95"
+  },
+  {
+    "name": "Photon dependency/build notice: ab_glyph_rasterizer",
+    "version": "0.1.5",
+    "license": "Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-ab_glyph_rasterizer-0.1.5.txt",
+    "source": "https://static.crates.io/crates/ab_glyph_rasterizer/ab_glyph_rasterizer-0.1.5.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "a13739d7177fbd22bb0ed28badfff9f372f8bef46c863db4e1c6248f6b223b6e"
+  },
+  {
+    "name": "Photon dependency/build notice: adler2",
+    "version": "2.0.0",
+    "license": "0BSD OR MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-adler2-2.0.0.txt",
+    "source": "https://static.crates.io/crates/adler2/adler2-2.0.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "512761e0bb2578dd7380c6baaa0f4ce03e84f95e960231d1dec8bf4d7d6e2627"
+  },
+  {
+    "name": "Photon dependency/build notice: approx",
+    "version": "0.5.1",
+    "license": "Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-approx-0.5.1.txt",
+    "source": "https://static.crates.io/crates/approx/approx-0.5.1.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "cab112f0a86d568ea0e627cc1d6be74a1e9cd55214684db5561995f6dad897c6"
+  },
+  {
+    "name": "Photon dependency/build notice: autocfg",
+    "version": "1.1.0",
+    "license": "Apache-2.0 OR MIT",
+    "textPath": "packaging/licenses/audited/photon-autocfg-1.1.0.txt",
+    "source": "https://static.crates.io/crates/autocfg/autocfg-1.1.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa"
+  },
+  {
+    "name": "Photon dependency/build notice: base64",
+    "version": "0.13.0",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-base64-0.13.0.txt",
+    "source": "https://static.crates.io/crates/base64/base64-0.13.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "904dfeac50f3cdaba28fc6f57fdcddb75f49ed61346676a78c4ffe55877802fd"
+  },
+  {
+    "name": "Photon dependency/build notice: bitflags",
+    "version": "1.3.2",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-bitflags-1.3.2.txt",
+    "source": "https://static.crates.io/crates/bitflags/bitflags-1.3.2.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
+  },
+  {
+    "name": "Photon dependency/build notice: bumpalo",
+    "version": "3.10.0",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-bumpalo-3.10.0.txt",
+    "source": "https://static.crates.io/crates/bumpalo/bumpalo-3.10.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "37ccbd214614c6783386c1af30caf03192f17891059cecc394b4fb119e363de3"
+  },
+  {
+    "name": "Photon dependency/build notice: bytemuck",
+    "version": "1.11.0",
+    "license": "Zlib OR Apache-2.0 OR MIT",
+    "textPath": "packaging/licenses/audited/photon-bytemuck-1.11.0.txt",
+    "source": "https://static.crates.io/crates/bytemuck/bytemuck-1.11.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "a5377c8865e74a160d21f29c2d40669f53286db6eab59b88540cbb12ffc8b835"
+  },
+  {
+    "name": "Photon dependency/build notice: byteorder",
+    "version": "1.4.3",
+    "license": "Unlicense OR MIT",
+    "textPath": "packaging/licenses/audited/photon-byteorder-1.4.3.txt",
+    "source": "https://static.crates.io/crates/byteorder/byteorder-1.4.3.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "14c189c53d098945499cdfa7ecc63567cf3886b3332b312a5b4585d8d3a6a610"
+  },
+  {
+    "name": "Photon dependency/build notice: cfg-if",
+    "version": "0.1.10",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-cfg-if-0.1.10.txt",
+    "source": "https://static.crates.io/crates/cfg-if/cfg-if-0.1.10.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "4785bdd1c96b2a846b2bd7cc02e86b6b3dbf14e7e53446c4f54c92a361040822"
+  },
+  {
+    "name": "Photon dependency/build notice: cfg-if",
+    "version": "1.0.0",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-cfg-if-1.0.0.txt",
+    "source": "https://static.crates.io/crates/cfg-if/cfg-if-1.0.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
+  },
+  {
+    "name": "Photon dependency/build notice: color_quant",
+    "version": "1.1.0",
+    "license": "MIT",
+    "textPath": "packaging/licenses/audited/photon-color_quant-1.1.0.txt",
+    "source": "https://static.crates.io/crates/color_quant/color_quant-1.1.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "3d7b894f5411737b7867f4827955924d7c254fc9f4d91a6aad6b097804b1018b"
+  },
+  {
+    "name": "Photon dependency/build notice: console_error_panic_hook",
+    "version": "0.1.7",
+    "license": "Apache-2.0/MIT",
+    "textPath": "packaging/licenses/audited/photon-console_error_panic_hook-0.1.7.txt",
+    "source": "https://static.crates.io/crates/console_error_panic_hook/console_error_panic_hook-0.1.7.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "a06aeb73f470f66dcdbf7223caeebb85984942f22f1adb2a088cf9668146bbbc"
+  },
+  {
+    "name": "Photon dependency/build notice: conv",
+    "version": "0.3.3",
+    "license": "MIT",
+    "textPath": "packaging/licenses/audited/photon-conv-0.3.3.txt",
+    "source": "https://static.crates.io/crates/conv/conv-0.3.3.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "78ff10625fd0ac447827aa30ea8b861fead473bb60aeb73af6c1c58caf0d1299"
+  },
+  {
+    "name": "Photon dependency/build notice: crc32fast",
+    "version": "1.3.2",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-crc32fast-1.3.2.txt",
+    "source": "https://static.crates.io/crates/crc32fast/crc32fast-1.3.2.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "b540bd8bc810d3885c6ea91e2018302f68baba2129ab3e88f32389ee9370880d"
+  },
+  {
+    "name": "Photon dependency/build notice: custom_derive",
+    "version": "0.1.7",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-custom_derive-0.1.7.txt",
+    "source": "https://static.crates.io/crates/custom_derive/custom_derive-0.1.7.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "ef8ae57c4978a2acd8b869ce6b9ca1dfe817bff704c220209fdef2c0b75a01b9"
+  },
+  {
+    "name": "Photon dependency/build notice: deranged",
+    "version": "0.3.8",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-deranged-0.3.8.txt",
+    "source": "https://static.crates.io/crates/deranged/deranged-0.3.8.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "f2696e8a945f658fd14dc3b87242e6b80cd0f36ff04ea560fa39082368847946"
+  },
+  {
+    "name": "Photon dependency/build notice: either",
+    "version": "1.7.0",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-either-1.7.0.txt",
+    "source": "https://static.crates.io/crates/either/either-1.7.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "3f107b87b6afc2a64fd13cac55fe06d6c8859f12d4b14cbcdd2c67d0976781be"
+  },
+  {
+    "name": "Photon dependency/build notice: fdeflate",
+    "version": "0.3.6",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-fdeflate-0.3.6.txt",
+    "source": "https://static.crates.io/crates/fdeflate/fdeflate-0.3.6.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "07c6f4c64c1d33a3111c4466f7365ebdcc37c5bd1ea0d62aae2e3d722aacbedb"
+  },
+  {
+    "name": "Photon dependency/build notice: find-crate",
+    "version": "0.6.3",
+    "license": "Apache-2.0 OR MIT",
+    "textPath": "packaging/licenses/audited/photon-find-crate-0.6.3.txt",
+    "source": "https://static.crates.io/crates/find-crate/find-crate-0.6.3.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "59a98bbaacea1c0eb6a0876280051b892eb73594fd90cf3b20e9c817029c57d2"
+  },
+  {
+    "name": "Photon dependency/build notice: flate2",
+    "version": "1.0.34",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-flate2-1.0.34.txt",
+    "source": "https://static.crates.io/crates/flate2/flate2-1.0.34.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "a1b589b4dc103969ad3cf85c950899926ec64300a1a46d76c03a6072957036f0"
+  },
+  {
+    "name": "Photon dependency/build notice: getrandom",
+    "version": "0.1.16",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-getrandom-0.1.16.txt",
+    "source": "https://static.crates.io/crates/getrandom/getrandom-0.1.16.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "8fc3cb4d91f53b50155bdcfd23f6a4c39ae1969c2ae85982b135750cccaf5fce"
+  },
+  {
+    "name": "Photon dependency/build notice: getrandom",
+    "version": "0.2.7",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-getrandom-0.2.7.txt",
+    "source": "https://static.crates.io/crates/getrandom/getrandom-0.2.7.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "4eb1a864a501629691edf6c15a593b7a51eebaa1e8468e9ddc623de7c9b58ec6"
+  },
+  {
+    "name": "Photon dependency/build notice: gif",
+    "version": "0.13.1",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-gif-0.13.1.txt",
+    "source": "https://static.crates.io/crates/gif/gif-0.13.1.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "3fb2d69b19215e18bb912fa30f7ce15846e301408695e44e0ef719f1da9e19f2"
+  },
+  {
+    "name": "Photon dependency/build notice: image",
+    "version": "0.24.9",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-image-0.24.9.txt",
+    "source": "https://static.crates.io/crates/image/image-0.24.9.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "5690139d2f55868e080017335e4b94cb7414274c74f1669c84fb5feba2c9f69d"
+  },
+  {
+    "name": "Photon dependency/build notice: imageproc",
+    "version": "0.23.0",
+    "license": "MIT",
+    "textPath": "packaging/licenses/audited/photon-imageproc-0.23.0.txt",
+    "source": "https://static.crates.io/crates/imageproc/imageproc-0.23.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "b6aee993351d466301a29655d628bfc6f5a35a0d062b6160ca0808f425805fd7"
+  },
+  {
+    "name": "Photon dependency/build notice: instant",
+    "version": "0.1.13",
+    "license": "BSD-3-Clause",
+    "textPath": "packaging/licenses/audited/photon-instant-0.1.13.txt",
+    "source": "https://static.crates.io/crates/instant/instant-0.1.13.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "e0242819d153cba4b4b05a5a8f2a7e9bbf97b6055b2a002b395c96b5ff3c0222"
+  },
+  {
+    "name": "Photon dependency/build notice: itertools",
+    "version": "0.10.3",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-itertools-0.10.3.txt",
+    "source": "https://static.crates.io/crates/itertools/itertools-0.10.3.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "a9a9d19fa1e79b6215ff29b9d6880b706147f16e9b1dbb1e4e5947b5b02bc5e3"
+  },
+  {
+    "name": "Photon dependency/build notice: jpeg-decoder",
+    "version": "0.3.1",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-jpeg-decoder-0.3.1.txt",
+    "source": "https://static.crates.io/crates/jpeg-decoder/jpeg-decoder-0.3.1.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "f5d4a7da358eff58addd2877a45865158f0d78c911d43a5784ceb7bbf52833b0"
+  },
+  {
+    "name": "Photon dependency/build notice: js-sys",
+    "version": "0.3.62",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-js-sys-0.3.62.txt",
+    "source": "https://static.crates.io/crates/js-sys/js-sys-0.3.62.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "68c16e1bfd491478ab155fd8b4896b86f9ede344949b641e61501e07c2b8b4d5"
+  },
+  {
+    "name": "Photon dependency/build notice: libc",
+    "version": "0.2.126",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-libc-0.2.126.txt",
+    "source": "https://static.crates.io/crates/libc/libc-0.2.126.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "349d5a591cd28b49e1d1037471617a32ddcda5731b99419008085f72d5a53836"
+  },
+  {
+    "name": "Photon dependency/build notice: log",
+    "version": "0.4.17",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-log-0.4.17.txt",
+    "source": "https://static.crates.io/crates/log/log-0.4.17.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "abb12e687cfb44aa40f41fc3978ef76448f9b6038cad6aef4259d3c095a2382e"
+  },
+  {
+    "name": "Photon dependency/build notice: matrixmultiply",
+    "version": "0.3.9",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-matrixmultiply-0.3.9.txt",
+    "source": "https://static.crates.io/crates/matrixmultiply/matrixmultiply-0.3.9.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "9380b911e3e96d10c1f415da0876389aaf1b56759054eeb0de7df940c456ba1a"
+  },
+  {
+    "name": "Photon dependency/build notice: miniz_oxide",
+    "version": "0.8.0",
+    "license": "MIT OR Zlib OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-miniz_oxide-0.8.0.txt",
+    "source": "https://static.crates.io/crates/miniz_oxide/miniz_oxide-0.8.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "e2d80299ef12ff69b16a84bb182e3b9df68b5a91574d3d4fa6e41b65deec4df1"
+  },
+  {
+    "name": "Photon dependency/build notice: nalgebra",
+    "version": "0.30.1",
+    "license": "BSD-3-Clause",
+    "textPath": "packaging/licenses/audited/photon-nalgebra-0.30.1.txt",
+    "source": "https://static.crates.io/crates/nalgebra/nalgebra-0.30.1.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "4fb2d0de08694bed883320212c18ee3008576bfe8c306f4c3c4a58b4876998be"
+  },
+  {
+    "name": "Photon dependency/build notice: node-sys",
+    "version": "0.4.2",
+    "license": "Apache-2.0 OR MIT",
+    "textPath": "packaging/licenses/audited/photon-node-sys-0.4.2.txt",
+    "source": "https://static.crates.io/crates/node-sys/node-sys-0.4.2.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "30d75eee6e8b159228449706773f9f2af60720250308124e9c3d38bd8070844a"
+  },
+  {
+    "name": "Photon dependency/build notice: num",
+    "version": "0.4.3",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-num-0.4.3.txt",
+    "source": "https://static.crates.io/crates/num/num-0.4.3.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "35bd024e8b2ff75562e5f34e7f4905839deb4b22955ef5e73d2fea1b9813cb23"
+  },
+  {
+    "name": "Photon dependency/build notice: num-bigint",
+    "version": "0.4.6",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-num-bigint-0.4.6.txt",
+    "source": "https://static.crates.io/crates/num-bigint/num-bigint-0.4.6.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "a5e44f723f1133c9deac646763579fdb3ac745e418f2a7af9cd0c431da1f20b9"
+  },
+  {
+    "name": "Photon dependency/build notice: num-complex",
+    "version": "0.4.6",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-num-complex-0.4.6.txt",
+    "source": "https://static.crates.io/crates/num-complex/num-complex-0.4.6.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "73f88a1307638156682bada9d7604135552957b7818057dcef22705b4d509495"
+  },
+  {
+    "name": "Photon dependency/build notice: num-integer",
+    "version": "0.1.46",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-num-integer-0.1.46.txt",
+    "source": "https://static.crates.io/crates/num-integer/num-integer-0.1.46.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "7969661fd2958a5cb096e56c8e1ad0444ac2bbcd0061bd28660485a44879858f"
+  },
+  {
+    "name": "Photon dependency/build notice: num-iter",
+    "version": "0.1.45",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-num-iter-0.1.45.txt",
+    "source": "https://static.crates.io/crates/num-iter/num-iter-0.1.45.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "1429034a0490724d0075ebb2bc9e875d6503c3cf69e235a8941aa757d83ef5bf"
+  },
+  {
+    "name": "Photon dependency/build notice: num-rational",
+    "version": "0.4.2",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-num-rational-0.4.2.txt",
+    "source": "https://static.crates.io/crates/num-rational/num-rational-0.4.2.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "f83d14da390562dca69fc84082e73e548e1ad308d24accdedd2720017cb37824"
+  },
+  {
+    "name": "Photon dependency/build notice: num-traits",
+    "version": "0.2.19",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-num-traits-0.2.19.txt",
+    "source": "https://static.crates.io/crates/num-traits/num-traits-0.2.19.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "071dfc062690e90b734c0b2273ce72ad0ffa95f0c74596bc250dcfd960262841"
+  },
+  {
+    "name": "Photon dependency/build notice: once_cell",
+    "version": "1.13.0",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-once_cell-1.13.0.txt",
+    "source": "https://static.crates.io/crates/once_cell/once_cell-1.13.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "18a6dbe30758c9f83eb00cbea4ac95966305f5a7772f3f42ebfc7fc7eddbd8e1"
+  },
+  {
+    "name": "Photon dependency/build notice: owned_ttf_parser",
+    "version": "0.6.0",
+    "license": "Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-owned_ttf_parser-0.6.0.txt",
+    "source": "https://static.crates.io/crates/owned_ttf_parser/owned_ttf_parser-0.6.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "9f923fb806c46266c02ab4a5b239735c144bdeda724a50ed058e5226f594cde3"
+  },
+  {
+    "name": "Photon dependency/build notice: palette",
+    "version": "0.6.1",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-palette-0.6.1.txt",
+    "source": "https://static.crates.io/crates/palette/palette-0.6.1.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "8f9cd68f7112581033f157e56c77ac4a5538ec5836a2e39284e65bd7d7275e49"
+  },
+  {
+    "name": "Photon dependency/build notice: palette_derive",
+    "version": "0.6.1",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-palette_derive-0.6.1.txt",
+    "source": "https://static.crates.io/crates/palette_derive/palette_derive-0.6.1.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "05eedf46a8e7c27f74af0c9cfcdb004ceca158cb1b918c6f68f8d7a549b3e427"
+  },
+  {
+    "name": "Photon dependency/build notice: paste",
+    "version": "1.0.15",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-paste-1.0.15.txt",
+    "source": "https://static.crates.io/crates/paste/paste-1.0.15.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a"
+  },
+  {
+    "name": "Photon dependency/build notice: perlin2d",
+    "version": "0.2.6",
+    "license": "Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-perlin2d-0.2.6.txt",
+    "source": "https://static.crates.io/crates/perlin2d/perlin2d-0.2.6.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "bb6c71cfd92099c43062f059494786cdcbd9cb4dab61389098362b241071cde0"
+  },
+  {
+    "name": "Photon dependency/build notice: phf",
+    "version": "0.11.0",
+    "license": "MIT",
+    "textPath": "packaging/licenses/audited/photon-phf-0.11.0.txt",
+    "source": "https://static.crates.io/crates/phf/phf-0.11.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "4724fa946c8d1e7cd881bd3dbee63ce32fc1e9e191e35786b3dc1320a3f68131"
+  },
+  {
+    "name": "Photon dependency/build notice: phf_generator",
+    "version": "0.11.0",
+    "license": "MIT",
+    "textPath": "packaging/licenses/audited/photon-phf_generator-0.11.0.txt",
+    "source": "https://static.crates.io/crates/phf_generator/phf_generator-0.11.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "5b450720b6f75cfbfabc195814bd3765f337a4f9a83186f8537297cac12f6705"
+  },
+  {
+    "name": "Photon dependency/build notice: phf_macros",
+    "version": "0.11.0",
+    "license": "MIT",
+    "textPath": "packaging/licenses/audited/photon-phf_macros-0.11.0.txt",
+    "source": "https://static.crates.io/crates/phf_macros/phf_macros-0.11.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "cd94351ac44e70e56b59883e15029a5135f902a8a3020f9c18d580a420e526aa"
+  },
+  {
+    "name": "Photon dependency/build notice: phf_shared",
+    "version": "0.11.0",
+    "license": "MIT",
+    "textPath": "packaging/licenses/audited/photon-phf_shared-0.11.0.txt",
+    "source": "https://static.crates.io/crates/phf_shared/phf_shared-0.11.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "9dd5609d4b2df87167f908a32e1b146ce309c16cf35df76bc11f440b756048e4"
+  },
+  {
+    "name": "Photon dependency/build notice: png",
+    "version": "0.17.14",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-png-0.17.14.txt",
+    "source": "https://static.crates.io/crates/png/png-0.17.14.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "52f9d46a34a05a6a57566bc2bfae066ef07585a6e3fa30fbbdff5936380623f0"
+  },
+  {
+    "name": "Photon dependency/build notice: ppv-lite86",
+    "version": "0.2.16",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-ppv-lite86-0.2.16.txt",
+    "source": "https://static.crates.io/crates/ppv-lite86/ppv-lite86-0.2.16.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "eb9f9e6e233e5c4a35559a617bf40a4ec447db2e84c20b55a6f83167b7e57872"
+  },
+  {
+    "name": "Photon dependency/build notice: proc-macro2",
+    "version": "1.0.67",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-proc-macro2-1.0.67.txt",
+    "source": "https://static.crates.io/crates/proc-macro2/proc-macro2-1.0.67.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "3d433d9f1a3e8c1263d9456598b16fec66f4acc9a74dacffd35c7bb09b3a1328"
+  },
+  {
+    "name": "Photon dependency/build notice: quote",
+    "version": "1.0.33",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-quote-1.0.33.txt",
+    "source": "https://static.crates.io/crates/quote/quote-1.0.33.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "5267fca4496028628a95160fc423a33e8b2e6af8a5302579e322e4b520293cae"
+  },
+  {
+    "name": "Photon dependency/build notice: rand",
+    "version": "0.7.3",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-rand-0.7.3.txt",
+    "source": "https://static.crates.io/crates/rand/rand-0.7.3.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "6a6b1679d49b24bbfe0c803429aa1874472f50d9b363131f0e89fc356b544d03"
+  },
+  {
+    "name": "Photon dependency/build notice: rand",
+    "version": "0.8.5",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-rand-0.8.5.txt",
+    "source": "https://static.crates.io/crates/rand/rand-0.8.5.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "34af8d1a0e25924bc5b7c43c079c942339d8f0a8b57c39049bef581b46327404"
+  },
+  {
+    "name": "Photon dependency/build notice: rand_chacha",
+    "version": "0.2.2",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-rand_chacha-0.2.2.txt",
+    "source": "https://static.crates.io/crates/rand_chacha/rand_chacha-0.2.2.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "f4c8ed856279c9737206bf725bf36935d8666ead7aa69b52be55af369d193402"
+  },
+  {
+    "name": "Photon dependency/build notice: rand_chacha",
+    "version": "0.3.1",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-rand_chacha-0.3.1.txt",
+    "source": "https://static.crates.io/crates/rand_chacha/rand_chacha-0.3.1.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "e6c10a63a0fa32252be49d21e7709d4d4baf8d231c2dbce1eaa8141b9b127d88"
+  },
+  {
+    "name": "Photon dependency/build notice: rand_core",
+    "version": "0.5.1",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-rand_core-0.5.1.txt",
+    "source": "https://static.crates.io/crates/rand_core/rand_core-0.5.1.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "90bde5296fc891b0cef12a6d03ddccc162ce7b2aff54160af9338f8d40df6d19"
+  },
+  {
+    "name": "Photon dependency/build notice: rand_core",
+    "version": "0.6.3",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-rand_core-0.6.3.txt",
+    "source": "https://static.crates.io/crates/rand_core/rand_core-0.6.3.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "d34f1408f55294453790c48b2f1ebbb1c5b4b7563eb1f418bcfcfdbb06ebb4e7"
+  },
+  {
+    "name": "Photon dependency/build notice: rand_distr",
+    "version": "0.2.2",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-rand_distr-0.2.2.txt",
+    "source": "https://static.crates.io/crates/rand_distr/rand_distr-0.2.2.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "96977acbdd3a6576fb1d27391900035bf3863d4a16422973a409b488cf29ffb2"
+  },
+  {
+    "name": "Photon dependency/build notice: rawpointer",
+    "version": "0.2.1",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-rawpointer-0.2.1.txt",
+    "source": "https://static.crates.io/crates/rawpointer/rawpointer-0.2.1.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "60a357793950651c4ed0f3f52338f53b2f809f32d83a07f72909fa13e4c6c1e3"
+  },
+  {
+    "name": "Photon dependency/build notice: rusttype",
+    "version": "0.9.2",
+    "license": "MIT / Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-rusttype-0.9.2.txt",
+    "source": "https://static.crates.io/crates/rusttype/rusttype-0.9.2.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "dc7c727aded0be18c5b80c1640eae0ac8e396abf6fa8477d96cb37d18ee5ec59"
+  },
+  {
+    "name": "Photon dependency/build notice: safe_arch",
+    "version": "0.7.2",
+    "license": "Zlib OR Apache-2.0 OR MIT",
+    "textPath": "packaging/licenses/audited/photon-safe_arch-0.7.2.txt",
+    "source": "https://static.crates.io/crates/safe_arch/safe_arch-0.7.2.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "c3460605018fdc9612bce72735cba0d27efbcd9904780d44c7e3a9948f96148a"
+  },
+  {
+    "name": "Photon dependency/build notice: serde",
+    "version": "1.0.188",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-serde-1.0.188.txt",
+    "source": "https://static.crates.io/crates/serde/serde-1.0.188.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "cf9e0fcba69a370eed61bcf2b728575f726b50b55cba78064753d708ddc7549e"
+  },
+  {
+    "name": "Photon dependency/build notice: serde_derive",
+    "version": "1.0.188",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-serde_derive-1.0.188.txt",
+    "source": "https://static.crates.io/crates/serde_derive/serde_derive-1.0.188.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "4eca7ac642d82aa35b60049a6eccb4be6be75e599bd2e9adb5f875a737654af2"
+  },
+  {
+    "name": "Photon dependency/build notice: simba",
+    "version": "0.7.3",
+    "license": "Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-simba-0.7.3.txt",
+    "source": "https://static.crates.io/crates/simba/simba-0.7.3.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "2f3fd720c48c53cace224ae62bef1bbff363a70c68c4802a78b5cc6159618176"
+  },
+  {
+    "name": "Photon dependency/build notice: simd-adler32",
+    "version": "0.3.7",
+    "license": "MIT",
+    "textPath": "packaging/licenses/audited/photon-simd-adler32-0.3.7.txt",
+    "source": "https://static.crates.io/crates/simd-adler32/simd-adler32-0.3.7.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "d66dc143e6b11c1eddc06d5c423cfc97062865baf299914ab64caa38182078fe"
+  },
+  {
+    "name": "Photon dependency/build notice: siphasher",
+    "version": "0.3.10",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-siphasher-0.3.10.txt",
+    "source": "https://static.crates.io/crates/siphasher/siphasher-0.3.10.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "7bd3e3206899af3f8b12af284fafc038cc1dc2b41d1b89dd17297221c5d225de"
+  },
+  {
+    "name": "Photon dependency/build notice: syn",
+    "version": "1.0.98",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-syn-1.0.98.txt",
+    "source": "https://static.crates.io/crates/syn/syn-1.0.98.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "c50aef8a904de4c23c788f104b7dddc7d6f79c647c7c8ce4cc8f73eb0ca773dd"
+  },
+  {
+    "name": "Photon dependency/build notice: syn",
+    "version": "2.0.37",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-syn-2.0.37.txt",
+    "source": "https://static.crates.io/crates/syn/syn-2.0.37.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "7303ef2c05cd654186cb250d29049a24840ca25d2747c25c0381c8d9e2f582e8"
+  },
+  {
+    "name": "Photon dependency/build notice: thiserror",
+    "version": "1.0.31",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-thiserror-1.0.31.txt",
+    "source": "https://static.crates.io/crates/thiserror/thiserror-1.0.31.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "bd829fe32373d27f76265620b5309d0340cb8550f523c1dda251d6298069069a"
+  },
+  {
+    "name": "Photon dependency/build notice: thiserror-impl",
+    "version": "1.0.31",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-thiserror-impl-1.0.31.txt",
+    "source": "https://static.crates.io/crates/thiserror-impl/thiserror-impl-1.0.31.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "0396bc89e626244658bef819e22d0cc459e795a5ebe878e6ec336d1674a8d79a"
+  },
+  {
+    "name": "Photon dependency/build notice: tiff",
+    "version": "0.9.1",
+    "license": "MIT",
+    "textPath": "packaging/licenses/audited/photon-tiff-0.9.1.txt",
+    "source": "https://static.crates.io/crates/tiff/tiff-0.9.1.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "ba1310fcea54c6a9a4fd1aad794ecc02c31682f6bfbecdf460bf19533eed1e3e"
+  },
+  {
+    "name": "Photon dependency/build notice: time",
+    "version": "0.3.28",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-time-0.3.28.txt",
+    "source": "https://static.crates.io/crates/time/time-0.3.28.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "17f6bb557fd245c28e6411aa56b6403c689ad95061f50e4be16c274e70a17e48"
+  },
+  {
+    "name": "Photon dependency/build notice: time-core",
+    "version": "0.1.1",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-time-core-0.1.1.txt",
+    "source": "https://static.crates.io/crates/time-core/time-core-0.1.1.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "7300fbefb4dadc1af235a9cef3737cea692a9d97e1b9cbcd4ebdae6f8868e6fb"
+  },
+  {
+    "name": "Photon dependency/build notice: toml",
+    "version": "0.5.9",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-toml-0.5.9.txt",
+    "source": "https://static.crates.io/crates/toml/toml-0.5.9.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "8d82e1a7758622a465f8cee077614c73484dac5b836c02ff6a40d5d1010324d7"
+  },
+  {
+    "name": "Photon dependency/build notice: ttf-parser",
+    "version": "0.6.2",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-ttf-parser-0.6.2.txt",
+    "source": "https://static.crates.io/crates/ttf-parser/ttf-parser-0.6.2.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "3e5d7cd7ab3e47dda6e56542f4bbf3824c15234958c6e1bd6aaa347e93499fdc"
+  },
+  {
+    "name": "Photon dependency/build notice: typenum",
+    "version": "1.17.0",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-typenum-1.17.0.txt",
+    "source": "https://static.crates.io/crates/typenum/typenum-1.17.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "42ff0bf0c66b8238c6f3b578df37d0b7848e55df8577b3f74f92a69acceeb825"
+  },
+  {
+    "name": "Photon dependency/build notice: unicode-ident",
+    "version": "1.0.2",
+    "license": "(MIT OR Apache-2.0) AND Unicode-DFS-2016",
+    "textPath": "packaging/licenses/audited/photon-unicode-ident-1.0.2.txt",
+    "source": "https://static.crates.io/crates/unicode-ident/unicode-ident-1.0.2.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "15c61ba63f9235225a22310255a29b806b907c9b8c964bcbd0a2c70f3f2deea7"
+  },
+  {
+    "name": "Photon dependency/build notice: wasm-bindgen",
+    "version": "0.2.95",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-wasm-bindgen-0.2.95.txt",
+    "source": "https://static.crates.io/crates/wasm-bindgen/wasm-bindgen-0.2.95.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "128d1e363af62632b8eb57219c8fd7877144af57558fb2ef0368d0087bddeb2e"
+  },
+  {
+    "name": "Photon dependency/build notice: wasm-bindgen-backend",
+    "version": "0.2.95",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-wasm-bindgen-backend-0.2.95.txt",
+    "source": "https://static.crates.io/crates/wasm-bindgen-backend/wasm-bindgen-backend-0.2.95.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "cb6dd4d3ca0ddffd1dd1c9c04f94b868c37ff5fac97c30b97cff2d74fce3a358"
+  },
+  {
+    "name": "Photon dependency/build notice: wasm-bindgen-macro",
+    "version": "0.2.95",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-wasm-bindgen-macro-0.2.95.txt",
+    "source": "https://static.crates.io/crates/wasm-bindgen-macro/wasm-bindgen-macro-0.2.95.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "e79384be7f8f5a9dd5d7167216f022090cf1f9ec128e6e6a482a2cb5c5422c56"
+  },
+  {
+    "name": "Photon dependency/build notice: wasm-bindgen-macro-support",
+    "version": "0.2.95",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-wasm-bindgen-macro-support-0.2.95.txt",
+    "source": "https://static.crates.io/crates/wasm-bindgen-macro-support/wasm-bindgen-macro-support-0.2.95.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "26c6ab57572f7a24a4985830b120de1594465e5d500f24afe89e16b4e833ef68"
+  },
+  {
+    "name": "Photon dependency/build notice: wasm-bindgen-shared",
+    "version": "0.2.95",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-wasm-bindgen-shared-0.2.95.txt",
+    "source": "https://static.crates.io/crates/wasm-bindgen-shared/wasm-bindgen-shared-0.2.95.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "65fc09f10666a9f147042251e0dda9c18f166ff7de300607007e96bdebc1068d"
+  },
+  {
+    "name": "Photon dependency/build notice: web-sys",
+    "version": "0.3.55",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-web-sys-0.3.55.txt",
+    "source": "https://static.crates.io/crates/web-sys/web-sys-0.3.55.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "38eb105f1c59d9eaa6b5cdc92b859d85b926e82cb2e0945cd0c9259faa6fe9fb"
+  },
+  {
+    "name": "Photon dependency/build notice: weezl",
+    "version": "0.1.8",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/photon-weezl-0.1.8.txt",
+    "source": "https://static.crates.io/crates/weezl/weezl-0.1.8.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "53a85b86a771b1c87058196170769dd264f66c0782acf1ae6cc51bfd64b39082"
+  },
+  {
+    "name": "Photon dependency/build notice: wide",
+    "version": "0.7.28",
+    "license": "Zlib OR Apache-2.0 OR MIT",
+    "textPath": "packaging/licenses/audited/photon-wide-0.7.28.txt",
+    "source": "https://static.crates.io/crates/wide/wide-0.7.28.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "b828f995bf1e9622031f8009f8481a85406ce1f4d4588ff746d872043e855690"
+  },
+  {
+    "name": "Rust standard library in Photon",
+    "version": "1.86.0-nightly (3f43b1a63 2025-01-03)",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/Rust-standard-library-3f43b1a63673.txt",
+    "source": "https://raw.githubusercontent.com/rust-lang/rust/3f43b1a636738f41c48df073c5bcb97a97bf8459/",
+    "shippedPaths": [
+      "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm"
+    ],
+    "linkage": "static-runtime"
+  },
+  {
+    "name": "Rust standard-library source/build notice: addr2line",
+    "version": "0.22.0",
+    "license": "Apache-2.0 OR MIT",
+    "textPath": "packaging/licenses/audited/rust-stdlib-addr2line-0.22.0.txt",
+    "source": "https://static.crates.io/crates/addr2line/addr2line-0.22.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "6e4503c46a5c0c7844e948c9a4d6acd9f50cccb4de1c48eb9e291ea17470c678"
+  },
+  {
+    "name": "Rust standard-library source/build notice: adler",
+    "version": "1.0.2",
+    "license": "0BSD OR MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-adler-1.0.2.txt",
+    "source": "https://static.crates.io/crates/adler/adler-1.0.2.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "f26201604c87b1e01bd3d98f8d5d9a8fcbb815e8cedb41ffccbeb4bf593a35fe"
+  },
+  {
+    "name": "Rust standard-library source/build notice: allocator-api2",
+    "version": "0.2.21",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-allocator-api2-0.2.21.txt",
+    "source": "https://static.crates.io/crates/allocator-api2/allocator-api2-0.2.21.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "683d7910e743518b0e34f1186f92494becacb047c7b6bf616c96772180fef923"
+  },
+  {
+    "name": "Rust standard-library source/build notice: cc",
+    "version": "1.2.0",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-cc-1.2.0.txt",
+    "source": "https://static.crates.io/crates/cc/cc-1.2.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "1aeb932158bd710538c73702db6945cb68a8fb08c519e6e12706b94263b36db8"
+  },
+  {
+    "name": "Rust standard-library source/build notice: cfg-if",
+    "version": "1.0.0",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-cfg-if-1.0.0.txt",
+    "source": "https://static.crates.io/crates/cfg-if/cfg-if-1.0.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
+  },
+  {
+    "name": "Rust standard-library source/build notice: compiler_builtins",
+    "version": "0.1.140",
+    "license": "MIT AND Apache-2.0 WITH LLVM-exception AND (MIT OR Apache-2.0)",
+    "textPath": "packaging/licenses/audited/rust-stdlib-compiler_builtins-0.1.140.txt",
+    "source": "https://static.crates.io/crates/compiler_builtins/compiler_builtins-0.1.140.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "df14d41c5d172a886df3753d54238eefb0f61c96cbd8b363c33ccc92c457bee3"
+  },
+  {
+    "name": "Rust standard-library source/build notice: dlmalloc",
+    "version": "0.2.7",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-dlmalloc-0.2.7.txt",
+    "source": "https://static.crates.io/crates/dlmalloc/dlmalloc-0.2.7.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "d9b5e0d321d61de16390ed273b647ce51605b575916d3c25e6ddf27a1e140035"
+  },
+  {
+    "name": "Rust standard-library source/build notice: getopts",
+    "version": "0.2.21",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-getopts-0.2.21.txt",
+    "source": "https://static.crates.io/crates/getopts/getopts-0.2.21.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "14dbbfd5c71d70241ecf9e6f13737f7b5ce823821063188d7e46c41d371eebd5"
+  },
+  {
+    "name": "Rust standard-library source/build notice: gimli",
+    "version": "0.29.0",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-gimli-0.29.0.txt",
+    "source": "https://static.crates.io/crates/gimli/gimli-0.29.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "40ecd4077b5ae9fd2e9e169b102c6c330d0605168eb0e8bf79952b256dbefffd"
+  },
+  {
+    "name": "Rust standard-library source/build notice: gimli",
+    "version": "0.31.1",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-gimli-0.31.1.txt",
+    "source": "https://static.crates.io/crates/gimli/gimli-0.31.1.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "07e28edb80900c19c28f1072f2e8aeca7fa06b23cd4169cefe1af5aa3260783f"
+  },
+  {
+    "name": "Rust standard-library source/build notice: hashbrown",
+    "version": "0.15.2",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-hashbrown-0.15.2.txt",
+    "source": "https://static.crates.io/crates/hashbrown/hashbrown-0.15.2.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "bf151400ff0baff5465007dd2f3e717f3fe502074ca563069ce3a6629d07b289"
+  },
+  {
+    "name": "Rust standard-library source/build notice: libc",
+    "version": "0.2.169",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-libc-0.2.169.txt",
+    "source": "https://static.crates.io/crates/libc/libc-0.2.169.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "b5aba8db14291edd000dfcc4d620c7ebfb122c613afb886ca8803fa4e128a20a"
+  },
+  {
+    "name": "Rust standard-library source/build notice: memchr",
+    "version": "2.7.4",
+    "license": "Unlicense OR MIT",
+    "textPath": "packaging/licenses/audited/rust-stdlib-memchr-2.7.4.txt",
+    "source": "https://static.crates.io/crates/memchr/memchr-2.7.4.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "78ca9ab1a0babb1e7d5695e3530886289c18cf2f87ec19a575a0abdce112e3a3"
+  },
+  {
+    "name": "Rust standard-library source/build notice: miniz_oxide",
+    "version": "0.7.4",
+    "license": "MIT OR Zlib OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-miniz_oxide-0.7.4.txt",
+    "source": "https://static.crates.io/crates/miniz_oxide/miniz_oxide-0.7.4.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "b8a240ddb74feaf34a79a7add65a741f3167852fba007066dcac1ca548d89c08"
+  },
+  {
+    "name": "Rust standard-library source/build notice: object",
+    "version": "0.36.7",
+    "license": "Apache-2.0 OR MIT",
+    "textPath": "packaging/licenses/audited/rust-stdlib-object-0.36.7.txt",
+    "source": "https://static.crates.io/crates/object/object-0.36.7.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "62948e14d923ea95ea2c7c86c71013138b66525b86bdc08d2dcc262bdb497b87"
+  },
+  {
+    "name": "Rust standard-library source/build notice: rand",
+    "version": "0.8.5",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-rand-0.8.5.txt",
+    "source": "https://static.crates.io/crates/rand/rand-0.8.5.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "34af8d1a0e25924bc5b7c43c079c942339d8f0a8b57c39049bef581b46327404"
+  },
+  {
+    "name": "Rust standard-library source/build notice: rand_core",
+    "version": "0.6.4",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-rand_core-0.6.4.txt",
+    "source": "https://static.crates.io/crates/rand_core/rand_core-0.6.4.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
+  },
+  {
+    "name": "Rust standard-library source/build notice: rand_xorshift",
+    "version": "0.3.0",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-rand_xorshift-0.3.0.txt",
+    "source": "https://static.crates.io/crates/rand_xorshift/rand_xorshift-0.3.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "d25bf25ec5ae4a3f1b92f929810509a2f53d7dca2f50b794ff57e3face536c8f"
+  },
+  {
+    "name": "Rust standard-library source/build notice: rustc-demangle",
+    "version": "0.1.24",
+    "license": "MIT/Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-rustc-demangle-0.1.24.txt",
+    "source": "https://static.crates.io/crates/rustc-demangle/rustc-demangle-0.1.24.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "719b953e2095829ee67db738b3bfa9fa368c94900df327b3f07fe6e794d2fe1f"
+  },
+  {
+    "name": "Rust standard-library source/build notice: shlex",
+    "version": "1.3.0",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-shlex-1.3.0.txt",
+    "source": "https://static.crates.io/crates/shlex/shlex-1.3.0.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "0fda2ff0d084019ba4d7c6f371c95d8fd75ce3524c3cb8fb653a3023f6323e64"
+  },
+  {
+    "name": "Rust standard-library source/build notice: unicode-width",
+    "version": "0.1.14",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-unicode-width-0.1.14.txt",
+    "source": "https://static.crates.io/crates/unicode-width/unicode-width-0.1.14.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "7dd6e30e90baa6f72411720665d41d89b9a3d039dc45b8faea1ddd07f617f6af"
+  },
+  {
+    "name": "Rust standard-library source/build notice: unwinding",
+    "version": "0.2.5",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/rust-stdlib-unwinding-0.2.5.txt",
+    "source": "https://static.crates.io/crates/unwinding/unwinding-0.2.5.crate",
+    "shippedPaths": [],
+    "potentialStaticContainer": "lib/tilde/app/node_modules/@silvia-odwyer/photon/photon_rs_bg.wasm",
+    "linkage": "source-build-notice-superset",
+    "sourceArchiveSha256": "51f06a05848f650946acef3bf525fe96612226b61f74ae23ffa4e98bfbb8ab3c"
+  },
+  {
+    "name": "quickjs-wasi embedded WebAssembly",
+    "version": "3.6.2",
+    "license": "MIT",
+    "textPath": "packaging/licenses/audited/quickjs-wasi-3.6.2.txt",
+    "source": "https://raw.githubusercontent.com/vercel-labs/quickjs-wasi/5a7a0eeda87c99542f8cf3095b6d61ecfa755977/",
+    "shippedPaths": [
+      "lib/tilde/app/node_modules/quickjs-wasi/extensions/crypto/crypto.so",
+      "lib/tilde/app/node_modules/quickjs-wasi/extensions/encoding/encoding.so",
+      "lib/tilde/app/node_modules/quickjs-wasi/extensions/headers/headers.so",
+      "lib/tilde/app/node_modules/quickjs-wasi/extensions/structured-clone/structured-clone.so",
+      "lib/tilde/app/node_modules/quickjs-wasi/extensions/url/url.so",
+      "lib/tilde/app/node_modules/quickjs-wasi/quickjs.wasm"
+    ],
+    "linkage": "static-wasm",
+    "noticeScope": "Root wrapper terms, with compiled libraries/runtime and data separately disclosed. No production CodeMode feature is enabled by these notices."
+  },
+  {
+    "name": "QuickJS-NG",
+    "version": "git 6d46d07d04041b40f4f49eaa7fdebe44c314c699",
+    "license": "MIT",
+    "textPath": "packaging/licenses/audited/QuickJS-NG-6d46d07d0404.txt",
+    "source": "https://raw.githubusercontent.com/quickjs-ng/quickjs/6d46d07d04041b40f4f49eaa7fdebe44c314c699/",
+    "shippedPaths": [
+      "lib/tilde/app/node_modules/quickjs-wasi/quickjs.wasm"
+    ],
+    "linkage": "static-wasm-dependency"
+  },
+  {
+    "name": "Unicode data in QuickJS",
+    "version": "as vendored at 6d46d07d04041b40f4f49eaa7fdebe44c314c699",
+    "license": "Unicode-3.0",
+    "textPath": "packaging/licenses/audited/Unicode-data.txt",
+    "source": "https://raw.githubusercontent.com/quickjs-ng/quickjs/6d46d07d04041b40f4f49eaa7fdebe44c314c699/libunicode-table.h",
+    "shippedPaths": [
+      "lib/tilde/app/node_modules/quickjs-wasi/quickjs.wasm"
+    ],
+    "linkage": "embedded-data"
+  },
+  {
+    "name": "Ada URL/IDNA parser",
+    "version": "3.4.3",
+    "license": "MIT OR Apache-2.0",
+    "textPath": "packaging/licenses/audited/Ada-3.4.3.txt",
+    "source": "https://github.com/ada-url/ada/releases/tag/v3.4.3",
+    "shippedPaths": [
+      "lib/tilde/app/node_modules/quickjs-wasi/extensions/url/url.so"
+    ],
+    "linkage": "static-wasm-dependency"
+  },
+  {
+    "name": "MbedTLS / TF-PSA-Crypto",
+    "version": "vendored at 5a7a0eeda87c99542f8cf3095b6d61ecfa755977",
+    "license": "Apache-2.0",
+    "textPath": "packaging/licenses/audited/MbedTLS-TF-PSA-Crypto.txt",
+    "source": "https://raw.githubusercontent.com/vercel-labs/quickjs-wasi/5a7a0eeda87c99542f8cf3095b6d61ecfa755977/extensions/crypto/mbedtls",
+    "shippedPaths": [
+      "lib/tilde/app/node_modules/quickjs-wasi/extensions/crypto/crypto.so"
+    ],
+    "linkage": "static-wasm-dependency"
+  },
+  {
+    "name": "WASI libc and allocator notice set",
+    "version": "SDK32; git 2fc32bc81b9f07f8d9525edea59bfbaf760c06d6",
+    "license": "MIT AND Apache-2.0 AND (Apache-2.0 WITH LLVM-exception) AND BSD-2-Clause AND BSD-3-Clause AND CC0-1.0",
+    "textPath": "packaging/licenses/audited/WASI-SDK32-libc.txt",
+    "source": "https://raw.githubusercontent.com/WebAssembly/wasi-libc/2fc32bc81b9f07f8d9525edea59bfbaf760c06d6/",
+    "shippedPaths": [
+      "lib/tilde/app/node_modules/quickjs-wasi/extensions/crypto/crypto.so",
+      "lib/tilde/app/node_modules/quickjs-wasi/extensions/encoding/encoding.so",
+      "lib/tilde/app/node_modules/quickjs-wasi/extensions/headers/headers.so",
+      "lib/tilde/app/node_modules/quickjs-wasi/extensions/structured-clone/structured-clone.so",
+      "lib/tilde/app/node_modules/quickjs-wasi/extensions/url/url.so",
+      "lib/tilde/app/node_modules/quickjs-wasi/quickjs.wasm"
+    ],
+    "linkage": "static-runtime-notice-superset"
+  },
+  {
+    "name": "WASI SDK LLVM runtimes",
+    "version": "SDK32; git 4434dabb69916856b824f68a64b029c67175e532",
+    "license": "Apache-2.0 WITH LLVM-exception",
+    "textPath": "packaging/licenses/audited/WASI-SDK32-LLVM-runtime.txt",
+    "source": "https://raw.githubusercontent.com/llvm/llvm-project/4434dabb69916856b824f68a64b029c67175e532/",
+    "shippedPaths": [
+      "lib/tilde/app/node_modules/quickjs-wasi/extensions/crypto/crypto.so",
+      "lib/tilde/app/node_modules/quickjs-wasi/extensions/encoding/encoding.so",
+      "lib/tilde/app/node_modules/quickjs-wasi/extensions/headers/headers.so",
+      "lib/tilde/app/node_modules/quickjs-wasi/extensions/structured-clone/structured-clone.so",
+      "lib/tilde/app/node_modules/quickjs-wasi/extensions/url/url.so",
+      "lib/tilde/app/node_modules/quickjs-wasi/quickjs.wasm"
+    ],
+    "linkage": "static-runtime-notice-superset"
+  }
+]

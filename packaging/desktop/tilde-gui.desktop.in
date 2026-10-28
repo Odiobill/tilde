@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Tilde
+Comment=Conversation with your Linux assistant
+Exec=@GUI@
+Icon=tilde-gui
+Terminal=false
+Categories=Utility;
+StartupNotify=true

@@ -1,0 +1,1 @@
+import{openCredentialStore}from'../store.js';await openCredentialStore(process.argv[2]!).modify('provider',async()=>({type:'api_key',key:'new-cli-canary'}));process.send?.('stored');process.disconnect?.();

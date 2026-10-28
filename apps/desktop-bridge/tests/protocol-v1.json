@@ -1,0 +1,6 @@
+{
+ "validInputs":[{"v":1,"id":"opaque_1","kind":"completion"},{"v":1,"id":"opaque_2","kind":"approval"},{"v":1,"id":"opaque_3","kind":"attention"}],
+ "invalidInputs":[{}, {"v":2,"id":"x","kind":"completion"},{"v":1,"id":"x","kind":"run"},{"v":1,"id":"x","kind":"completion","body":"secret"},{"v":1,"id":"../command","kind":"approval"}],
+ "validOutputs":[{"v":1,"event":"ready","available":true,"actions":true,"ownerRevision":"1"},{"v":1,"event":"ready","available":false,"actions":false,"ownerRevision":"2"},{"v":1,"event":"result","id":"opaque_1","status":"delivered","ownerRevision":"1"},{"v":1,"event":"result","id":"opaque_2","status":"unavailable","ownerRevision":"2"},{"v":1,"event":"open","id":"opaque_1","ownerRevision":"1"}],
+ "invalidOutputs":[{"v":1,"event":"open","id":"x","ownerRevision":"1","command":"bad"},{"v":1,"event":"ready","available":false,"actions":true,"ownerRevision":"1"},{"v":1,"event":"result","id":"x","status":"success","ownerRevision":"1"}]
+}

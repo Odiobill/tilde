@@ -1,0 +1,14 @@
+import assert from'node:assert/strict';import{join}from'node:path';
+import{test}from'node:test';import{checkAllBlockerSnapshotBounds,checkArtifactRetention,checkCancelledStageCleanup,checkRealJournalDiskFailures}from'./tools-security.js';
+test('all pending blockers survive escaped snapshot byte bounds',checkAllBlockerSnapshotBounds);
+test('terminal artifact retention prunes private files and preserves replay tombstones',checkArtifactRetention);
+test('cancelled prepared write removes only its owned temporary stage',checkCancelledStageCleanup);
+test('actual SQLite FULL and lock failures never dispatch',checkRealJournalDiskFailures);
+import{checkExternalArtifactQuota,checkUnsupportedMetadata}from'./tools-security.js';
+test('64MiB quota includes private artifacts and preserves all terminal tombstones',checkExternalArtifactQuota);
+test('unsupported actual xattr metadata fails before replacement',checkUnsupportedMetadata);
+import{crashCases,runCrashCase}from'./tools-crash.js';
+for(const c of crashCases)test('actual daemon crash: '+c.name,async()=>{await runCrashCase(c);});
+import{checkToolLifecycle}from'./tools-lifecycle.js';
+for(const mode of ['gui_disconnect','graceful_stop','auto_restart'] as const)test('M2 separate lifecycle: '+mode,async()=>{await checkToolLifecycle(mode);});
+test('M2 live smoke refuses without fresh opt-in before credential/network access',async()=>{const{command,root}=await import('./gui-lifecycle.js');await assert.rejects(command(process.execPath,[join(root,'scripts/m2-live-smoke.mjs')],{env:{PATH:'/unusable',HOME:'/no-credentials',XDG_RUNTIME_DIR:''}}),e=>typeof e==='object'&&e!==null&&'code'in e&&e.code===2);});

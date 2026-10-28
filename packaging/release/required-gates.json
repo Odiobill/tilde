@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "gates": [
+    {
+      "id": "runtime.floor22",
+      "required": true,
+      "environment": "node22-floor",
+      "packageBound": false
+    },
+    {
+      "id": "runtime.latest22",
+      "required": true,
+      "environment": "node22-latest",
+      "packageBound": false
+    },
+    {
+      "id": "runtime.latest24",
+      "required": true,
+      "environment": "node24-latest",
+      "packageBound": false
+    },
+    {
+      "id": "runtime.archSystem",
+      "required": true,
+      "environment": "arch-system-node",
+      "packageBound": false
+    },
+    {
+      "id": "source.clean",
+      "required": true,
+      "environment": "clean-public-source",
+      "packageBound": false
+    },
+    {
+      "id": "arch.installed",
+      "required": true,
+      "environment": "disposable-arch-x86_64",
+      "packageBound": true
+    },
+    {
+      "id": "provider.local",
+      "required": true,
+      "environment": "local-openai-compatible",
+      "packageBound": true
+    },
+    {
+      "id": "desktop.hyprland-wayland",
+      "required": true,
+      "environment": "hyprland-wayland",
+      "packageBound": false
+    },
+    {
+      "id": "desktop.plasma-wayland",
+      "required": true,
+      "environment": "plasma-wayland",
+      "packageBound": false
+    },
+    {
+      "id": "desktop.plasma-x11",
+      "required": true,
+      "environment": "plasma-x11",
+      "packageBound": false
+    },
+    {
+      "id": "accessibility.real",
+      "required": true,
+      "environment": "installed-atspi-operator",
+      "packageBound": true
+    },
+    {
+      "id": "performance.reference",
+      "required": true,
+      "environment": "reference-native-default-renderer",
+      "packageBound": false
+    },
+    {
+      "id": "recovery.process",
+      "required": true,
+      "environment": "owned-process-crash",
+      "packageBound": false
+    },
+    {
+      "id": "recovery.product-storage-loss",
+      "required": true,
+      "environment": "calibrated-guest-volatile-cache",
+      "packageBound": true
+    },
+    {
+      "id": "security.regression",
+      "required": true,
+      "environment": "synthetic-security-regressions",
+      "packageBound": false
+    },
+    {
+      "id": "licenses.shipped",
+      "required": true,
+      "environment": "shipped-component-inventory",
+      "packageBound": true
+    },
+    {
+      "id": "export.clean",
+      "required": true,
+      "environment": "allowlisted-public-source",
+      "packageBound": false
+    },
+    {
+      "id": "docs.local",
+      "required": true,
+      "environment": "local-static-docs",
+      "packageBound": false
+    },
+    {
+      "id": "workflows.local",
+      "required": true,
+      "environment": "local-workflow-validation",
+      "packageBound": false
+    },
+    {
+      "id": "review.final",
+      "required": true,
+      "environment": "single-fresh-final-review",
+      "packageBound": true
+    },
+    {
+      "id": "manual.owner",
+      "required": true,
+      "environment": "owner-final-installed-session",
+      "packageBound": true
+    }
+  ],
+  "publicationPrerequisites": [
+    "github.remote-ci"
+  ]
+}

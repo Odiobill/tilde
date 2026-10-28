@@ -1,0 +1,11 @@
+{
+  "packages/protocol/src/schema.ts": "d7c46ebf752e09ef4dd3b0de7b5a9007624644883437f2ce9cf1122caa037258",
+  "packages/protocol/src/m2.ts": "5c80c0f8008f463502251f3d19c8a27ecdd3f1ccf4e37054c2a7c470bf11de96",
+  "packages/protocol/src/m3.ts": "709e374abce0e06ae20bb02fdccc5c030b3d200aa5ce3180974cd2b21eadc203",
+  "packages/protocol/fixtures/wire-v1.json": "d3c7322eecdfbecd44fec37a0da34b7272f861bb3913879aaae837bd52c14873",
+  "packages/protocol/fixtures/wire-v2.json": "5312df55977e3dbfe35131d40c56db2b19f1dcb0f03f74bf82e3d2502f1e6101",
+  "packages/protocol/fixtures/wire-v3.json": "a7e55531d15106ebbee473261df69e627e6e4d845951044aad3eb58f4e1742c7",
+  "packages/protocol/.build/protocol-v1.hpp": "20ec317e2cffe5aab8dfec4c0e6e3536cf5ba6214d4c2c661fdb812cb3505b4c",
+  "packages/protocol/.build/protocol-v2.hpp": "4e238982fd531b2e81b280af66119fb8e3093b2a4f9fc7e71a42a1763a39eef5",
+  "packages/protocol/.build/protocol-v3.hpp": "463fd10c80844bdbef9008119862f1b298c62b0f11112781b36de114665e6b96"
+}

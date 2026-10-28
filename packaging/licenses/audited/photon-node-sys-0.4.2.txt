@@ -1,0 +1,5 @@
+Notice scope: Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.
+
+===== https://static.crates.io/crates/node-sys/node-sys-0.4.2.crate#node-sys-0.4.2/LICENSE =====
+SPDX-License-Identifier: (Apache-2.0 OR MIT)
+

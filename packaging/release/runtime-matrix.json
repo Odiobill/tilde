@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "resolvedOn": "2026-10-28",
+  "source": "https://nodejs.org/dist/index.json",
+  "lanes": [
+    { "id": "floor22", "version": "22.19.0", "executableEnv": "TILDE_NODE_FLOOR22" },
+    { "id": "latest22", "version": "22.23.4", "executableEnv": "TILDE_NODE_LATEST22" },
+    { "id": "latest24", "version": "24.22.1", "executableEnv": "TILDE_NODE_LATEST24" },
+    { "id": "archSystem", "executableEnv": "TILDE_NODE_ARCH_SYSTEM", "systemDefault": true }
+  ]
+}

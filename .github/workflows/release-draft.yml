@@ -1,0 +1,132 @@
+{
+  "name": "Manual verification-pending draft",
+  "on": {
+    "workflow_dispatch": {
+      "inputs": {
+        "version": {
+          "description": "Exact source version",
+          "required": true,
+          "type": "string",
+          "default": "0.1.0"
+        },
+        "source_sha256": {
+          "description": "Reviewed exact source archive SHA256",
+          "required": true,
+          "type": "string"
+        }
+      }
+    }
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "jobs": {
+    "identity": {
+      "runs-on": "ubuntu-26.04",
+      "timeout-minutes": 5,
+      "steps": [
+        {
+          "uses": "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "with": {
+            "persist-credentials": false,
+            "fetch-depth": 1
+          }
+        },
+        {
+          "uses": "actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "with": {
+            "node-version": "24.x",
+            "package-manager-cache": false
+          }
+        },
+        {
+          "run": "node scripts/ci-release.mjs validate",
+          "env": {
+            "RELEASE_VERSION": "${{ inputs.version }}",
+            "SOURCE_SHA256": "${{ inputs.source_sha256 }}"
+          }
+        }
+      ]
+    },
+    "native": {
+      "needs": [
+        "identity"
+      ],
+      "uses": "./.github/workflows/ci.yml",
+      "permissions": {
+        "contents": "read"
+      }
+    },
+    "arch": {
+      "needs": [
+        "identity"
+      ],
+      "uses": "./.github/workflows/arch.yml",
+      "with": {
+        "version": "${{ inputs.version }}",
+        "source_sha256": "${{ inputs.source_sha256 }}"
+      },
+      "permissions": {
+        "contents": "read"
+      }
+    },
+    "draft": {
+      "if": "${{ github.event_name == 'workflow_dispatch' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}",
+      "needs": [
+        "identity",
+        "native",
+        "arch"
+      ],
+      "runs-on": "ubuntu-26.04",
+      "timeout-minutes": 10,
+      "permissions": {
+        "contents": "write"
+      },
+      "env": {
+        "RELEASE_VERSION": "${{ inputs.version }}",
+        "SOURCE_SHA256": "${{ inputs.source_sha256 }}"
+      },
+      "steps": [
+        {
+          "uses": "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "with": {
+            "persist-credentials": false,
+            "fetch-depth": 1
+          }
+        },
+        {
+          "uses": "actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "with": {
+            "node-version": "24.x",
+            "package-manager-cache": false
+          }
+        },
+        {
+          "uses": "actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333",
+          "with": {
+            "name": "source-22.19.0",
+            "path": "${{ runner.temp }}/draft-input/source"
+          }
+        },
+        {
+          "uses": "actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333",
+          "with": {
+            "name": "arch-candidate",
+            "path": "${{ runner.temp }}/draft-input/arch"
+          }
+        },
+        {
+          "name": "Bind source, package and verification-pending manifest",
+          "run": "node scripts/ci-release.mjs assemble --inputs \"$RUNNER_TEMP/draft-input\" --output \"$RUNNER_TEMP/draft-assets\""
+        },
+        {
+          "name": "Create draft only against pre-existing matching tag",
+          "env": {
+            "GH_TOKEN": "${{ github.token }}"
+          },
+          "run": "node scripts/ci-release.mjs draft --assets \"$RUNNER_TEMP/draft-assets\""
+        }
+      ]
+    }
+  }
+}

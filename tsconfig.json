@@ -1,0 +1,29 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "packages/config"
+    },
+    {
+      "path": "packages/protocol"
+    },
+    {
+      "path": "packages/tools"
+    },
+    {
+      "path": "packages/credentials"
+    },
+    {
+      "path": "packages/transport"
+    },
+    {
+      "path": "packages/agent"
+    },
+    {
+      "path": "apps/daemon"
+    },
+    {
+      "path": "tests/integration"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "tilde",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/daemon",
+    "tests/integration"
+  ],
+  "scripts": {
+    "build:ts": "node scripts/with-runtime.mjs node_modules/typescript/bin/tsc -b",
+    "typecheck": "node scripts/with-runtime.mjs node_modules/typescript/bin/tsc -b --pretty false",
+    "test:config": "npm run build:ts && node scripts/with-runtime.mjs --test packages/config/dist/config.test.js",
+    "test": "npm run build:ts && node scripts/with-runtime.mjs scripts/run-product-tests.mjs",
+    "test:protocol": "npm run build:ts && node scripts/with-runtime.mjs --test packages/protocol/dist/protocol.test.js",
+    "protocol:generate": "node scripts/with-runtime.mjs packages/protocol/dist/generate-cpp.js",
+    "test:credentials": "npm run build:ts && node scripts/with-runtime.mjs --test packages/credentials/dist/credentials.test.js",
+    "test:transport": "npm run build:ts && node scripts/with-runtime.mjs --test packages/transport/dist/transport.test.js",
+    "build:native": "node scripts/with-runtime.mjs scripts/build-native.mjs",
+    "test:agent": "npm run build:ts && node scripts/with-runtime.mjs --test packages/agent/dist/agent.test.js",
+    "test:daemon": "npm run build:ts && node scripts/with-runtime.mjs --test apps/daemon/dist/daemon.test.js",
+    "test:integration": "npm run build:ts && node scripts/with-runtime.mjs --test tests/integration/dist/integration.test.js",
+    "package:generate": "node scripts/with-runtime.mjs scripts/generate-packaging.mjs",
+    "build": "npm run build:ts && npm run protocol:generate && npm run build:native && npm run package:generate",
+    "test:lifecycle": "npm run build:ts && node scripts/with-runtime.mjs tests/integration/dist/native-lifecycle.js",
+    "start:daemon": "node scripts/with-runtime.mjs apps/daemon/dist/main.js",
+    "start:gui": ".build/cmake/apps/gui/tilde-gui",
+    "smoke:live": "node scripts/with-runtime.mjs scripts/m2-live-smoke.mjs",
+    "test:tools": "npm run build:ts && node scripts/with-runtime.mjs --test packages/tools/dist/*.test.js",
+    "stage": "node scripts/with-runtime.mjs scripts/stage-install.mjs",
+    "test:release": "node scripts/with-runtime.mjs --test tests/release/*.test.mjs"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/node": "24.10.1",
+    "@types/proper-lockfile": "4.1.4"
+  }
+}

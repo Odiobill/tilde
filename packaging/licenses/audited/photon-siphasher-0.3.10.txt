@@ -1,0 +1,11 @@
+Notice scope: Conservative WASM-target normal/build dependency graph. This includes build-only components; not every entry is asserted linked into the binary.
+
+===== https://static.crates.io/crates/siphasher/siphasher-0.3.10.crate#siphasher-0.3.10/COPYING =====
+Copyright 2012-2016 The Rust Project Developers.
+Copyright 2016-2021 Frank Denis.
+
+Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or
+http://www.apache.org/licenses/LICENSE-2.0> or the MIT license
+<LICENSE-MIT or http://opensource.org/licenses/MIT>, at your
+option.
+

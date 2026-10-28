@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version", "runId", "environment", "cases"],
+  "properties": {
+    "version": { "const": 1 },
+    "runId": { "type": "string", "minLength": 1 },
+    "environment": { "type": "string", "minLength": 1 },
+    "cases": { "type": "array", "items": { "$ref": "#/$defs/case" } }
+  },
+  "$defs": { "case": {
+    "type": "object",
+    "required": ["id", "required", "status", "environment", "evidence", "exitCode", "cleanup", "details"],
+    "properties": {
+      "id": { "type": "string", "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]*$" },
+      "required": { "type": "boolean" },
+      "status": { "enum": ["pass", "fail", "unavailable", "not_run"] },
+      "environment": { "type": "string", "minLength": 1 },
+      "evidence": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+      "exitCode": { "type": ["integer", "null"] },
+      "cleanup": { "type": ["boolean", "null"] },
+      "details": { "type": "object" }
+    }
+  } }
+}
