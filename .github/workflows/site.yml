@@ -1,0 +1,41 @@
+{
+  "name": "Static site CI",
+  "on": {
+    "pull_request": {},
+    "push": {
+      "branches": [
+        "main"
+      ]
+    },
+    "workflow_dispatch": {}
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "jobs": {
+    "site": {
+      "runs-on": "ubuntu-26.04",
+      "timeout-minutes": 10,
+      "steps": [
+        {
+          "uses": "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "with": {
+            "persist-credentials": false,
+            "ref": "${{ github.sha }}"
+          }
+        },
+        {
+          "uses": "actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "with": {
+            "node-version": "24.x",
+            "package-manager-cache": false
+          }
+        },
+        {
+          "name": "Check semantic guides and safe download states",
+          "run": "npm ci --ignore-scripts --no-audit --no-fund\nnode --test tests/release/site.test.mjs tests/release/docs.test.mjs\nnode scripts/build-docs.mjs --output \"$RUNNER_TEMP/site\" --base-path /tilde/\nnode scripts/check-workflows.mjs"
+        }
+      ]
+    }
+  }
+}

@@ -18,9 +18,10 @@ test('releaseRequiresManualDispatchAndVersionIdentity',()=>{
  assert.equal(validateReleaseInput({version:'0.1.0',expectedSourceSha256:'a'.repeat(64),manifest}),true);
  for(const change of [{version:'0.1.0;run'},{version:'0.2.0'},{expectedSourceSha256:'b'.repeat(64)},{manifest:{...manifest,files:[{path:'../private',sha256:'b'.repeat(64)}]}}])assert.throws(()=>validateReleaseInput({version:'0.1.0',expectedSourceSha256:'a'.repeat(64),manifest,...change}));
 });
-test('ciMissingNativeGateCannotBecomeReleasePass',async()=>{
- const workflows=await checkWorkflows();assert.equal(workflows.valid,true,JSON.stringify(workflows.problems));
- const release=JSON.parse(await readFile('.github/workflows/release-draft.yml','utf8'));
- for(const needs of [[],['identity'],['identity','arch']]){const changed=clone(release);changed.jobs.draft.needs=needs;assert.equal(validateWorkflow(changed,{name:'release-draft.yml',pins}).valid,false);}
- const changed=clone(release);changed.jobs.draft.steps.push({run:'gh release create v0.1.0'});assert.equal(validateWorkflow(changed,{name:'release-draft.yml',pins}).valid,false);
+test('releaseVerifierRequiresManualIdentityAndCannotWrite',()=>{
+ const release={on:{workflow_dispatch:{inputs:{publication_manifest_sha256:{required:true,type:'string'}}}},permissions:{contents:'read'},jobs:{verify:{if:"${{ github.event_name == 'workflow_dispatch' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}",'runs-on':'ubuntu-26.04','timeout-minutes':10,permissions:{contents:'read',actions:'read'},steps:[{run:'node scripts/verify-published-release.mjs --allow-draft'}]}}};
+ assert.equal(validateWorkflow(release,{name:'release-draft.yml',pins}).valid,true);
+ for(const mutate of [f=>f.on={push:{}},f=>delete f.on.workflow_dispatch.inputs.publication_manifest_sha256,f=>f.jobs.verify.permissions={contents:'write'},f=>f.jobs.verify.steps.push({run:'gh release create v0.1.0'}),f=>delete f.jobs.verify.if]){const f=clone(release);mutate(f);assert.equal(validateWorkflow(f,{name:'release-draft.yml',pins}).valid,false);}
 });
+test('artifactUploadCannotProvideSeparateSourceOrArbitraryJson',()=>{const f=fixture();f.jobs.native.steps.push({uses:'actions/upload-artifact@'+pins.actions.find(x=>x.repository==='actions/upload-artifact').commit,with:{path:'${{ runner.temp }}/source/tilde-0.1.0.tar.gz'}});assert.equal(validateWorkflow(f,{name:'ci.yml',pins}).valid,false);f.jobs.native.steps.at(-1).with.path='${{ runner.temp }}/private/settings.json';assert.equal(validateWorkflow(f,{name:'ci.yml',pins}).valid,false);f.jobs.native.steps.at(-1).with.path='${{ runner.temp }}/source/source-manifest.json';assert.equal(validateWorkflow(f,{name:'ci.yml',pins}).valid,true);});
+test('allCurrentWorkflowsRespectThePublicationBoundary',async()=>{const r=await checkWorkflows();assert.equal(r.valid,true,JSON.stringify(r.problems));});

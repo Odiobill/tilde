@@ -1,7 +1,15 @@
 {
   "name": "Manual Pages deployment",
   "on": {
-    "workflow_dispatch": {}
+    "workflow_dispatch": {
+      "inputs": {
+        "publication_manifest_sha256": {
+          "description": "Reviewed exact public publication-manifest.json SHA256",
+          "required": true,
+          "type": "string"
+        }
+      }
+    }
   },
   "permissions": {
     "contents": "read"
@@ -15,7 +23,7 @@
           "uses": "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
           "with": {
             "persist-credentials": false,
-            "fetch-depth": 1
+            "ref": "${{ github.sha }}"
           }
         },
         {
@@ -26,11 +34,22 @@
           }
         },
         {
-          "name": "Build static documentation",
+          "run": "npm ci --ignore-scripts --no-audit --no-fund"
+        },
+        {
+          "name": "Verify the actual published release",
+          "env": {
+            "GH_TOKEN": "${{ github.token }}",
+            "EXPECTED_MANIFEST_SHA256": "${{ inputs.publication_manifest_sha256 }}"
+          },
+          "run": "node scripts/verify-published-release.mjs --config docs/site/release.json --manifest-sha256 \"$EXPECTED_MANIFEST_SHA256\" --site-commit \"$GITHUB_SHA\" --output \"$RUNNER_TEMP/release-evidence.json\""
+        },
+        {
+          "name": "Build offline production site",
           "env": {
             "PAGES_PROJECT": "${{ github.event.repository.name }}"
           },
-          "run": "node scripts/build-docs.mjs --output \"$RUNNER_TEMP/site\" --base-path \"/${PAGES_PROJECT}/\""
+          "run": "node scripts/build-docs.mjs --output \"$RUNNER_TEMP/site\" --base-path \"/${PAGES_PROJECT}/\" --mode production --release-evidence \"$RUNNER_TEMP/release-evidence.json\""
         },
         {
           "uses": "actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9",
@@ -39,7 +58,11 @@
             "retention-days": 1
           }
         }
-      ]
+      ],
+      "permissions": {
+        "contents": "read",
+        "actions": "read"
+      }
     },
     "deploy": {
       "if": "${{ github.event_name == 'workflow_dispatch' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}",

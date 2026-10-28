@@ -63,8 +63,8 @@
         {
           "uses": "actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
           "with": {
-            "name": "arch-candidate",
-            "path": "${{ runner.temp }}/arch-candidate/artifacts/*",
+            "name": "arch-evidence",
+            "path": "${{ runner.temp }}/arch-candidate/artifacts/source-manifest.json\n${{ runner.temp }}/arch-candidate/artifacts/arch-build-manifest.json\n${{ runner.temp }}/arch-candidate/artifacts/arch-inspection.json",
             "if-no-files-found": "error",
             "retention-days": 7
           }

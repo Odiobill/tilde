@@ -1,6 +1,6 @@
 // JSON is a YAML subset. Keeping these workflow files in canonical JSON allows
 // dependency-free structural validation instead of guessing YAML with regexes.
-import {readFile,lstat} from 'node:fs/promises';
+import {readFile,lstat,readdir} from 'node:fs/promises';
 import {resolve,join} from 'node:path';
 import {pathToFileURL} from 'node:url';
 const requiredCommands=['npm run build','npm run typecheck','npm test','npm run test:release','ctest --test-dir .build/cmake --output-on-failure'];
@@ -20,9 +20,9 @@ export function validateWorkflow(workflow,{name,pins}){
   if(!object(job)){bad('job-structure');continue;}
   if(job['continue-on-error']||job.secrets)bad('job-authority-or-failure-bypass');
   const permission=job.permissions??workflow.permissions;
-  const allowedWrite=name==='release-draft.yml'&&id==='draft'?{contents:'write'}:name==='pages.yml'&&id==='deploy'?{pages:'write','id-token':'write'}:null;
+  const allowedWrite=name==='pages.yml'&&id==='deploy'?{pages:'write','id-token':'write'}:null;
   if(allowedWrite){if(JSON.stringify(permission)!==JSON.stringify(allowedWrite)||!String(job.if).includes("github.event_name == 'workflow_dispatch'")||!String(job.if).includes('github.event.repository.default_branch'))bad('manual-write-job-boundary');}
-  else if(!object(permission)||Object.entries(permission).some(([key,value])=>key!=='contents'||value!=='read'))bad('read-only-job-permissions');
+  else if(!object(permission)||Object.entries(permission).some(([key,value])=>value!=='read'||!(['contents',...(['pages.yml','release-draft.yml'].includes(name)?['actions']:[])].includes(key))))bad('read-only-job-permissions');
   if(job.uses){if(!/^\.\/\.github\/workflows\/(?:ci|arch)\.yml$/.test(job.uses))bad('unverified-reusable-workflow');continue;}
   if(!Number.isInteger(job['timeout-minutes'])||job['timeout-minutes']<1||job['timeout-minutes']>60)bad('job-timeout');
   if(!Array.isArray(job.steps)||!job.steps.length)bad('job-steps');
@@ -32,6 +32,10 @@ export function validateWorkflow(workflow,{name,pins}){
     if(!allowedPins.has(step.uses))bad('action-pin-unverified');
     if(step.uses.startsWith('actions/checkout@')&&step.with?.['persist-credentials']!==false)bad('checkout-keeps-credentials');
     if(step.uses.startsWith('actions/deploy-pages@')&&!(name==='pages.yml'&&id==='deploy'))bad('pages-deploy-authority');
+    if(step.uses.startsWith('actions/upload-artifact@')){
+     const expected=name==='ci.yml'?['${{ runner.temp }}/source/source-manifest.json']:name==='arch.yml'?['${{ runner.temp }}/arch-candidate/artifacts/source-manifest.json','${{ runner.temp }}/arch-candidate/artifacts/arch-build-manifest.json','${{ runner.temp }}/arch-candidate/artifacts/arch-inspection.json']:[];
+     const paths=String(step.with?.path??'').trim().split('\n');if(!expected.length||paths.length!==expected.length||new Set(paths).size!==expected.length||paths.some(p=>!expected.includes(p)))bad('public-artifact-profile');
+    }
    }
    if(step.run&&(/\$\{\{/.test(step.run)||/gh\s+release\s+(?:create|edit|upload)|curl.*(?:api\.github|deploy)/.test(step.run)))bad('inline-untrusted-or-publish-command');
   }
@@ -43,10 +47,9 @@ export function validateWorkflow(workflow,{name,pins}){
   if(native?.if!==undefined)bad('ci-native-gate-conditional');
  }
  if(name==='release-draft.yml'){
-  const draft=workflow.jobs.draft;
-  if(!Array.isArray(draft?.needs)||!['identity','native','arch'].every(key=>draft.needs.includes(key))||workflow.jobs.native?.uses!=='./.github/workflows/ci.yml'||workflow.jobs.arch?.uses!=='./.github/workflows/arch.yml')bad('release-native-dependency-missing');
-  if(!draft?.steps?.some(s=>s.run?.startsWith('node scripts/ci-release.mjs assemble'))||!draft.steps.some(s=>s.run?.startsWith('node scripts/ci-release.mjs draft')))bad('release-identity-or-draft-command-missing');
-  const inputs=workflow.on.workflow_dispatch?.inputs;if(inputs?.version?.required!==true||inputs?.source_sha256?.required!==true)bad('release-input-identity-missing');
+  const verify=workflow.jobs.verify;
+  if(!verify||Object.keys(workflow.jobs).length!==1||!String(verify.if).includes("github.event_name == 'workflow_dispatch'")||!String(verify.if).includes('github.event.repository.default_branch')||!verify.steps?.some(s=>s.run?.startsWith('node scripts/verify-published-release.mjs')))bad('release-read-only-verifier-missing');
+  if(workflow.on.workflow_dispatch?.inputs?.publication_manifest_sha256?.required!==true)bad('release-input-identity-missing');
  }
  if(name==='arch.yml'&&(!Array.isArray(workflow.jobs.arch?.['runs-on'])||!workflow.jobs.arch['runs-on'].includes('tilde-disposable-arch')||!String(workflow.jobs.arch.if).includes("github.event_name == 'workflow_dispatch'")))bad('arch-disposable-manual-boundary');
  if(name==='pages.yml'&&(!workflow.jobs.deploy?.needs?.includes('build')||!workflow.jobs.deploy.environment||workflow.jobs.deploy.environment.name!=='github-pages'))bad('pages-environment-boundary');
@@ -55,7 +58,9 @@ export function validateWorkflow(workflow,{name,pins}){
 export async function checkWorkflows({root=resolve('.')}={}){
  const pins=JSON.parse(await readFile(join(root,'packaging/release/actions.json'),'utf8')),pkg=JSON.parse(await readFile(join(root,'package.json'),'utf8')),problems=[];
  for(const pin of pins.actions)if(!/^actions\/[a-z-]+$/.test(pin.repository)||!/^([a-f0-9]{40})$/.test(pin.commit)||pin.reference!==`https://api.github.com/repos/${pin.repository}/git/ref/tags/${pin.tag}`||pin.commitUrl!==`https://api.github.com/repos/${pin.repository}/git/commits/${pin.commit}`||!pin.verifiedAt)problems.push('action-provenance-invalid');
- for(const name of ['ci.yml','arch.yml','release-draft.yml','pages.yml']){
+ const expectedNames=['ci.yml','arch.yml','release-draft.yml','pages.yml','site.yml'];
+ for(const entry of await readdir(join(root,'.github/workflows'),{withFileTypes:true}))if(/\.ya?ml$/.test(entry.name)&&(!expectedNames.includes(entry.name)||!entry.isFile()))problems.push(entry.name+':unexpected-or-unsafe-workflow');
+ for(const name of expectedNames){
   let workflow;try{workflow=JSON.parse(await readFile(join(root,'.github/workflows',name),'utf8'));}catch{problems.push(name+':invalid-canonical-json-yaml');continue;}
   const validated=validateWorkflow(workflow,{name,pins});problems.push(...validated.problems.map(p=>name+':'+p));
   for(const job of Object.values(workflow.jobs??{}))for(const step of job.steps??[])for(const line of (step.run??'').split('\n')){

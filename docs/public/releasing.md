@@ -1,83 +1,96 @@
 # Release and publication
 
-The local source/package mechanism creates a candidate, with `verification_pending`
-while required gates are missing, failed or outside the candidate's exact source/
-artifact scope. A successful build, CI run, offscreen test or draft is not release
-acceptance. Review the final qualification manifest, exact checksums, tested matrix,
-accepted owner exceptions, cleanup and third-party license inventory before a
-release is called ready. Original failures remain retained separately.
+The published 0.1.0 binary is tied to its exact qualified package digest and
+application source commit. Website and guide commits come later on main.
+Read [qualification](qualification.md) and [release notes](release-notes-0.1.0.md)
+for the actual scope and five accepted exceptions. A build or CI pass alone
+does not establish installed, desktop, assistive-technology or storage-loss acceptance.
 
-Local preparation uses `scripts/export-source.mjs`, `prepare-arch-build.mjs`,
-`qualify-arch.mjs` and the strict final qualification/assembly commands described
-in the final build manifest. Use the same source SHA256 for every candidate
-artifact. Build/test a clean export without the development checkout. Validate
-package installation/run/removal in an approved disposable guest and preserve
-user data. Real model, desktop/AT-SPI, calibrated storage-loss and final owner
-walkthrough gates keep their actual status; generic CI cannot provide them.
+## Source distribution
 
-## Future GitHub setup
+Source is available in [Odiobill/tilde](https://github.com/Odiobill/tilde), at tag
+v0.1.0 and its exact commit. GitHub provides ZIP/tar downloads. No separate source
+archive is uploaded as a release asset. Publication compares the full file
+inventory, Git executable modes and link targets against the qualified source;
+generated compression bytes are not treated as stable identity.
 
-The owner creates the repository later and copies only the allowlisted public
-source. This task does not initialize Git, create a repository/PR/tag/release,
-push files or activate Pages. Choose the repository/default branch and access
-settings explicitly; adapt the CI push branch if it is not `main`. Review
-workflow source and token permissions before enabling it.
+Canonical source archives may be generated internally for reproducible build and
+qualification checks. They stay outside the public release and current public CI
+artifact profile. The original local qualification bundle remains immutable.
 
-Workflow files use canonical JSON, a YAML subset, for dependency-free structural
-validation. `node scripts/check-workflows.mjs` checks events, verified action
-commit pins, permissions, native dependencies and local command references.
-Action provenance is recorded in `packaging/release/actions.json`; update pins
-only after verifying official upstream tag and commit objects. A maintained
-workflow validator such as actionlint supplies a separate syntax/expression check.
-Local validation does not claim remote execution.
+## CI and the publication boundary
 
-`ci.yml` uses GitHub-hosted Ubuntu26.04 with distribution Qt>=6.8 and selected
-Node22.19.0/22.x/24.x. Its token is contents-read, checkout credentials are not
-persisted, and tests use synthetic providers/private fixtures. Dependencies and
-a temporary user manager are prepared only on that ephemeral remote runner.
-There is no real-provider helper or private qualification workspace in CI.
+Native CI uses hosted Ubuntu runners, Node 22.19.0/22.x/24.x, synthetic providers
+and private fixtures. Pull requests have read-only authority and no publication
+credentials. Current CI uploads explicit JSON source/build evidence, not a
+separate source archive or an unqualified candidate binary.
 
-`arch.yml` is manual-only (also callable by the manual release workflow) and
-requires an owner-provisioned **disposable, isolated Arch x86_64 runner** labelled
-`tilde-disposable-arch`, with system Node/Qt/build tools, a functioning user
-manager, private fresh state and the documented build dependencies. Never use an
-ordinary owner checkout or a runner containing credentials/data. Keep its group
-restricted to the reviewed manual/default-branch workflow; PR jobs use hosted
-runners. The job installs no host packages. It acquires a locked npm cache in its
-own temporary tree, builds/checks/inspects a candidate, and uploads an allowlisted
-artifact set. It does not claim actual installed/removal qualification.
+The manual Arch job requires a disposable isolated non-root Arch x86_64 runner.
+Register it only for a reviewed trusted ref, remove its credentials/registration
+afterward and stop the guest. Never expose that runner to public pull requests
+or use an ordinary owner checkout. Its rebuilt package is independent candidate
+evidence, not the already installed/storage-qualified binary.
 
-`release-draft.yml` requires manual dispatch with exact version0.1.0 and reviewed
-source archive SHA256. Identity, complete native CI and Arch build/inspection
-must succeed before its separate contents-write draft job. It derives repository
-identity from GitHub context, checks same-commit/source/package manifests and
-checksums, and requires an existing `v0.1.0` tag resolving to that exact commit.
-The command creates only a **draft**, labelled verification pending, with no
-automatic publication. Missing local qualification or licenses remain blockers
-for readiness/publication; inspect them before changing that draft's status.
-No personal access token or private local evidence is embedded in the workflow.
+The current release-draft workflow is a **manual read-only verifier** of the
+prepared draft. It does not create or publish releases. The historical baseline
+contains the earlier verification-pending draft mechanism; that is not the
+promotion route for the qualified public binary.
 
-## Documentation site
+## Prepare and promote an exact release
 
-```sh
+The maintainer supplies retained raw qualification, exact baseline assets,
+source identity, successful live baseline/site/Arch CI and frozen core asset
+hashes. These private qualification inputs are not shipped in the repository.
+The bounded CLI revalidates them, rather than accepting a hand-written ready flag:
+
+~~~sh
+node scripts/publish-release.mjs prepare --inputs /absolute/private-inputs.json --output /absolute/new-public-assets
+node scripts/publish-release.mjs draft --assets /absolute/new-public-assets --expected /absolute/new-public-assets.expected.json
+~~~
+
+The nine uploaded files are the qualified Arch package, LICENSE, third-party
+notices, license inventory, current notes, historical local qualification snapshot,
+source-file identity, publication manifest and SHA256SUMS. The checksum file
+covers the other eight files exactly once. GitHub's automatic source links are
+separate from uploaded assets.
+
+The publication manifest binds the baseline tag/commit, site commit, exact asset
+hashes, original local dispositions and successful remote runs. Its hash is
+reviewed explicitly. Current notes and core assets are frozen before the site
+commit, avoiding a source/site/manifest hash cycle.
+
+After the required review and concrete owner authorization, publication re-reads
+the tag, every asset and live CI before changing the exact draft:
+
+~~~sh
+node scripts/publish-release.mjs publish --release-id 123 --expected /absolute/new-public-assets.expected.json --authorization /absolute/private-launch-authorization.json
+~~~
+
+The example ID is illustrative. Use the actual verified release ID and exact
+launch binding. An authorization record documents the real owner grant; merely
+creating a JSON file does not provide that grant. Changed or incomplete drafts
+are refused. Repeating an identical completed operation observes its existing
+state rather than overwriting assets or moving tags.
+
+## GitHub Pages
+
+Build a local preview without network access in the renderer:
+
+~~~sh
 node scripts/build-docs.mjs --output /absolute/new-site --base-path /tilde/
-```
+~~~
 
-Use `/` for root hosting or a slash-delimited project path for project hosting.
-The build is standalone HTML/CSS, escaped preformatted public-document bodies,
-fixed navigation and validated related links. It requires no Markdown parser,
-network request, JavaScript framework or hosting activation. It includes only
-public guides and the explicitly public M4 testing procedures.
+Guides live under /tilde/guide/. Static fallback pages preserve former guide
+routes. Critical content and download links work without JavaScript.
+The root-path build mode remains available for local checks.
 
-`pages.yml` is manual-only. Build has contents-read permission; only its separate
-deploy job has Pages-write/OIDC permission and the `github-pages` environment.
-Configure Pages and any environment approval rules as the owner when ready.
-The project path comes from repository context. Adjust the base to `/` before
-using user/organization root hosting or a custom domain. A local docs build is
-not a deployed site or remote-CI pass.
+Production requires actual published-release evidence. The manual Pages workflow
+takes the reviewed publication-manifest SHA256, verifies the published tag,
+uploaded bytes and live CI, then performs the offline production build. Its build
+job has contents/actions read authority; only deployment has Pages/OIDC write
+authority, in the github-pages environment. A draft, local preview, synthetic
+QA fixture or workflow lint result is not a deployed or published release.
 
-After repository setup, execute the remote workflows on the exact intended
-commit, inspect their real logs/artifact checksums and complete required local/
-owner qualification. Remote CI and GitHub publication are later prerequisites,
-separate from local candidate preparation. Keep source/build/notice manifests
-with the resulting artifacts and record any support/qualification limitations.
+Verify the real public Pages URL, source/tag identity, downloaded package hash,
+guide deep links and issue/security routes after launch. Preserve raw failures
+and accepted exceptions; do not silently replace the qualified binary.

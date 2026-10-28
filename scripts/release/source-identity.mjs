@@ -35,7 +35,7 @@ export async function verifySourceIdentity({repositoryRoot,commit,canonicalManif
    else if(f.type!=='file'||f.mode!==(mode==='100755'?0o755:0o644)||sha(bytes)!==f.sha256)throw Error('SOURCE_IDENTITY_BLOB_OR_MODE_MISMATCH');
   }
  }catch(error){if(error.message.startsWith('SOURCE_IDENTITY_'))throw error;throw Error('SOURCE_IDENTITY_GIT_READ_FAILED');}
- return{...record,files:[...record.files].sort((a,b)=>a.path.localeCompare(b.path,'en'))};
+ return{...record,files:[...record.files].sort((a,b)=>a.path<b.path?-1:a.path>b.path?1:0)};
 }
 export async function verifySourceArchive({archivePath,format,sourceRecord}){
  validateSourceRecord(sourceRecord);if(!['tar','zip'].includes(format))throw Error('SOURCE_ARCHIVE_FORMAT_INVALID');
