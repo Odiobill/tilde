@@ -29,7 +29,27 @@ not establish real local-model compatibility. See
 [local qualification](../development/m4-local-testing.md) for the bounded
 chat/tool scopes and operator procedure.
 
-Configure typed filesystem roots explicitly. Each shell action needs complete
+## Filesystem roots
+
+Typed filesystem roots are configured in `tools.toml` beside the daemon's
+`config.toml`: normally `~/.config/tilde/tools.toml`, or the `tilde` directory
+under your chosen `XDG_CONFIG_HOME`. There is currently no GUI root picker.
+With no file, roots are empty. Stop the daemon before editing, retain any existing
+policy deliberately, and use a private file with mode `0600`:
+
+~~~toml
+version = 1
+roots = ["/absolute/path/to/your/tilde-example"]
+retentionDays = 7
+~~~
+
+Replace the example with a real absolute directory owned by your account, with
+no group/other write permission. Do not choose your whole home, application
+state/configuration, credential stores or system root. Symlinks and unsafe
+ownership/modes are rejected. Restart the daemon after saving. This grants typed
+tool access; it does not sandbox an unrestricted shell.
+
+Each shell action needs complete
 exact one-shot review; ordinary shell authority is broad. Limits apply to new
 admissions; changing a default is not approval of a paused or pending operation.
 Notification and tray preferences are opt-in as shown in Settings. Closing the

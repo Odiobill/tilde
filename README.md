@@ -1,29 +1,44 @@
 # Tilde
 
-A native Qt/QML Linux conversation window with a durable TypeScript daemon.
-Saved conversations, private drafts, safe Markdown, exact tool review and
-optional tray/notifications keep the interface separate from ongoing work.
-One unsettled run owns work globally, including approval and budget pauses.
+**Make yourself at home on Linux.** Tilde is a native Qt/QML assistant for
+understanding your system and getting useful work done, with a separate durable
+daemon that keeps work independent of the window.
 
-This is the 0.1.0 release-candidate source. Release qualification and publication
-are separate steps. No service is started or enabled by a build or staging run.
+[Explore Tilde](https://odiobill.github.io/tilde/) ·
+[Download 0.1.0](https://github.com/Odiobill/tilde/releases/tag/v0.1.0) ·
+[Get started](docs/public/getting-started.md) ·
+[What we tested](docs/public/qualification.md)
 
-Requires Linux, system Node >=22.19.0 with matching public Node/libuv build
-headers, npm, Qt >=6.8, CMake >=3.24, a C++17 compiler and a systemd user manager.
-Node and Qt are supplied by the system. The exact development selection in
-`.node-version` is separate from the capability-checked minimum.
+Ask about a confusing error, inspect project files or review a proposed shell
+action. Return to retained conversations, drafts and task state. After an
+interruption, uncertain effects pause for inspection instead of being blindly
+replayed. Tilde runs under your ordinary account; typed roots do not sandbox
+an unrestricted shell.
 
-```sh
-npm ci --ignore-scripts
-npm run build
-npm run typecheck
-npm test
-npm run test:release
-ctest --test-dir .build/cmake --output-on-failure
-```
+## Try the early preview
 
-See [documentation](docs/public/index.md), [source build](docs/public/source-build.md),
-[installation](docs/public/installation.md), [configuration](docs/public/configuration.md),
-[limitations](docs/public/limitations.md) and [security](docs/public/security.md).
-Original Tilde code uses the [MIT license](LICENSE). Dependency licenses remain
-separate; see [third-party notices](THIRD_PARTY_NOTICES.md).
+The first binary is for **Arch Linux x86_64**, with system Node >=22.19.0 and
+Qt >=6.12.0. Source builds support Qt >=6.8 with the
+[documented toolchain](docs/public/source-build.md). Bring a supported provider
+or existing compatible local model endpoint; Tilde does not bundle a model or
+runtime. Starting the user daemon is explicit, and background login startup is optional.
+
+Read [installation](docs/public/installation.md), [configuration](docs/public/configuration.md)
+and [limitations](docs/public/limitations.md). Local qualification has 16 passes
+and five accepted exceptions; Plasma sessions, real native assistive technology,
+the real local-model trial and remaining owner walkthrough are deferred.
+Storage-loss evidence covers a calibrated guest model, not every hardware failure.
+
+## Source and contributions
+
+Source is available here and through GitHub's built-in archives. Use tag
+[v0.1.0](https://github.com/Odiobill/tilde/tree/v0.1.0) at commit
+`103bfd089d70283fa7cb43d5d8bb1f6e110e98cb` for the qualified application.
+Main includes subsequent website/docs work. No duplicate source archive is uploaded.
+
+See [contributing](docs/public/contributing.md) and
+[issues](https://github.com/Odiobill/tilde/issues).
+Report vulnerabilities through [SECURITY.md](SECURITY.md), not public transcripts.
+Original Tilde code is [MIT licensed](LICENSE). Dependency licenses remain
+separate: [application notices](THIRD_PARTY_NOTICES.md) and
+[site-build notices](docs/site/BUILD_NOTICES.md).

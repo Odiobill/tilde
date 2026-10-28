@@ -1,5 +1,7 @@
 # Tilde documentation
 
+Start with [your first conversation](getting-started.md) and [what we tested](qualification.md).
+
 Tilde is an ordinary native Linux chat window backed by a separate user daemon.
 Closing the window leaves daemon work alive. Repeated launch opens or focuses the
 same window; compositor policy determines actual focus and placement.

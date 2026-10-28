@@ -1,0 +1,27 @@
+name: Bug report
+description: Report a reproducible problem using redacted or synthetic details.
+body:
+  - type: markdown
+    attributes:
+      value: "For vulnerabilities, use SECURITY.md. Do not include keys, credential files or private transcripts."
+  - type: input
+    id: version
+    attributes:
+      label: Tilde version and installation path
+      placeholder: "0.1.0; Arch x86_64 package"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: "Distribution, Node/Qt versions and compositor/session; no private account data."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction, expected result and actual result
+      description: "Use a small synthetic example. Redact paths, keys and personal data."
+    validations:
+      required: true

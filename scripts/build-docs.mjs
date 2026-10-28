@@ -41,6 +41,17 @@ export async function buildDocs({root=resolve('.'),output,basePath='/',mode='pre
  if(landing){const binary=downloads.available?'<a class="button primary" href="'+escape(downloads.packageUrl)+'">Download Arch package <span aria-hidden="true">↓</span></a>':'<span class="button unavailable" aria-disabled="true">Download available at launch</span>';
  const values={BASE:basePath,CANONICAL:'https://odiobill.github.io'+basePath,SOURCE:escape(downloads.sourceUrl),BINARY:binary,RELEASE_STATE:downloads.available?'An early preview, ready to try.':'Local preview · the public release is being prepared.',CHECKSUM:escape(release.package.sha256),RELEASE_LINKS:downloads.available?'<a href="'+downloads.links.SHA256SUMS+'">Checksums</a><a href="'+downloads.links['release-notes-0.1.0.md']+'">Release notes</a><a href="'+downloads.links['qualification-summary.json']+'">Qualification snapshot</a>':'<a href="'+basePath+'guide/limitations.html">Release scope & limitations</a>'};
  await emit('index.html',landing.replace(/\{\{([A-Z_]+)\}\}/g,(_,key)=>{if(!(key in values))throw Error('SITE_TEMPLATE_INVALID');return values[key];}));}
+ if(landing){
+  const directory=join(root,'docs/site/assets');await noSymlinkParents(root,directory,true);
+  for(const entry of (await readdir(directory,{withFileTypes:true})).sort((a,b)=>a.name.localeCompare(b.name))){
+   if(!entry.isFile()||!/^[-a-z0-9]+\.(?:png|jpg|svg)$/.test(entry.name))throw Error('SITE_ASSET_UNSAFE');
+   const path=join(directory,entry.name),stat=await lstat(path);if(stat.isSymbolicLink()||stat.size>2*1024*1024)throw Error('SITE_ASSET_UNSAFE');
+   const bytes=await readFile(path);if(entry.name.endsWith('.svg')&&/<script|\bon\w+\s*=|foreignObject|(?:href|src)\s*=\s*["'](?:https?:|\/\/)|url\s*\(/i.test(bytes.toString()))throw Error('SITE_ASSET_UNSAFE');await emit('assets/'+entry.name,bytes);
+  }
+  await emit('404.html','<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Page not found · Tilde</title><link rel="stylesheet" href="'+basePath+'style.css"></head><body><main class="wrap section"><h1>Let’s get you back home.</h1><p>This page could not be found.</p><p><a href="'+basePath+'index.html">Tilde home</a> · <a href="'+basePath+'guide/index.html">The guide</a></p></main></body></html>');
+  await emit('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+['',...sources.map(s=>s.file)].map(path=>'<url><loc>https://odiobill.github.io'+basePath+path+'</loc></url>').join('')+'</urlset>');
+  await emit('robots.txt','User-agent: *\nAllow: /\nSitemap: https://odiobill.github.io'+basePath+'sitemap.xml\n');
+ }
  await emit('style.css',css);
  const manifest={version:2,basePath,files:await Promise.all(files.map(async path=>({path,sha256:digest(await readFile(join(output,path)))}))),sourceDocuments:sources.map(s=>({path:s.path,sha256:digest(s.text)}))};
  await emit('docs-manifest.json',JSON.stringify(manifest,null,2)+'\n');return{output,basePath,files};

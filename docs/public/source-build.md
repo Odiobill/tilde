@@ -1,5 +1,22 @@
 # Build from source
 
+## Get the released source from GitHub
+
+~~~sh
+git clone --branch v0.1.0 --single-branch https://github.com/Odiobill/tilde.git
+cd tilde
+git rev-parse HEAD
+~~~
+
+The expected commit is `103bfd089d70283fa7cb43d5d8bb1f6e110e98cb`.
+Main contains later website/documentation work; use the release tag for the
+qualified application source. GitHub's built-in ZIP/tar downloads are also
+available at that tag or commit. No extra source archive is uploaded as a release
+asset. Generated compression bytes are not a stable source checksum; the release's
+source identity record describes the checked file contents and executable modes.
+
+## Prerequisites and build
+
 Build prerequisites: Linux, system Node >=22.19.0, npm supporting lockfile v3,
 matching public Node and libuv headers, CMake >=3.24, C++17 compiler, and Qt >=6.8
 Core, Gui, Qml, Quick, QuickControls2, Network, Widgets, DBus and Test development

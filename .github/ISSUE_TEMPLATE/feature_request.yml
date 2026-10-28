@@ -1,0 +1,15 @@
+name: Feature request
+description: Describe the useful outcome you want from Tilde.
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What are you trying to do?
+      description: "Explain the problem, who it affects and what a good outcome looks like; no private transcripts or credentials."
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What have you tried?
+      description: "Existing workarounds and constraints help us understand the request."

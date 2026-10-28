@@ -1,6 +1,38 @@
 # Install and run
 
-Use the x86_64 Arch package recipe or [build from source](source-build.md).
+Choose the [v0.1.0 Arch x86_64 package](https://github.com/Odiobill/tilde/releases/tag/v0.1.0)
+or [build from GitHub source](source-build.md). Follow the
+[first-conversation guide](getting-started.md) after installation.
+
+## Install the Arch package
+
+Download `tilde-assistant-0.1.0-1-x86_64.pkg.tar.zst` from the release.
+Compare its SHA256 before installing:
+
+~~~sh
+sha256sum tilde-assistant-0.1.0-1-x86_64.pkg.tar.zst
+~~~
+
+Expected:
+
+~~~text
+cc6d513bea8f2f11ed11c23c776737dab8c1fd34d73fd1e2160c11532381f9ba
+~~~
+
+Explicitly install that verified file:
+
+~~~sh
+sudo pacman -U ./tilde-assistant-0.1.0-1-x86_64.pkg.tar.zst
+~~~
+
+The binary requires system Node >=22.19.0 and Qt Base/Declarative >=6.12.0,
+plus its declared Arch dependencies. A fresh source build can use Qt >=6.8.
+A functioning systemd user manager and private `XDG_RUNTIME_DIR` are required.
+Read [qualification](qualification.md) and [limitations](limitations.md).
+
+## Start Tilde
+
+The package recipe also supports explicit local rebuilds.
 A locally supplied source archive must match its SHA256. The first release has
 no AUR/official-repository submission or Debian package. Supply system Node and
 Qt; runtime dependencies and exact tested versions belong in the artifact's

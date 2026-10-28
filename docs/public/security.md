@@ -1,5 +1,10 @@
 # Security and data
 
+Use [GitHub private vulnerability reporting](https://github.com/Odiobill/tilde/security/advisories/new)
+for suspected vulnerabilities. If unavailable, ask for a private contact in an
+issue without disclosing sensitive details. Never post keys, credential files
+or private transcripts publicly. No response-time commitment is implied.
+
 Tilde runs under the ordinary user account. Typed tools have explicit roots and
 policy/journal checks. An approved unrestricted shell has that account's file,
 network, credential, journal and same-user-service authority. Typed roots do not

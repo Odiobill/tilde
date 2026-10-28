@@ -1,5 +1,8 @@
 # Limitations
 
+Read [what we tested](qualification.md) for the exact package/source, 16 passing
+local gates and five explicitly deferred checks.
+
 One globally unsettled run is deliberate. Pending approvals, budget pauses,
 blocked recovery and unknown outcomes prevent unrelated new work. There are zero
 automatic provider retries and no blind replay of uncertain effects. Cancellation
