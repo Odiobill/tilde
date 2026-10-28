@@ -6,7 +6,7 @@ before installing. Tilde does not bundle a model.
 
 ## Start the daemon and open Tilde
 
-With a complete installation in place:
+For an Arch package installation:
 
 ~~~sh
 systemctl --user daemon-reload
@@ -16,6 +16,8 @@ tilde-gui
 
 Opening the GUI alone does not start or enable the daemon. Background startup
 at login is [optional](installation.md).
+For a source checkout, use [the two-terminal source run](source-build.md#run-from-the-checkout)
+instead; its unstaged build does not install a systemd unit.
 
 ## Connect your model
 

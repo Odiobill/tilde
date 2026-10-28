@@ -69,6 +69,12 @@ systemctl --user stop tilde-agentd.service
 ```
 
 Package removal removes owned application files, not HOME/XDG state or credentials.
+After stopping the daemon, remove the Arch package explicitly with:
+
+~~~sh
+sudo pacman -R tilde-assistant
+~~~
+
 For a source staging tree, `scripts/uninstall-staged.mjs --destdir <stage>
 --manifest <stage>/usr/lib/tilde/install-manifest.json` removes unchanged owned
 files and preserves modified files, changed directory modes and unrelated data.

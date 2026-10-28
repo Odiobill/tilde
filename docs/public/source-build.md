@@ -42,6 +42,32 @@ npm run test:release
 ctest --test-dir .build/cmake --output-on-failure
 ```
 
+## Run from the checkout
+
+After the build, stop any other Tilde daemon using the same user state. In one
+terminal, run:
+
+~~~sh
+npm run start:daemon
+~~~
+
+In a second terminal in the same checkout:
+
+~~~sh
+npm run start:gui
+~~~
+
+Use the normal logged-in Linux session with its private runtime directory. Leave
+the daemon terminal open; closing the GUI is separate from stopping the daemon.
+Use Ctrl-C in the daemon terminal to stop it. The systemd commands in the package
+guide apply to a complete installed layout, not an unstaged checkout.
+
+Follow [your first conversation](getting-started.md) for model and authority setup.
+The stage below prepares the full installed layout and desktop integration for
+packaging; it does not install or enable them on your host.
+
+## Offline rebuilds and staging
+
 A subsequent `npm ci --offline --ignore-scripts` requires a complete prepared npm
 cache. An unprepared build is not fully offline. Do not use ambient global npm
 packages as a substitute for the locked closure.
