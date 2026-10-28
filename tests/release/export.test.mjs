@@ -38,6 +38,14 @@ test('publicDocsHaveNoPrivateLinks', async t => {
   await writeFile(join(f.root, 'README.md'), '[private](.superpowers/evidence.md)\n');
   const report = await checkPublicSource(f.root); assert.equal(report.clean, false); assert.ok(report.problems.some(p => p.reason === 'private-link'));
 });
+test('siteTemplateLinksResolveToPublicSourcesWithoutBypassingGuard',async t=>{
+ const f=await fixture(t),{checkPublicSource}=await import('../../scripts/check-public-source.mjs');
+ await mkdir(join(f.root,'docs/site'),{recursive:true});await mkdir(join(f.root,'docs/public'),{recursive:true});
+ await writeFile(join(f.root,'docs/site/index.html'),'<a href="{{BASE}}guide/index.html">Guide</a><a href="{{SOURCE}}">Source</a>');await writeFile(join(f.root,'docs/public/index.md'),'# Guide\n');
+ const p=join(f.root,'packaging/release/public-files.json'),m=JSON.parse(await readFile(p));m.files.push('docs/site/index.html','docs/public/index.md');await writeFile(p,JSON.stringify(m));
+ assert.equal((await checkPublicSource(f.root)).clean,true);
+ for(const url of ['{{BASE}}guide/missing.html','{{BASE}}../.superpowers/private','{{UNAPPROVED}}']){await writeFile(join(f.root,'docs/site/index.html'),'<a href="'+url+'">Invalid</a>');assert.equal((await checkPublicSource(f.root)).clean,false);}
+});
 test('exportedProtocolTestsKeepHistoricalChecks', async t => {
   const dir = await mkdtemp(join(tmpdir(), 'tilde-public-protocol-')); t.after(() => rm(dir, { recursive: true, force: true }));
   await cp('packages/protocol', join(dir, 'packages/protocol'), { recursive: true });

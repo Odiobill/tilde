@@ -47,6 +47,18 @@ export async function checkPublicSource(tree) {
     const links = path.endsWith('.md') ? [...text.matchAll(/\[[^\]]*\]\(([^)]+)\)/g)].map(m => m[1]) : [...text.matchAll(/(?:href|src)=["']([^"']+)["']/g)].map(m => m[1]);
     for (let target of links) {
       if (/^(?:https?:|mailto:|#)/.test(target)) continue;
+      // Site templates refer to generated guide routes; validate their source,
+      // rather than treating a template marker as a literal filesystem path.
+      if (['docs/site/index.html','docs/site/guide.html'].includes(path)) {
+        if (['{{SOURCE}}','{{CANONICAL}}'].includes(target)) continue;
+        if (target.startsWith('{{BASE}}')) {
+          const route=target.slice(8).split('#')[0];let source;
+          if (/^guide\/(?:development\/m4-)?[a-z0-9][a-z0-9.-]*\.html$/.test(route)) source=route.startsWith('guide/development/')?'docs/'+route.slice(6,-5)+'.md':'docs/public/'+route.slice(6,-5)+'.md';
+          else if (/^(?:index\.html|style\.css|assets\/[A-Za-z0-9._-]+)$/.test(route)) source='docs/site/'+route;
+          else { problems.push({path,reason:'invalid-template-link'});continue; }
+          target=relative(join(tree,dirname(path)),join(tree,source));
+        }
+      }
       target = target.split('#')[0];
       if (!target) continue;
       if (/\.superpowers|docs\/superpowers|experiments\//.test(target)) { problems.push({ path, reason: 'private-link' }); continue; }

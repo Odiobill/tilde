@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "repository": "Odiobill/tilde",
+  "productVersion": "0.1.0",
+  "tag": "v0.1.0",
+  "baselineCommit": "103bfd089d70283fa7cb43d5d8bb1f6e110e98cb",
+  "source": {
+    "kind": "github",
+    "commit": "103bfd089d70283fa7cb43d5d8bb1f6e110e98cb",
+    "url": "https://github.com/Odiobill/tilde/tree/103bfd089d70283fa7cb43d5d8bb1f6e110e98cb"
+  },
+  "package": {
+    "name": "tilde-assistant-0.1.0-1-x86_64.pkg.tar.zst",
+    "sha256": "cc6d513bea8f2f11ed11c23c776737dab8c1fd34d73fd1e2160c11532381f9ba",
+    "requirements": {
+      "distribution": "Arch Linux",
+      "architecture": "x86_64",
+      "node": ">=22.19.0",
+      "qt": ">=6.12.0"
+    }
+  },
+  "assets": [
+    {
+      "name": "LICENSE",
+      "sha256": "a1bcf25f618139a0298604646ee491528249b6f4f99cdbe97fc74cfd150357c2"
+    },
+    {
+      "name": "THIRD_PARTY_NOTICES.md",
+      "sha256": "60894a6ded7d61e53d29ba8d33f29dccb64bbb03262e7016c99ccbf41c4da677"
+    },
+    {
+      "name": "license-inventory.json",
+      "sha256": "d65c5d8600ac368865a00a5a5554b7b453428334ff20481717c59be55c9e8acf"
+    },
+    {
+      "name": "qualification-summary.json",
+      "sha256": "4a8614f19eeb942f9329576efa353385dcc53fe3d6653e2f660a0e7293969db3"
+    },
+    {
+      "name": "release-notes-0.1.0.md",
+      "sha256": "0b136eaefd66e106de4317aa6c1529ba708c6488dd7d58b659af42cc87b3ce20"
+    },
+    {
+      "name": "source-identity.json",
+      "sha256": "fbbc3b7f507835599ca3b04660a9239a2990d8321192c7402c20b6d470fdfb5a"
+    },
+    {
+      "name": "tilde-assistant-0.1.0-1-x86_64.pkg.tar.zst",
+      "sha256": "cc6d513bea8f2f11ed11c23c776737dab8c1fd34d73fd1e2160c11532381f9ba"
+    }
+  ],
+  "preview": true
+}

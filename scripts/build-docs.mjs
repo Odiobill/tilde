@@ -2,6 +2,7 @@ import {readFile,readdir,lstat,mkdir,writeFile} from 'node:fs/promises';
 import {join,resolve,dirname} from 'node:path';import {pathToFileURL} from 'node:url';import {parseArgs} from 'node:util';import {createHash} from 'node:crypto';
 import {noSymlinkParents} from './release/files.mjs';
 import {renderGuide} from './site/markdown.mjs';import {basePath as validateBase,guideRoute,resolveGuideLink} from './site/routes.mjs';
+import {resolveDownloads} from './site/release-metadata.mjs';
 export const escape=value=>value.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
 const digest=b=>createHash('sha256').update(b).digest('hex');
 async function sourceFile(root,path){await noSymlinkParents(root,join(root,path));const stat=await lstat(join(root,path));if(!stat.isFile()||stat.isSymbolicLink()||stat.size>262144)throw Error('DOCS_SOURCE_UNSAFE');return readFile(join(root,path),'utf8');}
@@ -24,14 +25,22 @@ export async function buildDocs({root=resolve('.'),output,basePath='/',mode='pre
  const order=['index','getting-started','installation','source-build','configuration','qualification','limitations','security','troubleshooting','contributing','releasing','release-notes-0.1.0'];
  sources.sort((a,b)=>{const rank=s=>{const n=s.file.slice(6,-5);return order.includes(n)?order.indexOf(n):100;};return rank(a)-rank(b)||a.file.localeCompare(b.file);});
  const template=await sourceFile(root,'docs/site/guide.html'),css=await sourceFile(root,'docs/site/style.css');
+ // Small fixture-only guide trees need no release configuration. Full sites do.
+ const releaseText=await sourceFile(root,'docs/site/release.json').catch(e=>{if(e.code==='ENOENT'&&mode==='preview')return null;throw e;});
+ const release=releaseText?JSON.parse(releaseText):null,downloads=release?resolveDownloads(release,releaseEvidence,{mode}):null;
+ if(mode==='production'&&!downloads)throw Error('SITE_RELEASE_NOT_VERIFIED');
+ const landing=downloads?await sourceFile(root,'docs/site/index.html'):null;
  if(/\{\{(?!(?:TITLE|BASE|NAV|BODY)\}\})/.test(template))throw Error('DOCS_TEMPLATE_INVALID');
  for(const s of sources)s.body=renderGuide(s.text,{resolveLink:url=>resolveGuideLink(s.path,url,{basePath,sources})}).html;
  await mkdir(output,{mode:0o700});const files=[];
  const emit=async(name,body)=>{await mkdir(dirname(join(output,name)),{recursive:true,mode:0o700});await writeFile(join(output,name),body,{flag:'wx',mode:0o644});files.push(name);};
  for(const s of sources){const nav=sources.map(x=>'<a href="'+basePath+x.file+'"'+(s===x?' aria-current="page"':'')+'>'+escape(x.title)+'</a>').join('\n');
   const values={TITLE:escape(s.title),BASE:basePath,NAV:nav,BODY:s.body};await emit(s.file,template.replace(/\{\{(TITLE|BASE|NAV|BODY)\}\}/g,(_,key)=>values[key]));
-  const old=s.file.slice(6),target=basePath+s.file;await emit(old,'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+escape(s.title)+' · Tilde</title><link rel="canonical" href="https://odiobill.github.io'+target+'"></head><body><main><h1>'+escape(s.title)+'</h1><p>This guide now lives at <a href="'+target+'">'+escape(s.title)+'</a>.</p></main></body></html>');
+  const old=s.file.slice(6),target=basePath+s.file;if(old!=='index.html'||!landing)await emit(old,'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+escape(s.title)+' · Tilde</title><link rel="canonical" href="https://odiobill.github.io'+target+'"></head><body><main><h1>'+escape(s.title)+'</h1><p>This guide now lives at <a href="'+target+'">'+escape(s.title)+'</a>.</p></main></body></html>');
  }
+ if(landing){const binary=downloads.available?'<a class="button primary" href="'+escape(downloads.packageUrl)+'">Download Arch package <span aria-hidden="true">↓</span></a>':'<span class="button unavailable" aria-disabled="true">Download available at launch</span>';
+ const values={BASE:basePath,CANONICAL:'https://odiobill.github.io'+basePath,SOURCE:escape(downloads.sourceUrl),BINARY:binary,RELEASE_STATE:downloads.available?'An early preview, ready to try.':'Local preview · the public release is being prepared.',CHECKSUM:escape(release.package.sha256),RELEASE_LINKS:downloads.available?'<a href="'+downloads.links.SHA256SUMS+'">Checksums</a><a href="'+downloads.links['release-notes-0.1.0.md']+'">Release notes</a><a href="'+downloads.links['qualification-summary.json']+'">Qualification snapshot</a>':'<a href="'+basePath+'guide/limitations.html">Release scope & limitations</a>'};
+ await emit('index.html',landing.replace(/\{\{([A-Z_]+)\}\}/g,(_,key)=>{if(!(key in values))throw Error('SITE_TEMPLATE_INVALID');return values[key];}));}
  await emit('style.css',css);
  const manifest={version:2,basePath,files:await Promise.all(files.map(async path=>({path,sha256:digest(await readFile(join(output,path)))}))),sourceDocuments:sources.map(s=>({path:s.path,sha256:digest(s.text)}))};
  await emit('docs-manifest.json',JSON.stringify(manifest,null,2)+'\n');return{output,basePath,files};
