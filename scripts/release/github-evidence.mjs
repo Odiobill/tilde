@@ -11,6 +11,31 @@ export async function readTagCommit({execute=executeGithub}={}){
  for(let n=0;object?.type==='tag'&&n<3;n++){if(!hex(object.sha,40))throw Error('PUBLICATION_BINDING_TAG_INVALID');object=(await githubRead('repos/Odiobill/tilde/git/tags/'+object.sha,{execute})).object;}
  if(object?.type!=='commit'||!hex(object.sha,40))throw Error('PUBLICATION_BINDING_TAG_INVALID');return object.sha;
 }
+export async function readRelease({execute=executeGithub,allowDraft=false}={}){
+ let release;
+ try{release=await githubRead('repos/Odiobill/tilde/releases/tags/v0.1.1',{execute});}
+ catch(error){
+  if(error.status!==404)throw error;
+  if(!allowDraft)return null;
+  // The tag endpoint only discovers published releases. Authenticated release
+  // lists include drafts; bound the scan and reject ambiguous pending tags.
+  const matches=[];
+  for(let page=1;page<=10;page++){
+   const rows=await githubRead(`repos/Odiobill/tilde/releases?per_page=100&page=${page}`,{execute});
+   if(!Array.isArray(rows)||rows.length>100)throw Error('RELEASE_DISCOVERY_INVALID');
+   matches.push(...rows.filter(r=>r?.tag_name==='v0.1.1'));
+   if(rows.length<100)break;
+   if(page===10)throw Error('RELEASE_DISCOVERY_LIMIT');
+  }
+  if(matches.length>1)throw Error('RELEASE_DISCOVERY_AMBIGUOUS');
+  if(!matches.length)return null;
+  release=matches[0];
+ }
+ if(!Number.isSafeInteger(release?.id)||release.id<=0||release.tag_name!=='v0.1.1')throw Error('RELEASE_DISCOVERY_INVALID');
+ const full=await githubRead('repos/Odiobill/tilde/releases/'+release.id,{execute});
+ if(full?.id!==release.id||full.tag_name!=='v0.1.1')throw Error('RELEASE_DISCOVERY_CHANGED');
+ return full;
+}
 export function validateRemoteEvidence(e,{repository,baselineCommit,siteCommit,sourceSha256}){
  const bad=()=>{throw Error('REMOTE_EVIDENCE_INVALID');};
  if(repository!=='Odiobill/tilde'||!hex(baselineCommit,40)||!hex(siteCommit,40)||!hex(sourceSha256,64)||!e||e.version!==1||e.repository!==repository||e.baselineCommit!==baselineCommit||e.siteCommit!==siteCommit||e.tagCommit!==baselineCommit||e.baselineSourceSha256!==sourceSha256||e.archSourceSha256!==sourceSha256||e.runnerRemoved!==true||!Array.isArray(e.runs)||e.runs.length!==4)bad();

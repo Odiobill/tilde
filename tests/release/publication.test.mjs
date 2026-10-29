@@ -37,12 +37,41 @@ async function transport(f){
   if(path==='repos/Odiobill/tilde/actions/runners?per_page=100')return{stdout:JSON.stringify({total_count:0,runners:[]})};
   const run=f.remoteEvidence.runs.find(r=>path.startsWith('repos/Odiobill/tilde/actions/runs/'+r.id));
   if(run){if(path.includes('/jobs'))return{stdout:JSON.stringify({total_count:run.jobs.length,jobs:run.jobs.map((j,i)=>({...j,id:i+1,run_id:run.id}))})};return{stdout:JSON.stringify({id:run.id,path:'.github/workflows/'+run.workflow,repository:{full_name:'Odiobill/tilde'},head_sha:run.headSha,event:run.event,status:run.status,conclusion:run.conclusion,html_url:run.url})};}
-  if(path==='repos/Odiobill/tilde/releases/tags/v0.1.1')return{stdout:JSON.stringify({id:77,name:api.publicationTitle,body:api.publicationBody(files.find(x=>x.name==='release-notes-0.1.1.md').bytes.toString(),f.remoteEvidence),tag_name:'v0.1.1',draft:state.draft,prerelease:true,tarball_url:'https://api.github.com/repos/Odiobill/tilde/tarball/v0.1.1',zipball_url:'https://api.github.com/repos/Odiobill/tilde/zipball/v0.1.1',assets:[...files.map(x=>({id:x.id,name:x.name,size:x.bytes.length,state:'uploaded',browser_download_url:'https://github.com/Odiobill/tilde/releases/download/v0.1.1/'+x.name})),...state.extra]})};
+  if(path==='repos/Odiobill/tilde/releases/tags/v0.1.1'||path==='repos/Odiobill/tilde/releases/77')return{stdout:JSON.stringify({id:77,name:api.publicationTitle,body:api.publicationBody(files.find(x=>x.name==='release-notes-0.1.1.md').bytes.toString(),f.remoteEvidence),tag_name:'v0.1.1',draft:state.draft,prerelease:true,tarball_url:'https://api.github.com/repos/Odiobill/tilde/tarball/v0.1.1',zipball_url:'https://api.github.com/repos/Odiobill/tilde/zipball/v0.1.1',assets:[...files.map(x=>({id:x.id,name:x.name,size:x.bytes.length,state:'uploaded',browser_download_url:'https://github.com/Odiobill/tilde/releases/download/v0.1.1/'+x.name})),...state.extra]})};
   const file=files.find(x=>path==='repos/Odiobill/tilde/releases/assets/'+x.id);if(file)return{stdout:state.corrupt===file.name?Buffer.from('changed bytes'):file.bytes};
   throw Error('Unexpected GitHub call: '+JSON.stringify(args));
  };return{execute,state,files};
 }
 test('finalPublicBundleHasNineFilesAndNoSeparateSourceArchive',async t=>{const f=await publicationFixture(t);assert.equal((await readdir(f.finalDir)).length,9);assert.equal(f.finalized.manifest.baselineCommit,f.sourceRecord.baselineCommit);assert.equal(f.finalized.manifest.siteCommit,f.remoteEvidence.siteCommit);assert.doesNotMatch(await readFile(join(f.finalDir,'SHA256SUMS'),'utf8'),/tilde-0\.1\.1\.tar\.gz/);});
+test('privateDraftResolvesByIdWhenPublishedTagEndpointReturns404',async t=>{
+ const f=await publicationFixture(t),io=await transport(f);let creates=0;
+ const execute=async(cmd,args,options)=>{
+  if(args[0]==='release'){creates++;throw Error('Duplicate draft creation');}
+  const path=args[1];
+  if(path==='repos/Odiobill/tilde/releases/tags/v0.1.1'&&io.state.draft){const e=Error('Published tag not found');e.stdout=JSON.stringify({status:'404'});throw e;}
+  if(path==='repos/Odiobill/tilde/releases?per_page=100&page=1')return{stdout:JSON.stringify([{id:77,tag_name:'v0.1.1',draft:true}])};
+  if(path==='repos/Odiobill/tilde/releases/77'&&!args.includes('--method'))return io.execute(cmd,['api','repos/Odiobill/tilde/releases/tags/v0.1.1'],options);
+  return io.execute(cmd,args,options);
+ };
+ assert.equal((await verifier.verifyRelease({expectedManifest:f.finalized.expected,allowDraft:true,execute})).draft,true);
+ assert.equal((await publisher.draftPublication({assets:f.finalDir,expected:f.finalized.expected,execute})).releaseId,77);
+ assert.equal(creates,0);
+ assert.equal((await publisher.publishPublication({releaseId:77,expected:f.finalized.expected,authorization:{approved:true,repository:'Odiobill/tilde',publicationManifestSha256:f.finalized.expected.publicationManifestSha256},execute})).draft,false);
+ assert.equal(io.state.writes,1);
+});
+test('draftDiscoveryFailsClosedOnDeniedAmbiguousOrUnboundedLists',async()=>{
+ for(const kind of ['denied','ambiguous','limit']){
+  let pages=0;
+  const execute=async(_cmd,args)=>{
+   if(args[1].includes('/releases/tags/')){const e=Error('not found');e.stdout='{"status":"404"}';throw e;}
+   assert.match(args[1],/releases\?per_page=100&page=\d+$/);pages++;
+   if(kind==='denied'){const e=Error('denied');e.stdout='{"status":"403"}';throw e;}
+   return{stdout:JSON.stringify(kind==='ambiguous'?[{id:77,tag_name:'v0.1.1'},{id:78,tag_name:'v0.1.1'}]:Array.from({length:100},(_,i)=>({id:i+1,tag_name:'other'})))};
+  };
+  await assert.rejects(github.readRelease({allowDraft:true,execute}),kind==='denied'?/GITHUB_READ_FAILED/:kind==='ambiguous'?/RELEASE_DISCOVERY_AMBIGUOUS/:/RELEASE_DISCOVERY_LIMIT/);
+  assert.equal(pages,kind==='limit'?10:1);
+ }
+});
 test('changedDraftOrTagBlocksWritesAndValidPublicationIsIdempotent',async t=>{const f=await publicationFixture(t),io=await transport(f),expected=f.finalized.expected;const publish=requireFeature(publisher,'publishPublication');for(const change of ['tag','binary','source']){io.state.tag=change==='tag'?'f'.repeat(40):f.sourceRecord.baselineCommit;io.state.corrupt=change==='binary'?'tilde-assistant-0.1.1-1-x86_64.pkg.tar.zst':null;io.state.extra=change==='source'?[{id:99,name:'tilde-0.1.1.tar.gz',size:1,state:'uploaded',browser_download_url:'https://github.com/Odiobill/tilde/releases/download/v0.1.1/tilde-0.1.1.tar.gz'}]:[];await assert.rejects(publish({releaseId:77,expected,authorization:{approved:true,repository:'Odiobill/tilde',publicationManifestSha256:expected.publicationManifestSha256},execute:io.execute}));assert.equal(io.state.writes,0);}io.state.extra=[];io.state.corrupt=null;const auth={approved:true,repository:'Odiobill/tilde',publicationManifestSha256:expected.publicationManifestSha256};assert.equal((await publish({releaseId:77,expected,authorization:auth,execute:io.execute})).draft,false);assert.equal(io.state.writes,1);await publish({releaseId:77,expected,authorization:auth,execute:io.execute});assert.equal(io.state.writes,1);});
 test('releaseChecksRejectDuplicateChecksumsAndKeepAutomaticGitHubArchives',async t=>{const f=await publicationFixture(t),io=await transport(f),verify=requireFeature(verifier,'verifyRelease');assert.equal((await verify({expectedManifest:f.finalized.expected,allowDraft:true,execute:io.execute})).assets.length,9);const sums=io.files.find(x=>x.name==='SHA256SUMS');sums.bytes=Buffer.concat([sums.bytes,Buffer.from(sums.bytes.toString().split('\n')[0]+'\n')]);const expected=structuredClone(f.finalized.expected);delete expected.assets.find(x=>x.name==='SHA256SUMS').sha256;delete expected.assets.find(x=>x.name==='SHA256SUMS').size;await assert.rejects(verify({expectedManifest:expected,allowDraft:true,execute:io.execute}),/RELEASE_ASSET/);});
 test('publicationManifestCannotBorrowSiteChecksFromAnotherCommit',async t=>{
@@ -63,13 +92,13 @@ test('lostGitHubReadPermissionCannotCreateOrPublish',async t=>{
 });
 test('assetMetadataChangedDuringVerificationBlocksPublication',async t=>{
  const f=await publicationFixture(t),io=await transport(f);let reads=0;
- const execute=async(cmd,args,options)=>{const result=await io.execute(cmd,args,options);if(args[1]==='repos/Odiobill/tilde/releases/tags/v0.1.1'&&++reads===2){const release=JSON.parse(result.stdout);release.assets[0].id=999;return{stdout:JSON.stringify(release)};}return result;};
+ const execute=async(cmd,args,options)=>{const result=await io.execute(cmd,args,options);if(args[1]==='repos/Odiobill/tilde/releases/77'&&++reads===2){const release=JSON.parse(result.stdout);release.assets[0].id=999;return{stdout:JSON.stringify(release)};}return result;};
  await assert.rejects(publisher.publishPublication({releaseId:77,expected:f.finalized.expected,authorization:{approved:true,repository:'Odiobill/tilde',publicationManifestSha256:f.finalized.expected.publicationManifestSha256},execute}),/PUBLICATION_BINDING/);assert.equal(io.state.writes,0);
 });
 test('changedReleaseNotesOrTitleBlockPublicationBeforeWrites',async t=>{
  for(const field of ['body','name']){
   const f=await publicationFixture(t),io=await transport(f);
-  const execute=async(cmd,args,options)=>{const result=await io.execute(cmd,args,options);if(args[1]==='repos/Odiobill/tilde/releases/tags/v0.1.1'){const release=JSON.parse(result.stdout);release[field]='Unreviewed synthetic replacement';return{stdout:JSON.stringify(release)};}return result;};
+  const execute=async(cmd,args,options)=>{const result=await io.execute(cmd,args,options);if(args[1]==='repos/Odiobill/tilde/releases/77'){const release=JSON.parse(result.stdout);release[field]='Unreviewed synthetic replacement';return{stdout:JSON.stringify(release)};}return result;};
   await assert.rejects(publisher.publishPublication({releaseId:77,expected:f.finalized.expected,authorization:{approved:true,repository:'Odiobill/tilde',publicationManifestSha256:f.finalized.expected.publicationManifestSha256},execute}),/PUBLICATION_BINDING/);assert.equal(io.state.writes,0);
  }
 });
@@ -83,6 +112,7 @@ test('newDraftUploadsOnlyNineAssetsWithDeterministicVerifiedNotes',async t=>{
    for(const p of uploads)assert.equal(sha(await readFile(p)),f.finalized.expected.assets.find(a=>a.name===p.split('/').at(-1)).sha256);
    created=true;return{stdout:'https://github.com/Odiobill/tilde/releases/tag/v0.1.1'};
   }
+  if(args[1]==='repos/Odiobill/tilde/releases?per_page=100&page=1')return{stdout:JSON.stringify([])};
   if(args[1]==='repos/Odiobill/tilde/releases/tags/v0.1.1'&&!created){const e=Error('not found');e.stdout=JSON.stringify({status:'404'});throw e;}
   return io.execute(cmd,args,options);
  };
