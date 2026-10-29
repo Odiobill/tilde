@@ -37,7 +37,7 @@ async function transport(f){
   if(path==='repos/Odiobill/tilde/actions/runners?per_page=100')return{stdout:JSON.stringify({total_count:0,runners:[]})};
   const run=f.remoteEvidence.runs.find(r=>path.startsWith('repos/Odiobill/tilde/actions/runs/'+r.id));
   if(run){if(path.includes('/jobs'))return{stdout:JSON.stringify({total_count:run.jobs.length,jobs:run.jobs.map((j,i)=>({...j,id:i+1,run_id:run.id}))})};return{stdout:JSON.stringify({id:run.id,path:'.github/workflows/'+run.workflow,repository:{full_name:'Odiobill/tilde'},head_sha:run.headSha,event:run.event,status:run.status,conclusion:run.conclusion,html_url:run.url})};}
-  if(path==='repos/Odiobill/tilde/releases/tags/v0.1.1')return{stdout:JSON.stringify({id:77,tag_name:'v0.1.1',draft:state.draft,prerelease:true,tarball_url:'https://api.github.com/repos/Odiobill/tilde/tarball/v0.1.1',zipball_url:'https://api.github.com/repos/Odiobill/tilde/zipball/v0.1.1',assets:[...files.map(x=>({id:x.id,name:x.name,size:x.bytes.length,state:'uploaded',browser_download_url:'https://github.com/Odiobill/tilde/releases/download/v0.1.1/'+x.name})),...state.extra]})};
+  if(path==='repos/Odiobill/tilde/releases/tags/v0.1.1')return{stdout:JSON.stringify({id:77,name:api.publicationTitle,body:api.publicationBody(files.find(x=>x.name==='release-notes-0.1.1.md').bytes.toString(),f.remoteEvidence),tag_name:'v0.1.1',draft:state.draft,prerelease:true,tarball_url:'https://api.github.com/repos/Odiobill/tilde/tarball/v0.1.1',zipball_url:'https://api.github.com/repos/Odiobill/tilde/zipball/v0.1.1',assets:[...files.map(x=>({id:x.id,name:x.name,size:x.bytes.length,state:'uploaded',browser_download_url:'https://github.com/Odiobill/tilde/releases/download/v0.1.1/'+x.name})),...state.extra]})};
   const file=files.find(x=>path==='repos/Odiobill/tilde/releases/assets/'+x.id);if(file)return{stdout:state.corrupt===file.name?Buffer.from('changed bytes'):file.bytes};
   throw Error('Unexpected GitHub call: '+JSON.stringify(args));
  };return{execute,state,files};
@@ -65,4 +65,26 @@ test('assetMetadataChangedDuringVerificationBlocksPublication',async t=>{
  const f=await publicationFixture(t),io=await transport(f);let reads=0;
  const execute=async(cmd,args,options)=>{const result=await io.execute(cmd,args,options);if(args[1]==='repos/Odiobill/tilde/releases/tags/v0.1.1'&&++reads===2){const release=JSON.parse(result.stdout);release.assets[0].id=999;return{stdout:JSON.stringify(release)};}return result;};
  await assert.rejects(publisher.publishPublication({releaseId:77,expected:f.finalized.expected,authorization:{approved:true,repository:'Odiobill/tilde',publicationManifestSha256:f.finalized.expected.publicationManifestSha256},execute}),/PUBLICATION_BINDING/);assert.equal(io.state.writes,0);
+});
+test('changedReleaseNotesOrTitleBlockPublicationBeforeWrites',async t=>{
+ for(const field of ['body','name']){
+  const f=await publicationFixture(t),io=await transport(f);
+  const execute=async(cmd,args,options)=>{const result=await io.execute(cmd,args,options);if(args[1]==='repos/Odiobill/tilde/releases/tags/v0.1.1'){const release=JSON.parse(result.stdout);release[field]='Unreviewed synthetic replacement';return{stdout:JSON.stringify(release)};}return result;};
+  await assert.rejects(publisher.publishPublication({releaseId:77,expected:f.finalized.expected,authorization:{approved:true,repository:'Odiobill/tilde',publicationManifestSha256:f.finalized.expected.publicationManifestSha256},execute}),/PUBLICATION_BINDING/);assert.equal(io.state.writes,0);
+ }
+});
+test('newDraftUploadsOnlyNineAssetsWithDeterministicVerifiedNotes',async t=>{
+ const f=await publicationFixture(t),io=await transport(f);let created=false,uploads=[];
+ const execute=async(cmd,args,options)=>{
+  if(args[0]==='release'){
+   assert.equal(args[1],'create');assert.equal(created,false);uploads=args.slice(-9);assert.deepEqual(uploads.map(p=>p.split('/').at(-1)),f.finalized.assets);
+   const body=await readFile(args[args.indexOf('--notes-file')+1],'utf8');assert.equal(body,api.publicationBody(await readFile(join(f.finalDir,'release-notes-0.1.1.md'),'utf8'),f.remoteEvidence));
+   assert.equal(args[args.indexOf('--title')+1],api.publicationTitle);assert.ok(!uploads.some(p=>p.endsWith('/release-body.md')||p.endsWith('.tar.gz')));
+   for(const p of uploads)assert.equal(sha(await readFile(p)),f.finalized.expected.assets.find(a=>a.name===p.split('/').at(-1)).sha256);
+   created=true;return{stdout:'https://github.com/Odiobill/tilde/releases/tag/v0.1.1'};
+  }
+  if(args[1]==='repos/Odiobill/tilde/releases/tags/v0.1.1'&&!created){const e=Error('not found');e.stdout=JSON.stringify({status:'404'});throw e;}
+  return io.execute(cmd,args,options);
+ };
+ const result=await publisher.draftPublication({assets:f.finalDir,expected:f.finalized.expected,execute});assert.equal(created,true);assert.equal(uploads.length,9);assert.equal(result.draft,true);assert.equal(io.state.writes,0);
 });

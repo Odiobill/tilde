@@ -6,6 +6,12 @@ import {sha256,noSymlinkParents} from './files.mjs';
 import {validateRemoteEvidence} from './github-evidence.mjs';
 import {evaluateQualification} from './gates.mjs';
 export const publicCoreAssets=['tilde-assistant-0.1.1-1-x86_64.pkg.tar.zst','LICENSE','THIRD_PARTY_NOTICES.md','license-inventory.json','release-notes-0.1.1.md','qualification-summary.json','source-identity.json'];
+export const publicationTitle='Tilde 0.1.1 — early preview';
+export function publicationBody(notes,ci){
+ const labels={'baseline-native':'Baseline native CI','baseline-arch':'Baseline Arch CI','site-native':'Site commit native CI',site:'Static site CI'},roles=Object.keys(labels);
+ if(typeof notes!=='string'||!notes.trim()||!Array.isArray(ci?.runs)||ci.runs.length!==roles.length||new Set(ci.runs.map(r=>r.role)).size!==roles.length||ci.runs.some(r=>!roles.includes(r.role)||!Number.isSafeInteger(r.id)||r.id<=0||r.url!==`https://github.com/Odiobill/tilde/actions/runs/${r.id}`))throw Error('PUBLICATION_BODY_INVALID');
+ return notes.trim()+'\n\n## Verified CI\n\n'+roles.map(role=>`- [${labels[role]}](${ci.runs.find(r=>r.role===role).url})`).join('\n')+'\n';
+}
 export async function preparePublicationAssets({baselineAssets,qualificationPath,sourceRecord,releaseNotesPath,output,packageInspector}){
  validateSourceRecord(sourceRecord);
  const scratch=await mkdtemp(join(tmpdir(),'tilde-publication-'));
