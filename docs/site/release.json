@@ -26,23 +26,23 @@
     },
     {
       "name": "THIRD_PARTY_NOTICES.md",
-      "sha256": "60894a6ded7d61e53d29ba8d33f29dccb64bbb03262e7016c99ccbf41c4da677"
+      "sha256": "42b9058d6ac0ac53d88e93479fcc33dc84a279b3a371650842e6b2176249e014"
     },
     {
       "name": "license-inventory.json",
-      "sha256": "d65c5d8600ac368865a00a5a5554b7b453428334ff20481717c59be55c9e8acf"
+      "sha256": "408f62b049307d7745372ad350818afc94e4578a626d6d3a1188fed5cbea5108"
     },
     {
       "name": "qualification-summary.json",
-      "sha256": "4a8614f19eeb942f9329576efa353385dcc53fe3d6653e2f660a0e7293969db3"
+      "sha256": "e03935fa08309eedc45a5116ef0d4bd4dbd9654f44604d1c9f194f8be2d91b4e"
     },
     {
       "name": "release-notes-0.1.1.md",
-      "sha256": "42b2f79bcb68da3e79ccfd035ccd3ccb7af57b7dca3570a2ac0aad55b087e07f"
+      "sha256": "9c970eb08018d7c83962b0625abaf4ec738b5f7aa24ece38d0b46c27409730ae"
     },
     {
       "name": "source-identity.json",
-      "sha256": "fbbc3b7f507835599ca3b04660a9239a2990d8321192c7402c20b6d470fdfb5a"
+      "sha256": "1e665ae9c02e3a7922111497b5abf31b3a43fe2589543f68fb65d3b8500894a8"
     },
     {
       "name": "tilde-assistant-0.1.1-1-x86_64.pkg.tar.zst",
