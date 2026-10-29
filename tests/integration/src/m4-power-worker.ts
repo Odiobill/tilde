@@ -22,7 +22,7 @@ const exec=promisify(execFile),helper='/usr/local/libexec/tilde-m4-power-control
 export const powerScenarios=['fresh-state','committed-state','pending-approval','effect-before-journal','budget-pause','owned-job','catalog-ui'] as const;
 export type PowerScenario=typeof powerScenarios[number];
 const hash=(v:unknown)=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
-export const powerShellScript="/usr/bin/node -e 'const f=require(\"node:fs\");const n=f.openSync(\"effect.log\",\"a\",384);f.writeSync(n,\"effect\\n\");f.fsyncSync(n);f.closeSync(n);const d=f.openSync(\".\",\"r\");f.fsyncSync(d);f.closeSync(d);setInterval(()=>{},1000)'";
+export const powerShellScript="/usr/bin/node -e 'const f=require(\"node:fs\");const n=f.openSync(\"effect.log\",\"a\",384);f.writeSync(n,\"effect\\n\");f.fsyncSync(n);f.closeSync(n);const d=f.openSync(\".\",\"r\");f.fsyncSync(d);f.closeSync(d);f.writeFileSync(\"effect.ready\",\"fsynced\\n\",{mode:384});setInterval(()=>{},1000)'";
 export type PowerExpected={scenario:PowerScenario;rootId:string;createdId?:string;selectionRevision:string;rows:unknown[];operation?:Record<string,unknown>;pause?:unknown;gui?:unknown;effectCount:number;job?:unknown;pragmas?:unknown[]};
 function cleanEnv(home:string,manager=false):NodeJS.ProcessEnv{return{PATH:'/usr/bin:/bin',LANG:'C.UTF-8',HOME:home,TMPDIR:home,XDG_CONFIG_HOME:join(home,'config'),XDG_STATE_HOME:join(home,'state'),XDG_DATA_HOME:join(home,'data'),XDG_CACHE_HOME:join(home,'cache'),XDG_RUNTIME_DIR:manager?'/run/user/'+process.geteuid!():join(home,'run'),...(manager?{DBUS_SESSION_BUS_ADDRESS:'unix:path=/run/user/'+process.geteuid!()+'/bus'}:{})};}
 async function guiState(home:string,mode:string,cid:string,revision:string){
@@ -43,6 +43,12 @@ export async function openPowerFixture(home:string,{recover=false,allowShell=fal
  };
  return{agent,runtime,paths,config,faux,home,allowShell,pragmas,async close(){await agent.close();}};
 }
+export async function waitForPowerShellEffect(work:string){
+ // Visibility precedes fsync completion. The shell publishes this disposable
+ // marker only after both effect-file and working-directory fsyncs returned.
+ await untilTool(()=>readFile(join(work,'effect.ready'),'utf8').catch(()=>''),v=>v==='fsynced\n');
+ assert.equal(await readFile(join(work,'effect.log'),'utf8'),'effect\n');
+}
 export async function preparePowerState(home:string,scenario:PowerScenario,{allowShell=false,nativeGui=true}:{allowShell?:boolean;nativeGui?:boolean}={}){
  assert.ok(powerScenarios.includes(scenario));if(['effect-before-journal','owned-job'].includes(scenario))assert.equal(allowShell,true,'Separate exact synthetic shell-effect scope required');const f=await openPowerFixture(home,{allowShell,budgetPause:scenario==='budget-pause'});
  try{
@@ -61,7 +67,7 @@ export async function preparePowerState(home:string,scenario:PowerScenario,{allo
   const details=await f.runtime.broker.details(op.id,op.fingerprint);assert.deepEqual(details.request,request);
   if(scenario!=='pending-approval'){
    await f.runtime.broker.decide({decisionId:'m4-power-exact-fixture-decision',operationId:op.id,fingerprint:op.fingerprint,decision:'approve_once'},process.geteuid!());
-   await untilTool(()=>readFile(join(home,'work/effect.log'),'utf8').catch(()=>''),v=>v==='effect\n');
+   await waitForPowerShellEffect(join(home,'work'));
    op=(await f.runtime.broker.snapshot()).operations[0]!;assert.equal(op.status,'running');expected.effectCount=1;
    const jobs=(await import('node:fs/promises')).readdir;const names=await jobs(join(f.paths.stateDir,'operations'));
    const payload=names.find(n=>n.startsWith('process-')&&n.endsWith('.payload.json'));
