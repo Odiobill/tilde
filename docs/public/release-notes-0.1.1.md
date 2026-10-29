@@ -15,11 +15,11 @@ unpublished v0.1.0 candidate and its original qualification are retained private
 The qualified binary is `tilde-assistant-0.1.1-1-x86_64.pkg.tar.zst`, SHA256:
 
 ~~~text
-6bc6fa870901864a3f675b35a363a5ef7da586eb48180037d2a583783d4ed298
+81305e4ed059e2533bb1e90e05c14ce823b489aeb9d00333237be27f4fce42b4
 ~~~
 
 It needs Arch Linux x86_64, system Node >=22.19.0 and Qt >=6.12.0.
-[Source](https://github.com/Odiobill/tilde/tree/a353037ea6b0f0ddddecc75ba557a8b803b28576)
+[Source](https://github.com/Odiobill/tilde/tree/db9ef522d4c7385b6c249fb694d61a9bf4d507ef)
 is tag v0.1.1 at that exact commit. GitHub provides source ZIP/tar downloads;
 no separate source archive is uploaded. Fresh source builds can use Qt >=6.8.
 

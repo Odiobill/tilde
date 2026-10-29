@@ -8,13 +8,13 @@ Remote CI is separate evidence; it does not replace the product checks.
 ## Exact application
 
 The [v0.1.1 source](https://github.com/Odiobill/tilde/tree/v0.1.1) is bound to commit
-`a353037ea6b0f0ddddecc75ba557a8b803b28576`. Website and guide work comes in later
+`db9ef522d4c7385b6c249fb694d61a9bf4d507ef`. Website and guide work comes in later
 commits; it does not change which binary was qualified.
 
 The package is `tilde-assistant-0.1.1-1-x86_64.pkg.tar.zst`, SHA256:
 
 ~~~text
-6bc6fa870901864a3f675b35a363a5ef7da586eb48180037d2a583783d4ed298
+81305e4ed059e2533bb1e90e05c14ce823b489aeb9d00333237be27f4fce42b4
 ~~~
 
 Release assets include source-file identity, local qualification, publication

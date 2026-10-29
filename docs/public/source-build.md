@@ -8,7 +8,7 @@ cd tilde
 git rev-parse HEAD
 ~~~
 
-The expected commit is `a353037ea6b0f0ddddecc75ba557a8b803b28576`.
+The expected commit is `db9ef522d4c7385b6c249fb694d61a9bf4d507ef`.
 Main contains later website/documentation work; use the release tag for the
 qualified application source. GitHub's built-in ZIP/tar downloads are also
 available at that tag or commit. No extra source archive is uploaded as a release

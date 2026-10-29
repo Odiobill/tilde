@@ -94,6 +94,11 @@ scenario list and expiry. The two shell scenarios additionally require the
 exact `powerShellScript` SHA256 and one explicit synthetic effect decision each.
 That script appends/fsyncs one `effect` line and waits in a bounded owned job;
 no model chooses it. Pending-approval never approves or executes its proposal.
+The shell writes a disposable `effect.ready` marker only after the effect-file
+and working-directory fsyncs return. The worker waits for that marker before its
+held acknowledgement: readable effect bytes alone do not prove durability. The
+marker itself need not survive a cut and is not used during recovery. No flush
+is inserted into the controller's acknowledged cut path.
 
 ## Calibration and product cases
 

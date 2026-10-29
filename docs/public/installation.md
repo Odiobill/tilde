@@ -16,7 +16,7 @@ sha256sum tilde-assistant-0.1.1-1-x86_64.pkg.tar.zst
 Expected:
 
 ~~~text
-6bc6fa870901864a3f675b35a363a5ef7da586eb48180037d2a583783d4ed298
+81305e4ed059e2533bb1e90e05c14ce823b489aeb9d00333237be27f4fce42b4
 ~~~
 
 Explicitly install that verified file:

@@ -3,15 +3,15 @@
   "repository": "Odiobill/tilde",
   "productVersion": "0.1.1",
   "tag": "v0.1.1",
-  "baselineCommit": "a353037ea6b0f0ddddecc75ba557a8b803b28576",
+  "baselineCommit": "db9ef522d4c7385b6c249fb694d61a9bf4d507ef",
   "source": {
     "kind": "github",
-    "commit": "a353037ea6b0f0ddddecc75ba557a8b803b28576",
-    "url": "https://github.com/Odiobill/tilde/tree/a353037ea6b0f0ddddecc75ba557a8b803b28576"
+    "commit": "db9ef522d4c7385b6c249fb694d61a9bf4d507ef",
+    "url": "https://github.com/Odiobill/tilde/tree/db9ef522d4c7385b6c249fb694d61a9bf4d507ef"
   },
   "package": {
     "name": "tilde-assistant-0.1.1-1-x86_64.pkg.tar.zst",
-    "sha256": "6bc6fa870901864a3f675b35a363a5ef7da586eb48180037d2a583783d4ed298",
+    "sha256": "81305e4ed059e2533bb1e90e05c14ce823b489aeb9d00333237be27f4fce42b4",
     "requirements": {
       "distribution": "Arch Linux",
       "architecture": "x86_64",
@@ -46,7 +46,7 @@
     },
     {
       "name": "tilde-assistant-0.1.1-1-x86_64.pkg.tar.zst",
-      "sha256": "6bc6fa870901864a3f675b35a363a5ef7da586eb48180037d2a583783d4ed298"
+      "sha256": "81305e4ed059e2533bb1e90e05c14ce823b489aeb9d00333237be27f4fce42b4"
     }
   ],
   "preview": true

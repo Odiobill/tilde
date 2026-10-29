@@ -33,7 +33,7 @@ Storage-loss evidence covers a calibrated guest model, not every hardware failur
 
 Source is available here and through GitHub's built-in archives. Use tag
 [v0.1.1](https://github.com/Odiobill/tilde/tree/v0.1.1) at commit
-`a353037ea6b0f0ddddecc75ba557a8b803b28576` for the qualified application.
+`db9ef522d4c7385b6c249fb694d61a9bf4d507ef` for the qualified application.
 Main includes subsequent website/docs work. No duplicate source archive is uploaded.
 
 See [contributing](docs/public/contributing.md) and
