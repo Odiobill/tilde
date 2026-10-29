@@ -9,9 +9,11 @@ export async function verifyRelease({repository='Odiobill/tilde',tag='v0.1.1',ex
  if(await readTagCommit({execute})!==expected.baselineCommit)bad();
  const release=await readRelease({execute,allowDraft});if(!release)bad();const endpoint='repos/Odiobill/tilde/releases/'+release.id;
  if(!Number.isSafeInteger(release.id)||release.id<=0||release.tag_name!==tag||release.prerelease!==true||typeof release.draft!=='boolean'||!allowDraft&&release.draft||!Array.isArray(release.assets)||release.assets.length!==names.length||new Set(release.assets.map(a=>a.name)).size!==names.length)bad();
+ const firstUrl=release.assets[0]?.browser_download_url,downloadRoot=typeof firstUrl==='string'?firstUrl.slice(0,firstUrl.lastIndexOf('/')+1):'';
+ if(downloadRoot!=='https://github.com/Odiobill/tilde/releases/download/v0.1.1/'&&(!release.draft||!/^https:\/\/github\.com\/Odiobill\/tilde\/releases\/download\/untagged-[a-f0-9]{1,64}\/$/.test(downloadRoot)))bad();
  const files=new Map(),result=[];
  for(const a of release.assets){const configured=expected.assets.find(x=>x.name===a.name),limit=a.name===publicCoreAssets[0]?128*1024*1024:2*1024*1024;
-  if(!configured||!Number.isSafeInteger(a.id)||a.id<=0||!Number.isSafeInteger(a.size)||a.size<=0||a.size>limit||a.state!=='uploaded'||a.browser_download_url!==`https://github.com/Odiobill/tilde/releases/download/v0.1.1/${a.name}`||configured.size!==undefined&&configured.size!==a.size)bad();
+  if(!configured||!Number.isSafeInteger(a.id)||a.id<=0||!Number.isSafeInteger(a.size)||a.size<=0||a.size>limit||a.state!=='uploaded'||a.browser_download_url!==downloadRoot+a.name||configured.size!==undefined&&configured.size!==a.size)bad();
   const bytes=await githubRead('repos/Odiobill/tilde/releases/assets/'+a.id,{execute,bytes:true,limit:limit+1024}),digest=sha256(bytes);if(bytes.length!==a.size||configured.sha256&&configured.sha256!==digest)bad();files.set(a.name,bytes);result.push({name:a.name,sha256:digest,url:a.browser_download_url});
  }
  const covered=new Set();for(const line of files.get('SHA256SUMS').toString().trim().split('\n')){const m=line.match(/^([a-f0-9]{64})  ([A-Za-z0-9._-]+)$/);if(!m||m[2]==='SHA256SUMS'||!files.has(m[2])||covered.has(m[2])||sha256(files.get(m[2]))!==m[1])bad();covered.add(m[2]);}if(covered.size!==names.length-1)bad();
@@ -23,7 +25,7 @@ export async function verifyRelease({repository='Odiobill/tilde',tag='v0.1.1',ex
  if(release.name!==publicationTitle||typeof release.body!=='string'||release.body.trim()!==publicationBody(files.get('release-notes-0.1.1.md').toString(),manifest.ci).trim())bad();
  await readRemoteEvidence(manifest.ci,{execute,checkRunners});
  // Refuse a tag or asset list changed while hashes/CI were being checked.
- const fresh=await githubRead(endpoint,{execute}),shape=r=>JSON.stringify({id:r.id,name:r.name,body:r.body,draft:r.draft,prerelease:r.prerelease,tag:r.tag_name,assets:r.assets.map(a=>({id:a.id,name:a.name,size:a.size,state:a.state,updated:a.updated_at}))});
+ const fresh=await githubRead(endpoint,{execute}),shape=r=>JSON.stringify({id:r.id,name:r.name,body:r.body,draft:r.draft,prerelease:r.prerelease,tag:r.tag_name,assets:r.assets.map(a=>({id:a.id,name:a.name,size:a.size,state:a.state,url:a.browser_download_url,updated:a.updated_at}))});
  if(shape(fresh)!==shape(release)||await readTagCommit({execute})!==expected.baselineCommit)bad();
  return{version:1,repository,tag,baselineCommit:expected.baselineCommit,releaseId:release.id,draft:release.draft,prerelease:release.prerelease,publicationManifestSha256:expected.publicationManifestSha256,assets:result};
 }
