@@ -1,19 +1,20 @@
 # What we tested
 
-Tilde 0.1.0 is an early preview. Local qualification completed on 2026-10-28:
-**16 passing gates and five owner-accepted exceptions**. Remote CI and publication
-have their own later evidence; they do not replace the product checks.
+Tilde 0.1.1 is an early preview. Its release profile requires **16 passing gates
+and five owner-accepted exceptions**, bound to the exact source and package below.
+The published qualification and publication manifests record the actual results.
+Remote CI is separate evidence; it does not replace the product checks.
 
 ## Exact application
 
-The [v0.1.0 source](https://github.com/Odiobill/tilde/tree/v0.1.0) is bound to commit
-`103bfd089d70283fa7cb43d5d8bb1f6e110e98cb`. Website and guide work comes in later
+The [v0.1.1 source](https://github.com/Odiobill/tilde/tree/v0.1.1) is bound to commit
+`a353037ea6b0f0ddddecc75ba557a8b803b28576`. Website and guide work comes in later
 commits; it does not change which binary was qualified.
 
-The package is `tilde-assistant-0.1.0-1-x86_64.pkg.tar.zst`, SHA256:
+The package is `tilde-assistant-0.1.1-1-x86_64.pkg.tar.zst`, SHA256:
 
 ~~~text
-cc6d513bea8f2f11ed11c23c776737dab8c1fd34d73fd1e2160c11532381f9ba
+6bc6fa870901864a3f675b35a363a5ef7da586eb48180037d2a583783d4ed298
 ~~~
 
 Release assets include source-file identity, local qualification, publication
@@ -31,7 +32,7 @@ complete file inventory and Git executable modes against the qualified source.
 - Hyprland Wayland activation/window checks and reference native performance.
 - Process-crash recovery and calibrated guest storage-loss cases.
 - Security regressions, shipped licensing, public export, local docs/workflow
-  validation and final M4 review.
+  validation and final code review.
 
 These are scoped observations, not promises for every desktop or future runtime.
 

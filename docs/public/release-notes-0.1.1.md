@@ -1,21 +1,26 @@
-# Tilde 0.1.0 — early preview
+# Tilde 0.1.1 — early preview
 
 A native Linux assistant with a Qt/QML window and separate durable user daemon.
 Use it to ask questions, investigate files and review exact shell actions under
 your ordinary account. Bring your own supported provider or compatible existing
 local endpoint; there is no bundled model/runtime or automatic login startup.
 
+This corrected first preview fixes credential-lock cleanup on ext4. Tilde pins
+the held directory until release, preventing inode reuse from making another
+writer's replacement lock look owned. Compromised writes remain refused. The
+unpublished v0.1.0 candidate and its original qualification are retained privately.
+
 ## Download and source
 
-The qualified binary is `tilde-assistant-0.1.0-1-x86_64.pkg.tar.zst`, SHA256:
+The qualified binary is `tilde-assistant-0.1.1-1-x86_64.pkg.tar.zst`, SHA256:
 
 ~~~text
-cc6d513bea8f2f11ed11c23c776737dab8c1fd34d73fd1e2160c11532381f9ba
+6bc6fa870901864a3f675b35a363a5ef7da586eb48180037d2a583783d4ed298
 ~~~
 
 It needs Arch Linux x86_64, system Node >=22.19.0 and Qt >=6.12.0.
-[Source](https://github.com/Odiobill/tilde/tree/103bfd089d70283fa7cb43d5d8bb1f6e110e98cb)
-is tag v0.1.0 at that exact commit. GitHub provides source ZIP/tar downloads;
+[Source](https://github.com/Odiobill/tilde/tree/a353037ea6b0f0ddddecc75ba557a8b803b28576)
+is tag v0.1.1 at that exact commit. GitHub provides source ZIP/tar downloads;
 no separate source archive is uploaded. Fresh source builds can use Qt >=6.8.
 
 ## Work that stays

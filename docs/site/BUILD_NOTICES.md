@@ -1,6 +1,6 @@
 # Site build dependency notices
 
-Build-time only; these packages are not included in the qualified 0.1.0 application binary or sent to site visitors. Exact versions and integrity hashes are locked in package-lock.json. Retained license texts:
+Build-time only; these packages are not included in the qualified 0.1.1 application binary or sent to site visitors. Exact versions and integrity hashes are locked in package-lock.json. Retained license texts:
 
 - markdown-it 15.0.3 (MIT): [markdown-it license](../../packaging/licenses/site-build/markdown-it.txt)
 - argparse 3.0.4 (PSF-2.0): [argparse license](../../packaging/licenses/site-build/argparse.txt)

@@ -3,12 +3,12 @@
 ## Get the released source from GitHub
 
 ~~~sh
-git clone --branch v0.1.0 --single-branch https://github.com/Odiobill/tilde.git
+git clone --branch v0.1.1 --single-branch https://github.com/Odiobill/tilde.git
 cd tilde
 git rev-parse HEAD
 ~~~
 
-The expected commit is `103bfd089d70283fa7cb43d5d8bb1f6e110e98cb`.
+The expected commit is `a353037ea6b0f0ddddecc75ba557a8b803b28576`.
 Main contains later website/documentation work; use the release tag for the
 qualified application source. GitHub's built-in ZIP/tar downloads are also
 available at that tag or commit. No extra source archive is uploaded as a release

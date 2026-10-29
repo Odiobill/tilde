@@ -14,7 +14,7 @@ same window; compositor policy determines actual focus and placement.
 - [Security and data](security.md)
 - [Contributing](contributing.md)
 - [Releasing and documentation hosting](releasing.md)
-- [0.1.0 candidate notes](release-notes-0.1.0.md)
+- [0.1.1 candidate notes](release-notes-0.1.1.md)
 
 The first release targets x86_64 with an Arch package mechanism and a source
 archive. There is no Debian package, bundled Node/Qt, auto-updater or default

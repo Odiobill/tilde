@@ -22,7 +22,7 @@ export async function buildDocs({root=resolve('.'),output,basePath='/',mode='pre
   }
  }
  if(!sources.some(s=>s.file==='guide/index.html'))throw Error('DOCS_INDEX_MISSING');
- const order=['index','getting-started','installation','source-build','configuration','qualification','limitations','security','troubleshooting','contributing','releasing','release-notes-0.1.0'];
+ const order=['index','getting-started','installation','source-build','configuration','qualification','limitations','security','troubleshooting','contributing','releasing','release-notes-0.1.1'];
  sources.sort((a,b)=>{const rank=s=>{const n=s.file.slice(6,-5);return order.includes(n)?order.indexOf(n):100;};return rank(a)-rank(b)||a.file.localeCompare(b.file);});
  const template=await sourceFile(root,'docs/site/guide.html'),css=await sourceFile(root,'docs/site/style.css');
  // Small fixture-only guide trees need no release configuration. Full sites do.
@@ -39,7 +39,7 @@ export async function buildDocs({root=resolve('.'),output,basePath='/',mode='pre
   const old=s.file.slice(6),target=basePath+s.file;if(old!=='index.html'||!landing)await emit(old,'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+escape(s.title)+' · Tilde</title><link rel="canonical" href="https://odiobill.github.io'+target+'"></head><body><main><h1>'+escape(s.title)+'</h1><p>This guide now lives at <a href="'+target+'">'+escape(s.title)+'</a>.</p></main></body></html>');
  }
  if(landing){const binary=downloads.available?'<a class="button primary" href="'+escape(downloads.packageUrl)+'">Download Arch package <span aria-hidden="true">↓</span></a>':'<span class="button unavailable" aria-disabled="true">Download available at launch</span>';
- const values={BASE:basePath,CANONICAL:'https://odiobill.github.io'+basePath,SOURCE:escape(downloads.sourceUrl),BINARY:binary,RELEASE_STATE:downloads.available?'An early preview, ready to try.':'Local preview · the public release is being prepared.',CHECKSUM:escape(release.package.sha256),RELEASE_LINKS:downloads.available?'<a href="'+downloads.links.SHA256SUMS+'">Checksums</a><a href="'+downloads.links['release-notes-0.1.0.md']+'">Release notes</a><a href="'+downloads.links['qualification-summary.json']+'">Qualification snapshot</a>':'<a href="'+basePath+'guide/limitations.html">Release scope & limitations</a>'};
+ const values={BASE:basePath,CANONICAL:'https://odiobill.github.io'+basePath,SOURCE:escape(downloads.sourceUrl),BINARY:binary,RELEASE_STATE:downloads.available?'An early preview, ready to try.':'Local preview · the public release is being prepared.',CHECKSUM:escape(release.package.sha256),RELEASE_LINKS:downloads.available?'<a href="'+downloads.links.SHA256SUMS+'">Checksums</a><a href="'+downloads.links['release-notes-0.1.1.md']+'">Release notes</a><a href="'+downloads.links['qualification-summary.json']+'">Qualification snapshot</a>':'<a href="'+basePath+'guide/limitations.html">Release scope & limitations</a>'};
  await emit('index.html',landing.replace(/\{\{([A-Z_]+)\}\}/g,(_,key)=>{if(!(key in values))throw Error('SITE_TEMPLATE_INVALID');return values[key];}));}
  if(landing){
   const directory=join(root,'docs/site/assets');await noSymlinkParents(root,directory,true);

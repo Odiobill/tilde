@@ -39,7 +39,7 @@ the derived outcome records the owner disposition separately. No synthetic or
 property-tree success can satisfy an unrun real-operator requirement.
 
 ```sh
-node scripts/assemble-release.mjs --source /absolute/final-export --package /absolute/tilde-assistant-0.1.0-1-x86_64.pkg.tar.zst --qualification /absolute/private/qualification.json --output /absolute/new-artifacts
+node scripts/assemble-release.mjs --source /absolute/final-export --package /absolute/tilde-assistant-0.1.1-1-x86_64.pkg.tar.zst --qualification /absolute/private/qualification.json --output /absolute/new-artifacts
 ```
 
 Assembly pins copies of the actual input bytes, audits bounded archive paths,

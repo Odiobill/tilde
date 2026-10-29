@@ -1,28 +1,28 @@
 # Install and run
 
-Choose the [v0.1.0 Arch x86_64 package](https://github.com/Odiobill/tilde/releases/tag/v0.1.0)
+Choose the [v0.1.1 Arch x86_64 package](https://github.com/Odiobill/tilde/releases/tag/v0.1.1)
 or [build from GitHub source](source-build.md). Follow the
 [first-conversation guide](getting-started.md) after installation.
 
 ## Install the Arch package
 
-Download `tilde-assistant-0.1.0-1-x86_64.pkg.tar.zst` from the release.
+Download `tilde-assistant-0.1.1-1-x86_64.pkg.tar.zst` from the release.
 Compare its SHA256 before installing:
 
 ~~~sh
-sha256sum tilde-assistant-0.1.0-1-x86_64.pkg.tar.zst
+sha256sum tilde-assistant-0.1.1-1-x86_64.pkg.tar.zst
 ~~~
 
 Expected:
 
 ~~~text
-cc6d513bea8f2f11ed11c23c776737dab8c1fd34d73fd1e2160c11532381f9ba
+6bc6fa870901864a3f675b35a363a5ef7da586eb48180037d2a583783d4ed298
 ~~~
 
 Explicitly install that verified file:
 
 ~~~sh
-sudo pacman -U ./tilde-assistant-0.1.0-1-x86_64.pkg.tar.zst
+sudo pacman -U ./tilde-assistant-0.1.1-1-x86_64.pkg.tar.zst
 ~~~
 
 The binary requires system Node >=22.19.0 and Qt Base/Declarative >=6.12.0,
@@ -89,7 +89,7 @@ recipe beside an exact, verified source archive so no archive contains its own
 checksum and no nonexistent GitHub URL or SKIP checksum is used:
 
 ```sh
-node scripts/prepare-arch-build.mjs --source /absolute/tilde-0.1.0.tar.gz --sha256 <actual-sha256> --output /absolute/new-build --npm-cache /absolute/prepared-cache
+node scripts/prepare-arch-build.mjs --source /absolute/tilde-0.1.1.tar.gz --sha256 <actual-sha256> --output /absolute/new-build --npm-cache /absolute/prepared-cache
 node scripts/qualify-arch.mjs --build-root /absolute/new-build --evidence /absolute/new-evidence
 ```
 

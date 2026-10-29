@@ -1,15 +1,15 @@
 # Release and publication
 
-The published 0.1.0 binary is tied to its exact qualified package digest and
+The published 0.1.1 binary is tied to its exact qualified package digest and
 application source commit. Website and guide commits come later on main.
-Read [qualification](qualification.md) and [release notes](release-notes-0.1.0.md)
+Read [qualification](qualification.md) and [release notes](release-notes-0.1.1.md)
 for the actual scope and five accepted exceptions. A build or CI pass alone
 does not establish installed, desktop, assistive-technology or storage-loss acceptance.
 
 ## Source distribution
 
 Source is available in [Odiobill/tilde](https://github.com/Odiobill/tilde), at tag
-v0.1.0 and its exact commit. GitHub provides ZIP/tar downloads. No separate source
+v0.1.1 and its exact commit. GitHub provides ZIP/tar downloads. No separate source
 archive is uploaded as a release asset. Publication compares the full file
 inventory, Git executable modes and link targets against the qualified source;
 generated compression bytes are not treated as stable identity.

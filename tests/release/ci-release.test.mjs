@@ -5,11 +5,11 @@ const sha=v=>createHash('sha256').update(v).digest('hex');
 async function fixture(t){
  const home=await mkdtemp('/tmp/tilde-ci-draft-');t.after(()=>rm(home,{recursive:true,force:true}));const inputs=join(home,'inputs');await mkdir(join(inputs,'source'),{recursive:true});await mkdir(join(inputs,'arch'));
  const archive=Buffer.from('Synthetic archive-binding fixture; not a real source distribution'),pkg=Buffer.from('Synthetic package-binding fixture; not an ELF package');
- const manifest={version:'0.1.0',archiveSha256:sha(archive),files:[{path:'package.json',sha256:'a'.repeat(64)}]};
- for(const directory of ['source','arch']){await writeFile(join(inputs,directory,'source-manifest.json'),JSON.stringify(manifest));await writeFile(join(inputs,directory,'tilde-0.1.0.tar.gz'),archive);}
- await writeFile(join(inputs,'arch/tilde-assistant-0.1.0-1-x86_64.pkg.tar.zst'),pkg);
- const env={RELEASE_VERSION:'0.1.0',SOURCE_SHA256:sha(archive),GITHUB_SHA:'c'.repeat(40),GITHUB_REPOSITORY:'synthetic/fixture',GITHUB_EVENT_NAME:'workflow_dispatch',GH_TOKEN:'synthetic-token-never-used-on-network'};
- await writeFile(join(inputs,'arch/arch-build-manifest.json'),JSON.stringify({version:'0.1.0',sourceSha256:sha(archive),githubCommit:env.GITHUB_SHA,build:'pass',inspection:'pass',readiness:'verification_pending'}));
+ const manifest={version:'0.1.1',archiveSha256:sha(archive),files:[{path:'package.json',sha256:'a'.repeat(64)}]};
+ for(const directory of ['source','arch']){await writeFile(join(inputs,directory,'source-manifest.json'),JSON.stringify(manifest));await writeFile(join(inputs,directory,'tilde-0.1.1.tar.gz'),archive);}
+ await writeFile(join(inputs,'arch/tilde-assistant-0.1.1-1-x86_64.pkg.tar.zst'),pkg);
+ const env={RELEASE_VERSION:'0.1.1',SOURCE_SHA256:sha(archive),GITHUB_SHA:'c'.repeat(40),GITHUB_REPOSITORY:'synthetic/fixture',GITHUB_EVENT_NAME:'workflow_dispatch',GH_TOKEN:'synthetic-token-never-used-on-network'};
+ await writeFile(join(inputs,'arch/arch-build-manifest.json'),JSON.stringify({version:'0.1.1',sourceSha256:sha(archive),githubCommit:env.GITHUB_SHA,build:'pass',inspection:'pass',readiness:'verification_pending'}));
  await writeFile(join(inputs,'arch/arch-inspection.json'),JSON.stringify({valid:true,sourceSha256:sha(archive),packageSha256:sha(pkg)}));
  return{home,inputs,output:join(home,'assets'),env};
 }

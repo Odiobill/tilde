@@ -5,7 +5,7 @@ understanding your system and getting useful work done, with a separate durable
 daemon that keeps work independent of the window.
 
 [Explore Tilde](https://odiobill.github.io/tilde/) ·
-[Download 0.1.0](https://github.com/Odiobill/tilde/releases/tag/v0.1.0) ·
+[Download 0.1.1](https://github.com/Odiobill/tilde/releases/tag/v0.1.1) ·
 [Get started](docs/public/getting-started.md) ·
 [What we tested](docs/public/qualification.md)
 
@@ -32,8 +32,8 @@ Storage-loss evidence covers a calibrated guest model, not every hardware failur
 ## Source and contributions
 
 Source is available here and through GitHub's built-in archives. Use tag
-[v0.1.0](https://github.com/Odiobill/tilde/tree/v0.1.0) at commit
-`103bfd089d70283fa7cb43d5d8bb1f6e110e98cb` for the qualified application.
+[v0.1.1](https://github.com/Odiobill/tilde/tree/v0.1.1) at commit
+`a353037ea6b0f0ddddecc75ba557a8b803b28576` for the qualified application.
 Main includes subsequent website/docs work. No duplicate source archive is uploaded.
 
 See [contributing](docs/public/contributing.md) and

@@ -25,4 +25,4 @@ The allowlisted source export is separate from a developer's private checkout.
 Add intended new public files to `packaging/release/public-files.json`; build/test
 that export without the checkout. Keep third-party notices and actual license texts
 with redistributed components. The public default branch is main; the qualified application is bound to the
-separate v0.1.0 baseline tag. Website changes do not move that tag.
+separate v0.1.1 baseline tag. Website changes do not move that tag.

@@ -10,17 +10,17 @@ async function fixture(t){
  const dir=await mkdtemp('/tmp/tilde-source-id-');t.after(()=>rm(dir,{recursive:true,force:true}));
  const git=(...args)=>execFileSync('git',['-C',dir,...args],{encoding:'utf8'}).trim();
  git('init','-q');git('config','user.name','Synthetic fixture');git('config','user.email','fixture@example.invalid');
- await writeFile(join(dir,'readme.txt'),'Synthetic source\n');await writeFile(join(dir,'run.sh'),'#!/bin/sh\nexit 0\n',{mode:0o755});git('add','.');git('commit','-qm','fixture');git('tag','v0.1.0');
+ await writeFile(join(dir,'readme.txt'),'Synthetic source\n');await writeFile(join(dir,'run.sh'),'#!/bin/sh\nexit 0\n',{mode:0o755});git('add','.');git('commit','-qm','fixture');git('tag','v0.1.1');
  const commit=git('rev-parse','HEAD'),files=[{path:'readme.txt',type:'file',mode:0o644,sha256:sha('Synthetic source\n')},{path:'run.sh',type:'file',mode:0o755,sha256:sha('#!/bin/sh\nexit 0\n')}];
- const args={repositoryRoot:dir,commit,canonicalManifest:{version:'0.1.0',files},canonicalArchiveSha256:'a'.repeat(64)};
+ const args={repositoryRoot:dir,commit,canonicalManifest:{version:'0.1.1',files},canonicalArchiveSha256:'a'.repeat(64)};
  return{dir,git,args,files};
 }
 function required(name){assert.equal(typeof api[name],'function',`Missing source identity behavior: ${name}`);return api[name];}
 test('gitSourceMatchesCompleteCanonicalInventory',async t=>{const f=await fixture(t);const r=await required('verifySourceIdentity')(f.args);assert.equal(r.baselineCommit,f.args.commit);assert.deepEqual(r.files,f.files);assert.equal(r.repository,'Odiobill/tilde');});
-test('verifiedRecordKeepsCanonicalBytewisePathOrdering',async t=>{const f=await fixture(t);for(const name of ['CMakeLists.txt','ChatModel.cpp'])await writeFile(join(f.dir,name),'fixture');f.git('add','.');f.git('commit','-qm','case ordering');f.git('tag','-f','v0.1.0');f.args.commit=f.git('rev-parse','HEAD');f.args.canonicalManifest.files=[...['CMakeLists.txt','ChatModel.cpp'].map(path=>({path,type:'file',mode:0o644,sha256:sha('fixture')})),...f.files];const r=await required('verifySourceIdentity')(f.args);assert.deepEqual(r.files.map(x=>x.path),['CMakeLists.txt','ChatModel.cpp','readme.txt','run.sh']);});
+test('verifiedRecordKeepsCanonicalBytewisePathOrdering',async t=>{const f=await fixture(t);for(const name of ['CMakeLists.txt','ChatModel.cpp'])await writeFile(join(f.dir,name),'fixture');f.git('add','.');f.git('commit','-qm','case ordering');f.git('tag','-f','v0.1.1');f.args.commit=f.git('rev-parse','HEAD');f.args.canonicalManifest.files=[...['CMakeLists.txt','ChatModel.cpp'].map(path=>({path,type:'file',mode:0o644,sha256:sha('fixture')})),...f.files];const r=await required('verifySourceIdentity')(f.args);assert.deepEqual(r.files.map(x=>x.path),['CMakeLists.txt','ChatModel.cpp','readme.txt','run.sh']);});
 test('changedBlobExecutableModeExtraFileAndMovedTagAreRejected',async t=>{
  for(const change of ['blob','mode','extra','tag']){const f=await fixture(t);if(change==='blob')await writeFile(join(f.dir,'readme.txt'),'changed');if(change==='mode')await chmod(join(f.dir,'run.sh'),0o644);if(change==='extra')await writeFile(join(f.dir,'extra'),'extra');
- f.git('add','.');if(change==='tag')await writeFile(join(f.dir,'readme.txt'),'tag moved');f.git('add','.');f.git('commit','--allow-empty','-qm','changed');if(change==='tag')f.git('tag','-f','v0.1.0');
+ f.git('add','.');if(change==='tag')await writeFile(join(f.dir,'readme.txt'),'tag moved');f.git('add','.');f.git('commit','--allow-empty','-qm','changed');if(change==='tag')f.git('tag','-f','v0.1.1');
  const commit=change==='tag'?f.args.commit:f.git('rev-parse','HEAD');await assert.rejects(required('verifySourceIdentity')({...f.args,commit}),/SOURCE_IDENTITY/);}
 });
 test('gitGeneratedTarAndZipNormalizeOnlyPackagingDifferences',async t=>{

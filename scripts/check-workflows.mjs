@@ -6,7 +6,7 @@ import {pathToFileURL} from 'node:url';
 const requiredCommands=['npm run build','npm run typecheck','npm test','npm run test:release','ctest --test-dir .build/cmake --output-on-failure'];
 const object=v=>!!v&&typeof v==='object'&&!Array.isArray(v);
 export function validateReleaseInput({version,expectedSourceSha256,manifest}){
- if(version!=='0.1.0'||!/^([a-f0-9]{64})$/.test(expectedSourceSha256??'')||!object(manifest)||manifest.version!==version||manifest.archiveSha256!==expectedSourceSha256||!Array.isArray(manifest.files)||!manifest.files.length)throw Error('RELEASE_IDENTITY_MISMATCH');
+ if(version!=='0.1.1'||!/^([a-f0-9]{64})$/.test(expectedSourceSha256??'')||!object(manifest)||manifest.version!==version||manifest.archiveSha256!==expectedSourceSha256||!Array.isArray(manifest.files)||!manifest.files.length)throw Error('RELEASE_IDENTITY_MISMATCH');
  const names=new Set();for(const file of manifest.files){if(!object(file)||typeof file.path!=='string'||file.path.startsWith('/')||file.path.includes('\\')||file.path.split('/').some(s=>!s||s==='.'||s==='..'||['.git','.superpowers','.aws','.codex','.agents','experiments','node_modules','dist','.build'].includes(s))||names.has(file.path)||!/^([a-f0-9]{64})$/.test(file.sha256??''))throw Error('RELEASE_SOURCE_MANIFEST_INVALID');names.add(file.path);}
  return true;
 }

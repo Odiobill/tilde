@@ -7,7 +7,7 @@ export async function githubRead(endpoint,{execute=executeGithub,bytes=false,lim
  catch(error){const failure=Error('GITHUB_READ_FAILED');try{failure.status=Number(JSON.parse(error.stdout?.toString()).status);}catch{}throw failure;}
 }
 export async function readTagCommit({execute=executeGithub}={}){
- let object=(await githubRead('repos/Odiobill/tilde/git/ref/tags/v0.1.0',{execute})).object;
+ let object=(await githubRead('repos/Odiobill/tilde/git/ref/tags/v0.1.1',{execute})).object;
  for(let n=0;object?.type==='tag'&&n<3;n++){if(!hex(object.sha,40))throw Error('PUBLICATION_BINDING_TAG_INVALID');object=(await githubRead('repos/Odiobill/tilde/git/tags/'+object.sha,{execute})).object;}
  if(object?.type!=='commit'||!hex(object.sha,40))throw Error('PUBLICATION_BINDING_TAG_INVALID');return object.sha;
 }

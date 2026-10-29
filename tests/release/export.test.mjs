@@ -8,17 +8,17 @@ import { childEnvironment } from '../../scripts/release/runtime.mjs';
 async function fixture(t) {
   const dir = await mkdtemp(join(tmpdir(), 'tilde-export-')); t.after(() => rm(dir, { recursive: true, force: true }));
   const root = join(dir, 'input'); await mkdir(join(root, 'packaging/release'), { recursive: true });
-  await writeFile(join(root, 'package.json'), '{"version":"0.1.0"}'); await writeFile(join(root, 'README.md'), '# Public\n');
+  await writeFile(join(root, 'package.json'), '{"version":"0.1.1"}'); await writeFile(join(root, 'README.md'), '# Public\n');
   await writeFile(join(root, 'packaging/release/public-files.json'), JSON.stringify({ version: 1, files: ['README.md', 'package.json', 'packaging/release/public-files.json'] }));
   return { dir, root };
 }
 test('exportExcludesEvidenceCredentialsAndBuilds', async t => {
   const f = await fixture(t), { exportSource } = await import('../../scripts/export-source.mjs');
   for (const path of ['.superpowers', '.aws', '.codex', '.build', 'node_modules']) { await mkdir(join(f.root, path)); await writeFile(join(f.root, path, 'private'), 'synthetic private data'); }
-  const result = await exportSource({ root: f.root, output: join(f.dir, 'out'), version: '0.1.0' });
+  const result = await exportSource({ root: f.root, output: join(f.dir, 'out'), version: '0.1.1' });
   assert.deepEqual((await readdir(result.tree)).sort(), ['README.md', 'package.json', 'packaging']);
   assert.equal((await readFile(join(f.root, '.aws/private'), 'utf8')), 'synthetic private data');
-  const again = await exportSource({ root: f.root, output: join(f.dir, 'again'), version: '0.1.0' }); assert.equal(result.sha256, again.sha256);
+  const again = await exportSource({ root: f.root, output: join(f.dir, 'again'), version: '0.1.1' }); assert.equal(result.sha256, again.sha256);
 });
 test('unlistedSourceFileCannotPass', async t => {
   const f = await fixture(t), { checkPublicSource } = await import('../../scripts/check-public-source.mjs');
@@ -29,9 +29,9 @@ test('unlistedSourceFileCannotPass', async t => {
 test('exportRejectsEscapingLinksAndSecretCanaries', async t => {
   const f = await fixture(t), { exportSource } = await import('../../scripts/export-source.mjs');
   await rm(join(f.root, 'README.md')); await writeFile(join(f.dir, 'outside'), 'outside'); await symlink('../outside', join(f.root, 'README.md'));
-  await assert.rejects(exportSource({ root: f.root, output: join(f.dir, 'link'), version: '0.1.0' }));
+  await assert.rejects(exportSource({ root: f.root, output: join(f.dir, 'link'), version: '0.1.1' }));
   await rm(join(f.root, 'README.md')); await writeFile(join(f.root, 'README.md'), ['TILDE', 'EXPORT', 'SECRET', 'CANARY', 'ABCDEF0123456789'].join('_'));
-  await assert.rejects(exportSource({ root: f.root, output: join(f.dir, 'secret'), version: '0.1.0' }), /PUBLIC_SOURCE_REJECTED/);
+  await assert.rejects(exportSource({ root: f.root, output: join(f.dir, 'secret'), version: '0.1.1' }), /PUBLIC_SOURCE_REJECTED/);
 });
 test('publicDocsHaveNoPrivateLinks', async t => {
   const f = await fixture(t), { checkPublicSource } = await import('../../scripts/check-public-source.mjs');
